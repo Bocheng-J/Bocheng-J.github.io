@@ -1,13 +1,14 @@
 ---
 layout:     post
-title:      5分钟带你看完 WWDC 2018
-subtitle:   WWDC 2018 Keynote 全记录
-date:       2018-06-05
-author:     BY
-header-img: img/post-bg-cook.jpg
+title:      Ubuntu系统安装搜狗中文输入法
+subtitle:   Ubuntu 安装中文输入法
+date:       2020-04-28
+author:     oscar
+header-img: img/post_20200427_bg.jpg
 catalog: true
 tags:
-    - iOS
+    - Ubuntu
+    - Linux
 ---
 
 ## 前言

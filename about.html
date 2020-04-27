@@ -1,0 +1,149 @@
+---
+layout: page
+title: "About"
+description: "Hey, this is Bocheng."
+header-img: "img/bg_about_me.jpg"
+---
+
+<!-- Language Selector -->
+ <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select> 
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+
+    <!--copied from markdown -->
+    <blockquote><p>多少事 从来急<br>
+    天地转 光阴迫<br>
+    一万年太久 只争朝夕</p></blockquote>
+
+<p>Hello !<br>
+我是 <strong>博成</strong>，你也可以叫我 <strong>oscar</strong>。</p>
+<p>目前我在瑞典攻读硕士学位，在学习、工作之余，我也是一个体育和音乐爱好者，喜欢足球与架子鼓。</p>
+<p>这个博客是我看了<a href="https://www.jianshu.com/u/e71990ada2fd">柏荧(BY)</a>的<a href="https://www.jianshu.com/p/e68fba58f75c">教程</a> 后搭建出来的，在此感谢柏荧，以及博客模板的原作者<a href="https://github.com/Huxpro/huxpro.github.io">Hux</a>。</p>
+<p>如果你有任何的想法想与我交流，欢迎在下面留言！<br>
+当然，你也直接可以通过邮箱联系我：jiabc1997@163.com .</p>
+
+ 
+    <h5>Talks</h5>
+
+    <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+        <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
+    </ul>
+</div>
+
+<!-- English Version -->
+ <div class="en post-container">
+    <blockquote><p>How many roads must a man walk down  <br>
+    before you call him a man?</p></blockquote>
+
+    <p>Hi, I am <strong>Bocheng</strong>，you can also call me <strong>oscar</strong>. </p>
+
+    <p>I am a master student in Sweden. In my spare time, I like sports and music, and I am a big fan of football and drumming. </p>
+
+    <p>This is my personal blog, I made this blog through learning from <a href="https://www.jianshu.com/u/e71990ada2fd">BY</a>'s <a href="https://www.jianshu.com/p/e68fba58f75c">instruction</a>. Thanks BY and <a href="https://github.com/Huxpro/huxpro.github.io">Hux</a>, the original author of this theme.</p>
+    
+    <p>If you want to talk to me, you are welcome to post your thoughts in below.</p>
+
+    <p>And of course, you can also email me: jiabc1997@163.com.</p>
+
+    <h5>Talks</h5>
+
+    <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+        <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
+    </ul>
+</div> 
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
+
+<!-- Gitalk 评论 start  -->
+{% if site.gitalk.enable %}
+<!-- Gitalk link  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+    <script type="text/javascript">
+    var gitalk = new Gitalk({
+    clientID: '{{site.gitalk.clientID}}',
+    clientSecret: '{{site.gitalk.clientSecret}}',
+    repo: '{{site.gitalk.repo}}',
+    owner: '{{site.gitalk.owner}}',
+    admin: ['{{site.gitalk.admin}}'],
+    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
+    id: 'about',
+    });
+    gitalk.render('gitalk-container');
+</script>
+{% endif %}
+<!-- Gitalk end -->
+
+ <!-- disqus 评论框 start  -->
+{% if site.disqus.enable %}
+
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus.username}}";
+    var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}

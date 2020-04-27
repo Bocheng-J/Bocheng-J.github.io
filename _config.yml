@@ -1,0 +1,111 @@
+# Site settings
+title: Bocheng
+SEOTitle: Bocheng | Oscar
+header-img: img/bocheng_bg2.jpg
+email: jiabc1997@163.com
+description: "hiSomething great is happening."
+keyword: "Oscar, Bocheng, 博成的博客, Bocheng Jia"
+url: "http:www.oscar-bocheng.com"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "How many roads must a man walk down before you call him a man?<br>一万年太久 只争朝夕。"
+sidebar-avatar: img/profile_bc3.PNG      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# SNS settings
+RSS: false
+weibo_username:     jiabc
+#zhihu_username:     qiubaiying
+github_username:    Bocheng-J
+facebook_username:  bocheng.jia
+linkedin_username:  bocheng-jia-b42969197
+bilibili_username:  4670891
+instagram_username: oscar._.21
+#jianshu_username:   e71990ada2fd
+#twitter_username:   qiubaiying
+
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# 评论系统
+# Disqus（https://disqus.com/）
+# disqus_username: qiubaiying
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: 9f05a95dffbfe8f259b4                            #生成的clientID
+  clientSecret: 7aa549a2f18806be4564f545beb1b699b76b4b37    #生成的clientSecret
+  repo: Bocheng-J.github.io    #仓库名称
+  owner: Bocheng-J    #github用户名
+  admin: Bocheng-J
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+# 统计
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 0aab206351df7456a401cbc521928a7a
+
+# Google Analytics
+ga_track_id: 'UA-164616978-1'            # Format: UA-xxxxxx-xx
+ga_domain: oscar-bocheng.com              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+
+
+
+
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "CodeSheep",
+        href: "https://space.bilibili.com/384068749"
+    },{
+        title: "简书·BY",
+        href: "http://www.jianshu.com/u/e71990ada2fd"
+    }
+]

@@ -55,6 +55,7 @@ Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代�
     sudo apt-get install -f
 
 ![安装完成](https://i.loli.net/2020/04/28/4xOR986MgXHEvjV.jpg)
+
 到此，搜狗输入法就安装完成了。
 
 接着我们重启系统，进行下一步的设置操作。
@@ -73,6 +74,7 @@ Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代�
 搜索Sougou Pinyin (**要匹配大小写**)。
 或者直接列表拉到最底也能找到搜狗输入法。
 ![搜索搜狗输入法](https://i.loli.net/2020/04/28/JV6uDtUNHhcgFWQ.jpg)
+
 点击OK添加。
 
 可以选择将其置顶位系统第一输入法：

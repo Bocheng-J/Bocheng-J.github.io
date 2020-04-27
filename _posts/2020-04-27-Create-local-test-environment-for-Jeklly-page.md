@@ -19,7 +19,7 @@ Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代�
 
     sudo apt install fcitx
 
-![安装fcitx](https://imgchr.com/i/Jhj379)
+![安装fcitx](https://i.loli.net/2020/04/28/sEUk1cozDAHy9ST.jpg)
 在提示进行选择的时候输入y，fcitx就安装成功了。
 ## **step2：下载搜狗输入法**
 首先，点击系统右上角的设置选项：

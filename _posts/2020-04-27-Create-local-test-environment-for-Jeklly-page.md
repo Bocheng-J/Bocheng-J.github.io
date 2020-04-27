@@ -23,17 +23,21 @@ Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代�
 在提示进行选择的时候输入y，fcitx就安装成功了。
 ## **step2：下载搜狗输入法**
 首先，点击系统右上角的设置选项：
+
 ![系统设置](https://i.loli.net/2020/04/28/KABSjUIYVw1fhOz.jpg)
 
 进入about，查看系统的OS类型，是64位或32位：
+
 ![OS类型](https://i.loli.net/2020/04/28/VmFWpqrivZNMtYX.jpg)
 
 
 接着进入搜狗输入法Linux版的[官网](https://pinyin.sogou.com/linux/?r=pinyin)，下载对应的安装包。
+
 ![下载搜狗输入法](https://i.loli.net/2020/04/28/Vrow3GMRuSIUNOH.jpg)
 
 
 注意，在这一步，选择保存文件而不是运行打开：
+
 ![保存文件](https://i.loli.net/2020/04/28/hzQwOF5HXgM8LBR.jpg)
 
 在此推荐新建单独的文件夹，将安装包放于其中。打开命令窗口，进入该文件夹，运行：

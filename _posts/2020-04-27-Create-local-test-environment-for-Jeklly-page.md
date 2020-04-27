@@ -32,6 +32,7 @@ Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代�
 接着进入搜狗输入法Linux版的[官网](https://pinyin.sogou.com/linux/?r=pinyin)，下载对应的安装包。
 ![下载搜狗输入法](https://i.loli.net/2020/04/28/Vrow3GMRuSIUNOH.jpg)
 
+
 注意，在这一步，选择保存文件而不是运行打开：
 ![保存文件](https://i.loli.net/2020/04/28/hzQwOF5HXgM8LBR.jpg)
 
@@ -42,6 +43,7 @@ Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代�
    
 **注意：此处dpkg后面的参数应该为你下载的安装包的名称，需要进行单独更改。**
 ![安装搜狗输入法](https://i.loli.net/2020/04/28/gIz8MiNH6W5vnZJ.jpg)
+
 可以看到，我一开始没有更改安装包的名字，安装报了错。
 
 修复依赖关系：

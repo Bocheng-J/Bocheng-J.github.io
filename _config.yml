@@ -65,8 +65,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 9f05a95dffbfe8f259b4                            #生成的clientID
-  clientSecret: 7aa549a2f18806be4564f545beb1b699b76b4b37    #生成的clientSecret
+  clientID: 4bb37e5ad9c0e0862e63                            #生成的clientID
+  clientSecret: 3563a4ce1f911495299ffa8f3f07bb7867df3b94    #生成的clientSecret
   repo: Bocheng-J.github.io    #仓库名称
   owner: Bocheng-J    #github用户名
   admin: Bocheng-J

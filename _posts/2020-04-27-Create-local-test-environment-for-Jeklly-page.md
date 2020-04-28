@@ -9,7 +9,7 @@ catalog: true
 tags:
     - Ubuntu
     - Linux
-    - instruction
+    - Instruction
 ---
 
 # Ubuntu系统下安装中文输入法

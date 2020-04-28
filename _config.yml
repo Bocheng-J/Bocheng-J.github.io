@@ -7,7 +7,7 @@ description: "hiSomething great is happening."
 keyword: "Oscar, Bocheng, 博成的博客, Bocheng Jia"
 url: "http:www.oscar-bocheng.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/Bocheng-J/Bocheng-J.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.

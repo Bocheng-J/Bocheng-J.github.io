@@ -9,6 +9,7 @@ catalog: true
 tags:
     - Ubuntu
     - Linux
+    - instruction
 ---
 
 # Ubuntu系统下安装中文输入法

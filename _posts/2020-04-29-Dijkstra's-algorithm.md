@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Shortest path Dijkstra's algorithm
+title:      Shortest path-Dijkstra's algorithm
 subtitle:   Dijkstra's algorithm
 date:       2020-04-29
 author:     oscar

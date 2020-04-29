@@ -8,8 +8,8 @@ header-img: img/post_20200427_bg.jpg
 catalog: true
 tags:
     - Ubuntu
-    - Linux
-    - Instruction
+    - Linux 
+    - 教程
 ---
 
 # Ubuntu系统下安装中文输入法

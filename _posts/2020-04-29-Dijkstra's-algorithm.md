@@ -48,7 +48,7 @@ For each node i, if ***D*** is smaller than the previously stored distance of i,
 After checking all the neighbour nodes (all the non-visited nodes of the current node), select one **non-visited** node which has the **smallest** stored distance as the next current node.
 
 ## Step: 3 -- Loop
-Return to step 2, unless the target node has been reached.
+Return to step 2, unless the target node has been reached or all the nodes are visited.
 
 ---
 

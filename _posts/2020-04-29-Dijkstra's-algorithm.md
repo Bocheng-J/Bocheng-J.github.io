@@ -13,8 +13,6 @@ tags:
     - study notes
 ---
 
-
-
 > [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) is an algorithm which is used to find the shortest path.
 
 # Dijkstra's algorithm method

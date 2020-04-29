@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Dijkstra's algorithm
+title:      Find Dijkstra's algorithm
 subtitle:   Dijkstra's algorithm
 date:       2020-04-29
 author:     oscar
-header-img: img/post_20200427_bg.jpg
+header-img: img/bg_Dijkstra.jpg
 catalog: true
 tags:
     - Dijkstra's algorithm

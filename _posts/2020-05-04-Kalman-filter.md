@@ -21,8 +21,11 @@ tags:
 ## Step: 0 -- The prerequisite
  
  
- <video src="video/1.mp4" width="800px" height="600px" controls="controls"></video>
- 
+插入视频：
+<video id="video" controls="" preload="none">
+    <source id="mp4" src="video/1.mp4" type="video/mp4">
+</video>
+
 
  1. We need to have a map of nodes.
  2. We need to have a start node.

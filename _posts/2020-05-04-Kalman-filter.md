@@ -107,3 +107,6 @@ Q is used to refine the system's performance. We can use diagonal matrix at the 
 H_k is the Jacobian matrix of h(xk).
 
 For R,  we can use diagonal matrix too, and then correct it in future according to system's performance.
+
+## Step 4: Loop
+After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.

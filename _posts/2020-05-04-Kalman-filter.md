@@ -11,290 +11,102 @@ tags:
     - study notes
 ---
 
+>  [Kalman filter](https://en.wikipedia.org/wiki/Kalman_filter).
 
+# Introduction videos
 
-> [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) is an algorithm which is used to find the shortest path.
+> video source: 
+> 如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224
 
-# Dijkstra's algorithm method
-## Step: 0 -- The prerequisite
+## 1. Why use Kalman Filters:
+
+<video src="https://vdn3.vzuu.com/SD/v3_22cf47c0-e288-11e9-a5c8-f6c3b9ad3fcc.mp4?disable_local_cache=1&bu=http-com&expiration=1588618383&auth_key=1588618383-0-0-e6b42f8bd915319835f5c7a13d72c671&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+
+## 2. State Observers:
+
+<video src="https://vdn3.vzuu.com/SD/v3_462b3fe4-e288-11e9-8eec-0a15e95faed4.mp4?disable_local_cache=1&bu=http-com&expiration=1588619214&auth_key=1588619214-0-0-bbead69d01354bec004e21e3e191c886&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+
+## 3. Optimal State Estimator:
+
+<video src="https://vdn3.vzuu.com/SD/v3_06d8f1e2-e35a-11e9-97d7-0ac945157a92.mp4?disable_local_cache=1&bu=http-com&expiration=1588619262&auth_key=1588619262-0-0-445dc726fa1fa71fa7bf72a549874595&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+
+## 4. Optimal State Estimator Algorithm:
+
+<video src="https://vdn3.vzuu.com/SD/v3_170e4586-e426-11e9-9a35-6e0fb3749454.mp4?disable_local_cache=1&bu=http-com&expiration=1588619263&auth_key=1588619263-0-0-1dfd0b8384b197e122541e9b23109c40&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+
+## 5. Nonlinear State Estimators:
+
+<video src="https://vdn3.vzuu.com/SD/v3_9c9077ee-e4f1-11e9-a5a9-727d3207a1f2.mp4?disable_local_cache=1&bu=http-com&expiration=1588619332&auth_key=1588619332-0-0-bf4c301dc058a9b4c06cf2a9611362da&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+
+## 6. How to Use a Kalman Filter in Simulink:
+
+<video src="https://vdn3.vzuu.com/SD/v3_be17418c-e5c7-11e9-9c63-fe4dd367aa36.mp4?disable_local_cache=1&bu=http-com&expiration=1588619440&auth_key=1588619440-0-0-f46ecb4b7abb50d7a8aeec56b3c99c7c&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+
+## 7. How to Use an Extended Kalman FIlter in SImulink:
+
+<video src="https://vdn3.vzuu.com/SD/v3_3f701e28-e6a1-11e9-85b1-f63f25bc9388.mp4?disable_local_cache=1&bu=http-com&expiration=1588619441&auth_key=1588619441-0-0-a786d515a007e84c61fbc01c701d0cef&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+
+# Steps to set a kalman filter:
+
+## Linear systems:
+## Step 1: Build system model
+Build the process model (equation 13) 
+and the observation model (equation 14).
+
+Through these two models, we know how these two models work.
+Plus, we can get process model coefficient **a**, control signal **U_k**, and measurement noise **V_k**.
+
+We will use these coefficients in later steps.
+
+![step1.JPG](https://i.loli.net/2020/05/05/dWJAzFu78eP2rUQ.jpg)
+
+## Step 2: Calculate the predicted state
+ ![step2.JPG](https://i.loli.net/2020/05/05/Mmw6rYkpBVUCjRf.jpg)
+ By using the state from previous time step (k-1),
+ equation (15) calculates **x_k--** the current (time step: k) priori estimate;
+ (the hat means estimated value)
  
+ equation (16) calculates **p_k--**, the current covariance of this priori estimate.
  
-插入视频：
-<video src="https://vdn3.vzuu.com/SD/v3_22cf47c0-e288-11e9-a5c8-f6c3b9ad3fcc.mp4?disable_local_cache=1&bu=http-com&expiration=1588618383&auth_key=1588618383-0-0-e6b42f8bd915319835f5c7a13d72c671&f=mp4&v=tx" width="400px" height="300px" controls="controls"></video>
-
-
-
- 1. We need to have a map of nodes.
- 2. We need to have a start node.
- 3. The distance between each adjacent nodes should be known.
-
-## Step: 1 -- Start
-
- - Set the start node to be the current node, which is the first visited
-   node.
-   
- - Introduce several concepts:
-> The current node is a already-visited node, and will be the predecessor node for the next node. 
->
-> The stored distance of each node is the shortest distance from the start node. We will use this later.
-> 
-> The start node is an exception: 
-> The shortest distance is 0, but the stored distance is always infinite (∞). 
-
-## Step: 2 -- Check neighbours
-Go through all the **non-visited**  **neighbour nodes** of the current node, and calculate the distance ***D*** . 
-
-***D*** **=** the distance between current node and predecessor node **+** the predecessor's shortest distance. 
-
-(If one node can't be reached from the current node, then ***D***=∞ )
-
-For each node i, if ***D*** is smaller than the previously stored distance of i, then update the stored distance by ***D***. Otherwise, keep the previous stored distance unchanged.
-
-After checking all the neighbour nodes (all the non-visited nodes of the current node), select one **non-visited** node which has the **smallest** stored distance as the next current node.
-
-## Step: 3 -- Loop
-Return to step 2, unless the target node has been reached.
-
----
-
-I prepare 2 examples here, a simple one and a more complex one.
-
-## Example 1:
-Find the shortest path from 1 to 5.
-![example_1](https://i.loli.net/2020/04/30/HUD1s78WgMXVuOt.gif)
-
-## Round 1:
-
->    Current node:  1.
-
- -Start from node 1, so we have 3 non-visited neighour nodes: 2 3 6, their distance D is: [7 9 14]. 
+ **But they are just our prediction, we need to use the measured data to refine them to get an optimal result.**  And this is the point of using kalman filter.
  
- -So now the **stored distance** is : 
- 
- |NODE|node 1* |node 2|node 3|node 4|node 5|node 6|
-|--|--|--|--|--|--|--|
-|**DISTANCE**|0| 7 | 9 |∞|∞|14|
-|**PATH**|--|through node 1| through node 1 |-|-|-|
+## Step 3: Update the predicted state 
+![step3.JPG](https://i.loli.net/2020/05/05/1o8e9vEuJRYnpys.jpg)
+First, in (17), we calculate the kalman gain **g_k** by using predicted covariance **p_k--**.
 
+Then in (18), we update the **x_k** by combining predicted data **x_k--** and measured data **z_k**. 
+(The essence of this step is to multiply **x_k--** and **z_k**'s probability density function, for more information, please check the fourth video.)
 
- (the star mark : visited node)
- 
- -The **smallest** non-visited node is 7, so **node 2** is the next node.
- -The shortest path to node 2: **1 --> 2**.
- 
+And in (19), we update the covariance **p_k** too.
 
-## Round 2:
+## Step 4: Loop
+After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.
 
-  
 
->   Current node:  2.
+## Result:
 
-   -Now we have 2 non-visited neighbour nodes: 3 4, and their distance D now is :[17 22].
-   
-   -The **stored distance** is:
-   
-|NODE|node 1* |node 2* |node 3|node 4|node 5|node 6|
-|--|--|--|--|--|--|--|
-|**DISTANCE**|0| 7 | 9 |22|∞|14|
-|**PATH**|--|through node 1| through node 1 |through node 2|-|-|
+First we need the process model and observation model to get necessary coefficients.
 
- (the star mark : visited node)
- 
+Then we do the prediction.
 
- 
-   -The **smallest** non-visited node is 9,  so **node 3** is the next node.
-   -The shortest path to node 3: **1 --> 3**. (Since the distace is 9).
-   
+After that, we update the prediction state by combining predicted data and measured data together.
 
-## Round 3:
+So, as a result, the updated data **x_k** is what we want, it is more accurate than the predicted-only version. 
 
->    Current node:  3.
+And this system is an Iterative system.
 
-   -Now we have 2 non-visited neighbour nodes: 4 6, and their distance D now is :[20 11].
-   
-   -The **stored distance**  is: 
-   
-|NODE|node 1* |node 2* |node 3* |node 4|node 5|node 6|
-|--|--|--|--|--|--|--|
-|**DISTANCE**|0| 7 | 9 |20|∞|11|
-|**PATH**|--|through node 1| through node 1 |through node 3|-|through node 3|
 
-  (the star mark: visited node) 
+## Non-linear: extended kalman filter:
+## Step 1: Build system model
 
- 
-   -The **smallest** non-visited node is 11, so **node 6** is the next node.
-   -The shortest path to node 6: **1 --> 3 --> 6**.
+![4.JPG](https://i.loli.net/2020/05/05/gpZMFsqU2HVY649.jpg)
+## Step 2: Calculate the predicted state
+![5.JPG](https://i.loli.net/2020/05/05/IADLqcFiKsSPm6E.jpg)
+F_k is the Jacobian matrix of f(xk,uk).
+Q is used to refine the system's performance. We can use diagonal matrix at the beginning, and correct it in future according to system's performance.
 
-## Round 4:
+## Step 3: Update the predicted state 
+![6.JPG](https://i.loli.net/2020/05/05/XxrocHGyLihF4jW.jpg)
+H_k is the Jacobian matrix of h(xk).
 
->    Current node:  6.
-
-   -Now we **only have 1** non-visited neighbour: 5.  D is 20.
-
-   
-   -The **stored distance**  is: 
-   
-|NODE|node 1* |node 2* |node 3* |node 4|node 5|node 6* |
-|--|--|--|--|--|--|--|
-|**DISTANCE**|0| 7 | 9 |20|20|11|
-|**PATH**|--|through node 1| through node 1 |through node 3|through node 6|through node 3|
-
-  (the star mark: visited node) 
-
-
->    Since now we only have 2 nodes left, and their stored distances are equal, we can stop. They both have 20 as the shortest path. (If these two distances are not equal, we still need to go to the next round).
-
-   -The shortest path to node 5: **1 --> 3 --> 6 --> 5**. 
-   -Shortest distance is **20**.
-  
----
-  
-## Example 2:
-Find the shortest path from A to I.
-![example2](https://i.loli.net/2020/04/30/usi2WDCGTexk9wg.jpg)
-
-## Round 1:
-
->   Current node:  A.
-
-  
-  
-  Stored distance: 
-    
-|NODE|node A*|node B|node C|node D|node E|node F|node G|node H|node I| 
-|--|--|--|--|--|--|--|--|--|--|
-|**DISTANCE**|0| 3 | ∞ |4|∞|∞|∞|∞|∞|
-|**PATH**|--|through node A| - |through node A|-|-|-|-|-|
-
-  (the star mark: visited node) 
-
-The **smallest** non-visited node is **B**.
-Node **B** is the next one.
-
-So shortest Path to B:   **A --> B**.
-
-
-## Round 2:
-
->   Current node:  B.
-
-  
-  Stored distance: 
-    
-|NODE|node A* |node B* |node C|node D|node E|node F|node G|node H|node I| 
-|--|--|--|--|--|--|--|--|--|--|
-|**DISTANCE**| 0|3 | 5 |4|∞|∞|∞|∞|∞|
-|**PATH**|--|through node A| through node B |through node A|-|-|-|-|-|
-
-  (the star mark: visited node) 
- 
-  The **smallest** non-visited node is **D**.
-  Node **D** is the next one.
-  
-So shortest Path to D: **A --> D**. （Since the distance is 4）
-
-## Round 3:
-
->   Current node:  D.
- 
-  
-  Stored distance: 
-
-|NODE|node A* |node B* |node C|node D* |node E|node F|node G|node H|node I| 
-|--|--|--|--|--|--|--|--|--|--|
-|**DISTANCE**| 0|3 | 5 |4|∞|8|∞|∞|∞|
-|**PATH**|--|through node A| through node B |through node A|-|through node D|-|-|-|
-
-  (the star mark: visited node) 
-  
-The **smallest** non-visited node is **C**.
-Node **C** is the next one.
-
-So shortest Path to C: **A --> B --> C**.
-
-## Round 4:
-
->   Current node:  C.
-
-  
-  
-  Stored distance: 
-
-|NODE|node A* |node B* |node C* |node D* |node E|node F|node G|node H|node I| 
-|--|--|--|--|--|--|--|--|--|--|
-|**DISTANCE**| 0|3 | 5 |4|7|8|∞|∞|∞|
-|**PATH**|--|through node A| through node B |through node A|through node C|through node D|-|-|-|
-
-  (the star mark: visited node) 
-  
-The **smallest** non-visited node is **E**.
-Node **E** is the next one.
-
-So shortest Path to E: **A --> B --> C -->E**.
-
-
-
-
-## Round 5:
-
->   Current node:  E.
-
-
-  
-  Stored distance: 
-
-|NODE|node A* |node B* |node C* |node D* |node E* |node F|node G|node H|node I| 
-|--|--|--|--|--|--|--|--|--|--|
-|**DISTANCE**| 0|3 | 5 |4|7|8|9|∞|∞|
-|**PATH**|--|through node A| through node B |through node A|through node C|through node D|through node E|-|-|
-
-  (the star mark: visited node) 
-  
-The **smallest** non-visited node is **F**.
-  Node **F** is the next one.
-    
-
-So shortest Path to G: **A --> D --> F**.
-
-## Round 6:
-
->   Current node:  F.
-
-
-  
-  Stored distance: 
-
-|NODE|node A* |node B* |node C* |node D* |node E* |node F* |node G|node H|node I| 
-|--|--|--|--|--|--|--|--|--|--|
-|**DISTANCE**| 0|3 | 5 |4|7|8|9|11|∞|
-|**PATH**|--|through node A| through node B |through node A|through node C|through node D|through node E|through F|-|
-
-  (the star mark: visited node) 
-  
-The **smallest** non-visited node is **G**.
-  Node **G** is the next one.
-    
-
-So shortest Path to G: **A--> B --> C --> E --> G**.
-
-
-
-## Round 7:
-
->   Current node:  G.
-
-  
-  Stored distance: 
-
-|NODE|node A* |node B* |node C* |node D* |node E* |node F* |node G* |node H|node I| 
-|--|--|--|--|--|--|--|--|--|--|
-|**DISTANCE**| 0|3 | 5 |4|7|8|9|11|11|
-|**PATH**|--|through node A| through node B |through node A|through node C|through node D|through node E|through node F|through node G|
-
-  (the star mark: visited node) 
-  
-
-We get 2 equal distances again, stop.
-
-So shortest Path to I: **A --> B --> C -->E --> G -->I**.
-The distance is 11.
+For R,  we can use diagonal matrix too, and then correct it in future according to system's performance.

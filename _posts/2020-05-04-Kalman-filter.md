@@ -22,9 +22,8 @@ tags:
  
  
 插入视频：
-<video id="video" controls="" preload="none">
-    <source id="mp4" src="video/1.mp4" type="video/mp4">
-</video>
+<video src="https://vdn3.vzuu.com/SD/v3_22cf47c0-e288-11e9-a5c8-f6c3b9ad3fcc.mp4?disable_local_cache=1&bu=http-com&expiration=1588618383&auth_key=1588618383-0-0-e6b42f8bd915319835f5c7a13d72c671&f=mp4&v=tx" width="800px" height="600px" controls="controls"></video>
+
 
 
  1. We need to have a map of nodes.

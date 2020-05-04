@@ -11,7 +11,7 @@ tags:
     - study notes
 ---
 
->  [Kalman filter](https://en.wikipedia.org/wiki/Kalman_filter).
+>  Wikipedia: [Kalman filter](https://en.wikipedia.org/wiki/Kalman_filter).
 
 
 # Introduction videos

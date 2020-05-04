@@ -1,15 +1,13 @@
 ---
 layout:     post
-title:      Dijkstra's algorithm
-subtitle:   Dijkstra's algorithm
-date:       2020-04-29
+title:      Kalman filter
+subtitle:   Kalman filter
+date:       2020-05-04
 author:     oscar
-header-img: img/post_20200427_bg.jpg
+header-img: img/post_bg_20200504.jpg
 catalog: true
 tags:
-    - Dijkstra's algorithm
-    - algorithm 
-    - shortest path
+    - Kalman filter
     - study notes
 ---
 

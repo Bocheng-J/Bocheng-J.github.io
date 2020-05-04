@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Dijkstra's algorithm
+title:      Shortest path - Dijkstra's algorithm
 subtitle:   Dijkstra's algorithm
 date:       2020-04-29
 author:     oscar
-header-img: img/post_20200427_bg.jpg
+header-img: img/bg_Dijkstra.jpg
 catalog: true
 tags:
     - Dijkstra's algorithm
@@ -12,8 +12,6 @@ tags:
     - shortest path
     - study notes
 ---
-
-
 
 > [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) is an algorithm which is used to find the shortest path.
 
@@ -50,7 +48,7 @@ For each node i, if ***D*** is smaller than the previously stored distance of i,
 After checking all the neighbour nodes (all the non-visited nodes of the current node), select one **non-visited** node which has the **smallest** stored distance as the next current node.
 
 ## Step: 3 -- Loop
-Return to step 2, unless the target node has been reached.
+Return to step 2, unless the target node has been reached or all the nodes are visited.
 
 ---
 
@@ -295,3 +293,6 @@ We get 2 equal distances again, stop.
 
 So shortest Path to I: **A --> B --> C -->E --> G -->I**.
 The distance is 11.
+
+---
+Reference: https://blog.csdn.net/gamer_gyt/article/details/47184081

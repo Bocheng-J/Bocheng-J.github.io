@@ -18,33 +18,39 @@ tags:
 > video source: 
 > 如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224
 
+
+
+
+>  [Kalman filter](https://en.wikipedia.org/wiki/Kalman_filter).
+
+# Introduction videos
+> video source: 
+> 如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224
+
 ## 1. Why use Kalman Filters:
 
-<iframe src="http://player.bilibili.com/player.html?aid=24931813&cid=42084760&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=370545584&bvid=BV1pZ4y1s7XB&cid=187145554&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ## 2. State Observers:
 
-<video src="https://vdn3.vzuu.com/SD/v3_462b3fe4-e288-11e9-8eec-0a15e95faed4.mp4?disable_local_cache=1&bu=http-com&expiration=1588619214&auth_key=1588619214-0-0-bbead69d01354bec004e21e3e191c886&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+<iframe src="//player.bilibili.com/player.html?aid=968070266&bvid=BV11p4y197Ly&cid=187145687&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 ## 3. Optimal State Estimator:
 
-<video src="https://vdn3.vzuu.com/SD/v3_06d8f1e2-e35a-11e9-97d7-0ac945157a92.mp4?disable_local_cache=1&bu=http-com&expiration=1588619262&auth_key=1588619262-0-0-445dc726fa1fa71fa7bf72a549874595&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
 
 ## 4. Optimal State Estimator Algorithm:
-
-<video src="https://vdn3.vzuu.com/SD/v3_170e4586-e426-11e9-9a35-6e0fb3749454.mp4?disable_local_cache=1&bu=http-com&expiration=1588619263&auth_key=1588619263-0-0-1dfd0b8384b197e122541e9b23109c40&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+<iframe src="//player.bilibili.com/player.html?aid=200533156&bvid=BV1ez411z7Qo&cid=187146006&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ## 5. Nonlinear State Estimators:
-
-<video src="https://vdn3.vzuu.com/SD/v3_9c9077ee-e4f1-11e9-a5a9-727d3207a1f2.mp4?disable_local_cache=1&bu=http-com&expiration=1588619332&auth_key=1588619332-0-0-bf4c301dc058a9b4c06cf2a9611362da&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+<iframe src="//player.bilibili.com/player.html?aid=710515346&bvid=BV1sQ4y1N7e6&cid=187146091&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ## 6. How to Use a Kalman Filter in Simulink:
 
-<video src="https://vdn3.vzuu.com/SD/v3_be17418c-e5c7-11e9-9c63-fe4dd367aa36.mp4?disable_local_cache=1&bu=http-com&expiration=1588619440&auth_key=1588619440-0-0-f46ecb4b7abb50d7a8aeec56b3c99c7c&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
 
 ## 7. How to Use an Extended Kalman FIlter in SImulink:
+<iframe src="//player.bilibili.com/player.html?aid=968015764&bvid=BV14p4y197Ue&cid=187146193&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-<video src="https://vdn3.vzuu.com/SD/v3_3f701e28-e6a1-11e9-85b1-f63f25bc9388.mp4?disable_local_cache=1&bu=http-com&expiration=1588619441&auth_key=1588619441-0-0-a786d515a007e84c61fbc01c701d0cef&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
 
 # Steps to set a kalman filter:
 

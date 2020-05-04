@@ -20,7 +20,7 @@ tags:
 
 ## 1. Why use Kalman Filters:
 
-<video src="https://vdn3.vzuu.com/SD/v3_22cf47c0-e288-11e9-a5c8-f6c3b9ad3fcc.mp4?disable_local_cache=1&bu=http-com&expiration=1588618383&auth_key=1588618383-0-0-e6b42f8bd915319835f5c7a13d72c671&f=mp4&v=tx" width="600px" height="450px" controls="controls"></video>
+<video src="https://vdn3.vzuu.com/SD/v3_22cf47c0-e288-11e9-a5c8-f6c3b9ad3fcc.mp4?disable_local_cache=1&bu=http-com&expiration=1588626131&auth_key=1588626131-0-0-e8ec34258436d05e2acdb2be81c6ab3b&f=mp4&v=tx"></video>
 
 ## 2. State Observers:
 

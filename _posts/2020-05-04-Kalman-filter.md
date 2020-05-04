@@ -20,6 +20,9 @@ tags:
 # Dijkstra's algorithm method
 ## Step: 0 -- The prerequisite
  
+ 
+ <video src="video/1.mp4" width="800px" height="600px" controls="controls"></video>
+ 
 
  1. We need to have a map of nodes.
  2. We need to have a start node.

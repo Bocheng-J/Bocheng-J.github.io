@@ -20,31 +20,32 @@ tags:
 
 ## 1. Why use Kalman Filters:
 
-<iframe src="//player.bilibili.com/player.html?aid=370545584&bvid=BV1pZ4y1s7XB&cid=187145554&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=370545584&bvid=BV1pZ4y1s7XB&cid=187145554&page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 ## 2. State Observers:
 
-<iframe src="//player.bilibili.com/player.html?aid=968070266&bvid=BV11p4y197Ly&cid=187145687&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=968070266&bvid=BV11p4y197Ly&cid=187145687&page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## 3. Optimal State Estimator:
-<iframe src="//player.bilibili.com/player.html?aid=285592413&bvid=BV1Cf4y1m7wg&cid=187145830&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=285592413&bvid=BV1Cf4y1m7wg&cid=187145830&page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## 4. Optimal State Estimator Algorithm:
-<iframe src="//player.bilibili.com/player.html?aid=200533156&bvid=BV1ez411z7Qo&cid=187146006&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=200533156&bvid=BV1ez411z7Qo&cid=187146006&page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## 5. Nonlinear State Estimators:
-<iframe src="//player.bilibili.com/player.html?aid=710515346&bvid=BV1sQ4y1N7e6&cid=187146091&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=710515346&bvid=BV1sQ4y1N7e6&cid=187146091&page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## 6. How to Use a Kalman Filter in Simulink:
-<iframe src="//player.bilibili.com/player.html?aid=455533544&bvid=BV1V541147dX&cid=187146142&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=455533544&bvid=BV1V541147dX&cid=187146142&page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## 7. How to Use an Extended Kalman FIlter in SImulink:
-<iframe src="//player.bilibili.com/player.html?aid=968015764&bvid=BV14p4y197Ue&cid=187146193&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=968015764&bvid=BV14p4y197Ue&cid=187146193&page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 # Steps to set a kalman filter:

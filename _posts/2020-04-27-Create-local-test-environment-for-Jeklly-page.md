@@ -10,6 +10,7 @@ tags:
     - Ubuntu
     - Linux 
     - 教程
+    - Instruction
 ---
 
 # Ubuntu系统下安装中文输入法

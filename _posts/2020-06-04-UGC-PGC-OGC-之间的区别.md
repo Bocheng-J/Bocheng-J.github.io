@@ -12,23 +12,29 @@ tags:
     - study notes
 ---
 
-# oracle VM virtualbox ubuntu虚拟机系统磁盘扩容
-
-当初安装时，分配给了虚拟机25G空间，想着完全够用了，没想到两个月下来系统就被占满了。这里吐血推荐大家在第一次分配空间时就多分配点，最好按照预想空间的两倍来分配，否则日后再拓展会很麻烦，还容易丢失数据。
-
-今天把系统拓展的步骤记录一下，避免以后再踩坑。
-
-## 1. 为虚拟机拓展空间，并进入分区工具GParted
-
-**[教程](https://segmentfault.com/a/1190000004990372)点这里。**
-
-感谢原作者的整理。
-
-（**注意**：下载GParted时要看好系统的版本，i686是32位系统的，amd64是64位系统的。）
 
 
-## 2. 进入GParted，进行内存分配
-为虚拟机拓展了空间后，这一部分空间并不能立即被我们使用，我们还必须进行内存分配，才能真正激活这一部分磁盘空间。
 
-**[教程](https://www.cnblogs.com/yuanlibin/p/9207671.html)点这里。**
-感谢原作者的整理。
+# UGC OGC和PGC
+**UGC，OGC, PGC是当下三种主流的社区形式，他们的具体关系如下图：**
+![UGC.png](https://i.loli.net/2020/06/04/URcx9WsK3pPBymH.png)
+
+# 1. UGC
+
+> **UGC: user generated content**
+
+
+UGC指依靠用户创作内容的形式，主要代表产品有：虎扑，小红书等。
+
+# 2. PGC
+
+> **PGC：professionally generated content**
+
+PGC是指有行业专家，业内人士来创作内容的社区形式，代表产品有：知乎，果壳网等。
+
+# 3. OGC
+
+
+> **OGC：occupationally generated content**
+
+OGC是指由网站、社区职业人士创作内容的形式，此形式下往往是社区付费请人来专职创作内容。代表产品有：各大公司的官方网站，公司论坛等。

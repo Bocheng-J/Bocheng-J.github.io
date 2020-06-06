@@ -38,6 +38,10 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 3. 复制Markdown格式链接，将其粘贴在StackEdit文本框内想要添加图片的位置即可。
 ![smms3.JPG](https://i.loli.net/2020/05/28/9PFwbmdE8ao3QxW.jpg)
 
+*2020/06/06更新：*
+增加图片压缩工具：
+使用在线图片压缩网站[Docsmall](https://docsmall.com/image-compress)提升图片载入速度。
+
 ## 4. 添加视频
 在Markdown中添加视频，与添加照片一样，较为简单的办法是先将视频上传至云端，再添加链接。这里以[B站](https://www.bilibili.com/)作为视频储存端为例。
 
@@ -51,4 +55,4 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 ![bilibili1.jpg](https://i.loli.net/2020/05/28/SEMDjL2PfZRVsyi.jpg)
 
 **插入视频**
-最后，和插入图片一样，在Markdown文本中直接插入上述链接就可以了。 
+最后，和插入图片一样，在Markdown文本中直接插入上述链接就可以了。

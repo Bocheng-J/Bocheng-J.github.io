@@ -4,3 +4,8 @@ old command:
 
 new command:
 'bundle exec jekyll serve'
+
+
+
+
+git push https://e.coding.net/oscar-bocheng/oscar-bocheng.git --all

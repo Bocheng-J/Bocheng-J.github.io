@@ -1,7 +1,7 @@
 # Site settings
 title: Bocheng
 SEOTitle: Bocheng | Oscar
-header-img: img/bocheng_bg2.jpg
+header-img: img/bocheng_bg2_compressed.jpg
 email: jiabc1997@163.com
 description: "Something great is happening."
 keyword: "Oscar, Bocheng, 博成的博客, Bocheng Jia"
@@ -12,7 +12,7 @@ github_repo: "https://github.com/Bocheng-J/Bocheng-J.github.io" # you code repos
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "How many roads must a man walk down before you call him a man?<br>一万年太久 只争朝夕。"
-sidebar-avatar: img/profile_bc3.PNG      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/profile_bc3_compressed.PNG      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 

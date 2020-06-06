@@ -80,9 +80,9 @@ gitalk:
 ba_track_id: 0aab206351df7456a401cbc521928a7a
 
 # Google Analytics
-ga_track_id: 'UA-164616978-1'            # Format: UA-xxxxxx-xx
-ga_domain: oscar-bocheng.com              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
-
+#ga_track_id: 'UA-164616978-1'            # Format: UA-xxxxxx-xx
+#ga_domain: oscar-bocheng.com              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+# 因为在国内google analytics被墙，严重拖慢网站加载速度，因此将其注释掉
 
 
 

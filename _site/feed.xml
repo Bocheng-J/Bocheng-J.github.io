@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bocheng</title>
+    <description>Something great is happening.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 06 Jun 2020 12:38:08 +0200</pubDate>
+    <lastBuildDate>Sat, 06 Jun 2020 12:38:08 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>Jekyll github page博客本地调试</title>
+        <description>&lt;h1 id=&quot;jekyll-github-page博客本地调试教程&quot;&gt;Jekyll github page博客本地调试教程&lt;/h1&gt;
+
+&lt;p&gt;相信大家在调试博客时都有这样的烦恼，将更改commit到github进行调试，效率太低，操作太复杂。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;在本地调试博客, 能极大提升工作效率！！！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;（本教程所有操作全部在linux系统本地git仓库内完成）&lt;/p&gt;
+
+&lt;h2 id=&quot;方法一&quot;&gt;方法一：&lt;/h2&gt;
+
+&lt;p&gt;安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt;和 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll bundler&lt;/code&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll
+$ gem install jekyll bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;cd进入博客所在目录&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;接着就可以在 http://127.0.0.1:4000/ 看到博客，任何本地git仓库中的修改，只需刷新一次就能更新显示在这个页面中。&lt;/p&gt;
+
+&lt;p&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+c&lt;/code&gt;来停止本地博客调试。&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;a href=&quot;https://www.jianshu.com/p/e68fba58f75c&quot;&gt;简书-BYQiu&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;方法二&quot;&gt;方法二:&lt;/h2&gt;
+&lt;p&gt;之前在国外的时候一直使用方法一，回国之后不知道怎么方法一就不好用了，挂了VPN也还是不行，后来发现了方法二，重新实现了本地调试。&lt;/p&gt;
+
+&lt;p&gt;首先安装bundler包管理器&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; gem install bundler
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在github-page的git本地仓库主目录下创建&lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gedit Gemfile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;该文件内的具体内容如下:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'      
+gem 'github-pages'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;执行bundle：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在git仓库主目录下启动本地调试：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;默认访问地址为：&lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;至此就大功告成啦。&lt;/p&gt;
+
+&lt;p&gt;当然也可以手动更新本地jekyll：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;同样，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+c&lt;/code&gt;来停止本地博客调试。&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;a href=&quot;http://lazybios.com/2014/09/install-jekyll-in-locate/&quot;&gt;安装Jekyll本地调试环境–lazybios&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Jun 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/06/06/Jekyll-github-page%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/06/Jekyll-github-page%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95/</guid>
+        
+        <category>教程</category>
+        
+        <category>Instruction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>UGC PGC OGC之间的区别</title>
+        <description>&lt;h1 id=&quot;ugc-ogc和pgc&quot;&gt;UGC OGC和PGC&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;UGC，OGC, PGC是当下三种主流的社区形式，他们的具体关系如下图：&lt;/strong&gt;
+&lt;img src=&quot;https://i.loli.net/2020/06/04/URcx9WsK3pPBymH.png&quot; alt=&quot;UGC.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1-ugc&quot;&gt;1. UGC&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;UGC: user generated content&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;UGC指依靠用户创作内容的形式，主要代表产品有：虎扑，小红书等。&lt;/p&gt;
+
+&lt;h1 id=&quot;2-pgc&quot;&gt;2. PGC&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;PGC：professionally generated content&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;PGC是指有行业专家，业内人士来创作内容的社区形式，代表产品有：知乎，果壳网等。&lt;/p&gt;
+
+&lt;h1 id=&quot;3-ogc&quot;&gt;3. OGC&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;OGC：occupationally generated content&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;OGC是指由网站、社区职业人士创作内容的形式，此形式下往往是社区付费请人来专职创作内容。代表产品有：各大公司的官方网站，公司论坛等。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Jun 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+        
+        <category>产品</category>
+        
+        <category>学习笔记</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>什么是AARRR模型？</title>
+        <description>&lt;h1 id=&quot;aarrr用户增长模型&quot;&gt;AARRR用户增长模型&lt;/h1&gt;
+&lt;p&gt;AARRR是在产品及运营思维中具有重要意义的一个用户增长模型，其具体包括五个层级：Acquisition, Activation, Retention, Revenue, Refer. 
+&lt;img src=&quot;https://i.loli.net/2020/06/04/c6N7miTe9W4MfJQ.jpg&quot; alt=&quot;aarrr.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;acquisition-获客&quot;&gt;Acquisition 获客&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Acquisition是指获取顾客的过程&lt;/strong&gt;，获客按照用户种类可分为两类：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;一是获取新用户&lt;/li&gt;
+  &lt;li&gt;二是获取流失的老用户&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;获客的手段可分为以下两种：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;线下推广&lt;/li&gt;
+  &lt;li&gt;线上推广&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;具体的获客措施有很多，比如：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;活动推广&lt;/li&gt;
+  &lt;li&gt;广告推广&lt;/li&gt;
+  &lt;li&gt;软文（KOL）推广&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;activation-促活&quot;&gt;Activation 促活&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;促活是指提高产品用户活跃度的过程&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;促活的手段大概可分为以下三种：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;价格优惠促活&lt;/li&gt;
+  &lt;li&gt;高质量内容促活&lt;/li&gt;
+  &lt;li&gt;多种类商品/产品/功能促活&lt;/li&gt;
+  &lt;li&gt;利用活动促活&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;另外，设立会员激励成长体制也是较为常用的一种促活手段，即会员等级成长制，等级越高便可解锁更多特权。例如：B站的会员机制，会员等级越高就能发送越高级的弹幕。&lt;/p&gt;
+
+&lt;h2 id=&quot;retention-留存&quot;&gt;Retention 留存&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;留存是在提高活跃度得到了忠实用户后，将其长期保留，沉淀于产品中的操作。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;留存的本质：由PGC向UGC发展转变。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;关于PGC和UGC，可以点击我的这篇博文：&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/&quot;&gt;UGC PGC OGC之间的区别&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;几类常见的留存方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;简单粗暴捆绑式：充会员，办理储值卡等。  举例：各大视频网站&lt;/li&gt;
+  &lt;li&gt;做社区，通过PGC-&amp;gt;UGC的社交留存。  举例：虎扑，soul&lt;/li&gt;
+  &lt;li&gt;做内容，输出目标用户喜欢的内容。  举例：知乎。&lt;/li&gt;
+  &lt;li&gt;设立账号成长机制，例如每日签到奖励，高等级解锁更多特权等。  举例：B站会员&lt;/li&gt;
+  &lt;li&gt;其他：APP推送，短信广告等。  举例：网易云音乐&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;revenue-收益转化&quot;&gt;Revenue 收益转化&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;做产品的最终目的还是要将用户转化为收益，即提高产品的商业能力，变现能力。收益转化的关键是提高付费用户的转化率。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;目前互联网生态中主流的几种收入方式：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;付费应用，必须付费才能使用该应用。   举例：专业的PS，视频剪辑软件等。&lt;/li&gt;
+  &lt;li&gt;应用内付费，通过付费解锁内容或者增值服务。  举例：王者荣耀内购买英雄皮肤。&lt;/li&gt;
+  &lt;li&gt;广告收益，通过广告来获取广告主的收益。  举例：爱奇艺视频广告。&lt;/li&gt;
+  &lt;li&gt;电商收益，通过自营电商来赚取利润。  举例：拼多多，京东等。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;按照变现模式分，有以下几类主流方式：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;内容变现&lt;/li&gt;
+  &lt;li&gt;增值服务变现&lt;/li&gt;
+  &lt;li&gt;广告变现&lt;/li&gt;
+  &lt;li&gt;电商变现&lt;/li&gt;
+  &lt;li&gt;流量变现&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;refer-自传播&quot;&gt;Refer 自传播&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自传播是指忠实用户在自身社交网中，自主二次推广传播产品的过程。&lt;/strong&gt; 
+ 自传播是依赖于社交网络产生的。&lt;/p&gt;
+
+&lt;p&gt;通过用户的自传播，产品又能获得新的用户，即这是一个良性的螺旋上升过程：
+&lt;strong&gt;口碑&lt;/strong&gt; –&amp;gt; 分享 –&amp;gt; 获客&lt;/p&gt;
+
+&lt;p&gt;自传播的重点，也是前提：&lt;strong&gt;良好的口碑&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;自传播可分为两类：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;纯粹用户自主分享 （可能性较小）&lt;/li&gt;
+  &lt;li&gt;在产品引导下的自传播  （可能性较大）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这也是为什么很多软件都具有“分享”功能，包括网易云音乐的年终盘点也是一次很好的自传播营销活动。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Jun 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/</guid>
+        
+        <category>产品</category>
+        
+        <category>学习笔记</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown文本在线编辑教程</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Written with &lt;a href=&quot;https://stackedit.io/&quot;&gt;StackEdit&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;1-markdown-文本简介&quot;&gt;1. Markdown 文本简介&lt;/h2&gt;
+&lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的&lt;a href=&quot;https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436&quot;&gt;标记语言&lt;/a&gt;，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
+
+&lt;p&gt;Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。世界上最流行的博客平台&lt;a href=&quot;https://baike.baidu.com/item/WordPress&quot;&gt;WordPress&lt;/a&gt;和大型CMS如&lt;a href=&quot;https://baike.baidu.com/item/Joomla&quot;&gt;Joomla&lt;/a&gt;、&lt;a href=&quot;https://baike.baidu.com/item/Drupal&quot;&gt;Drupal&lt;/a&gt;都能很好的支持Markdown。完全采用Markdown编辑器的博客平台有&lt;a href=&quot;https://baike.baidu.com/item/Ghost/17013737&quot;&gt;Ghost&lt;/a&gt;和&lt;a href=&quot;https://baike.baidu.com/item/Typecho&quot;&gt;Typecho&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-在线编辑器&quot;&gt;2. 在线编辑器&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackedit.io/&quot;&gt;StackEdit&lt;/a&gt;是一款功能全面的免费在线Markdown编辑器，在StackEdit的网页客户端中可直接进行文本输入，StackEdit系统会自动将文字转为Markdown格式或HTML格式，PDF格式等。可直接插入于博客。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-添加图片&quot;&gt;3. 添加图片&lt;/h2&gt;
+&lt;p&gt;在Markdown中添加图片，首先需要将图片上传至云端，获取图片链接再进行插入。&lt;/p&gt;
+
+&lt;p&gt;这里我推荐&lt;a href=&quot;https://sm.ms/&quot;&gt;SM.MS&lt;/a&gt;，SM.MS是一款免费的在线图床软件。使用方法如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;打开 SM.MS，将图片拖拽至上传框内，或点击右下角上传图片。
+ &lt;img src=&quot;https://i.loli.net/2020/05/28/USEL5jDZKkRBp2l.jpg&quot; alt=&quot;smms1.JPG&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;上传完成后，点击upload按钮，将图片传至云端。
+ &lt;img src=&quot;https://i.loli.net/2020/05/28/cBQw15qKyYP2Oex.jpg&quot; alt=&quot;smms2.JPG&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;复制Markdown格式链接，将其粘贴在StackEdit文本框内想要添加图片的位置即可。
+&lt;img src=&quot;https://i.loli.net/2020/05/28/9PFwbmdE8ao3QxW.jpg&quot; alt=&quot;smms3.JPG&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;2020/06/06更新：&lt;/em&gt;
+增加图片压缩工具：
+使用在线图片压缩网站&lt;a href=&quot;https://docsmall.com/image-compress&quot;&gt;Docsmall&lt;/a&gt;提升图片载入速度。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-添加视频&quot;&gt;4. 添加视频&lt;/h2&gt;
+&lt;p&gt;在Markdown中添加视频，与添加照片一样，较为简单的办法是先将视频上传至云端，再添加链接。这里以&lt;a href=&quot;https://www.bilibili.com/&quot;&gt;B站&lt;/a&gt;作为视频储存端为例。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;嵌入链接格式：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;iframe src=&quot;http://player.bilibili.com/player.html?aid=24931813&amp;amp;cid=42084760&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;800px&quot; height=&quot;600px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&amp;gt; &amp;lt;/iframe&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;获取视频链接：&lt;/strong&gt;
+进入视频页面，复制下面的嵌入代码，再用其替换上面链接中的视频地址。
+&lt;img src=&quot;https://i.loli.net/2020/05/28/SEMDjL2PfZRVsyi.jpg&quot; alt=&quot;bilibili1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;插入视频&lt;/strong&gt;
+最后，和插入图片一样，在Markdown文本中直接插入上述链接就可以了。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/05/27/markdown-instruction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/27/markdown-instruction/</guid>
+        
+        <category>教程</category>
+        
+        <category>Instruction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Autonomous car project demonstration</title>
+        <description>&lt;h1 id=&quot;1-project-introduction&quot;&gt;1. Project introduction&lt;/h1&gt;
+&lt;p&gt;The purpose of this project is to design one self-driving car, which can drive in the special track without hitting any cone.&lt;/p&gt;
+
+&lt;p&gt;The track is formed by three kinds of different cones:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blue cone&lt;/strong&gt; represents the right side of the track&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Yellow cone&lt;/strong&gt; represents the left side of the track&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Red cone&lt;/strong&gt; represents the start/end of the track&lt;/p&gt;
+
+&lt;h1 id=&quot;2-implementation&quot;&gt;2. Implementation&lt;/h1&gt;
+&lt;p&gt;The autonomous car uses camera as the input sensor, by applying Opencv algorithm to find color and contour of the cones, we can recognize blue cones and yellow cones.&lt;/p&gt;
+
+&lt;p&gt;After getting blue cones and yellow cones, we can find the middle point of the track, and set that point as the aim point, where we want our car to drive to.&lt;/p&gt;
+
+&lt;p&gt;By calculating the angle between aim point and current car point, we can get the steering angle, sending this angle to motor block, the car can be controlled autonomously.&lt;/p&gt;
+
+&lt;p&gt;The total project is built based on docker, using microservices. So we can achieve cross-compilation inside our system.&lt;/p&gt;
+
+&lt;h1 id=&quot;3-simulation-video&quot;&gt;3. Simulation video&lt;/h1&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=370853141&amp;amp;bvid=BV1KZ4y1W73F&amp;amp;cid=194873648&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;p&gt;As seen in video, the car can self-drive in the track without hitting any cones.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/05/27/autonomous-project/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/27/autonomous-project/</guid>
+        
+        <category>project demonstration</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>oracle VM virtual box ubuntu系统扩容</title>
+        <description>&lt;h1 id=&quot;oracle-vm-virtualbox-ubuntu虚拟机系统磁盘扩容&quot;&gt;oracle VM virtualbox ubuntu虚拟机系统磁盘扩容&lt;/h1&gt;
+
+&lt;p&gt;当初安装时，分配给了虚拟机25G空间，想着完全够用了，没想到两个月下来系统就被占满了。这里吐血推荐大家在第一次分配空间时就多分配点，最好按照预想空间的两倍来分配，否则日后再拓展会很麻烦，还容易丢失数据。&lt;/p&gt;
+
+&lt;p&gt;今天把系统拓展的步骤记录一下，避免以后再踩坑。&lt;/p&gt;
+
+&lt;h2 id=&quot;1-为虚拟机拓展空间并进入分区工具gparted&quot;&gt;1. 为虚拟机拓展空间，并进入分区工具GParted&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000004990372&quot;&gt;教程&lt;/a&gt;点这里。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;感谢原作者的整理。&lt;/p&gt;
+
+&lt;p&gt;（&lt;strong&gt;注意&lt;/strong&gt;：下载GParted时要看好系统的版本，i686是32位系统的，amd64是64位系统的。）&lt;/p&gt;
+
+&lt;h2 id=&quot;2-进入gparted进行内存分配&quot;&gt;2. 进入GParted，进行内存分配&lt;/h2&gt;
+&lt;p&gt;为虚拟机拓展了空间后，这一部分空间并不能立即被我们使用，我们还必须进行内存分配，才能真正激活这一部分磁盘空间。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.cnblogs.com/yuanlibin/p/9207671.html&quot;&gt;教程&lt;/a&gt;点这里。&lt;/strong&gt;
+感谢原作者的整理。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/05/27/Ubuntu-%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%AE%B9/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/27/Ubuntu-%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%AE%B9/</guid>
+        
+        <category>Ubuntu</category>
+        
+        <category>Linux</category>
+        
+        <category>教程</category>
+        
+        <category>Instruction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Kalman filter</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Wikipedia: &lt;a href=&quot;https://en.wikipedia.org/wiki/Kalman_filter&quot;&gt;Kalman filter&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;introduction-video&quot;&gt;Introduction video&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;video source: 
+如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;1-why-use-kalman-filters&quot;&gt;1. Why use Kalman Filters:&lt;/h2&gt;
+
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=370545584&amp;amp;bvid=BV1pZ4y1s7XB&amp;amp;cid=187145554&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;2-state-observers&quot;&gt;2. State Observers:&lt;/h2&gt;
+
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=968070266&amp;amp;bvid=BV11p4y197Ly&amp;amp;cid=187145687&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;3-optimal-state-estimator&quot;&gt;3. Optimal State Estimator:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=285592413&amp;amp;bvid=BV1Cf4y1m7wg&amp;amp;cid=187145830&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;4-optimal-state-estimator-algorithm&quot;&gt;4. Optimal State Estimator Algorithm:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=200533156&amp;amp;bvid=BV1ez411z7Qo&amp;amp;cid=187146006&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;5-nonlinear-state-estimators&quot;&gt;5. Nonlinear State Estimators:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=710515346&amp;amp;bvid=BV1sQ4y1N7e6&amp;amp;cid=187146091&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;6-how-to-use-a-kalman-filter-in-simulink&quot;&gt;6. How to Use a Kalman Filter in Simulink:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=455533544&amp;amp;bvid=BV1V541147dX&amp;amp;cid=187146142&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;7-how-to-use-an-extended-kalman-filter-in-simulink&quot;&gt;7. How to Use an Extended Kalman FIlter in SImulink:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=968015764&amp;amp;bvid=BV14p4y197Ue&amp;amp;cid=187146193&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h1 id=&quot;steps-to-set-a-kalman-filter&quot;&gt;Steps to set a kalman filter:&lt;/h1&gt;
+
+&lt;h2 id=&quot;linear-systems&quot;&gt;Linear systems:&lt;/h2&gt;
+&lt;h2 id=&quot;step-1-build-system-model&quot;&gt;Step 1: Build system model&lt;/h2&gt;
+&lt;p&gt;Build the process model (equation 13) 
+and the observation model (equation 14).&lt;/p&gt;
+
+&lt;p&gt;Through these two models, we know how these two models work.
+Plus, we can get process model coefficient &lt;strong&gt;a&lt;/strong&gt;, control signal &lt;strong&gt;U_k&lt;/strong&gt;, and measurement noise &lt;strong&gt;V_k&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We will use these coefficients in later steps.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/dWJAzFu78eP2rUQ.jpg&quot; alt=&quot;step1.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-calculate-the-predicted-state&quot;&gt;Step 2: Calculate the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/Mmw6rYkpBVUCjRf.jpg&quot; alt=&quot;step2.JPG&quot; /&gt;
+ By using the state from previous time step (k-1),
+ equation (15) calculates &lt;strong&gt;x_k–&lt;/strong&gt; the current (time step: k) priori estimate;
+ (the hat means estimated value)&lt;/p&gt;
+
+&lt;p&gt;equation (16) calculates &lt;strong&gt;p_k–&lt;/strong&gt;, the current covariance of this priori estimate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;But they are just our prediction, we need to use the measured data to refine them to get an optimal result.&lt;/strong&gt;  And this is the point of using kalman filter.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-update-the-predicted-state&quot;&gt;Step 3: Update the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/1o8e9vEuJRYnpys.jpg&quot; alt=&quot;step3.JPG&quot; /&gt;
+First, in (17), we calculate the kalman gain &lt;strong&gt;g_k&lt;/strong&gt; by using predicted covariance &lt;strong&gt;p_k–&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then in (18), we update the &lt;strong&gt;x_k&lt;/strong&gt; by combining predicted data &lt;strong&gt;x_k–&lt;/strong&gt; and measured data &lt;strong&gt;z_k&lt;/strong&gt;. 
+(The essence of this step is to multiply &lt;strong&gt;x_k–&lt;/strong&gt; and &lt;strong&gt;z_k&lt;/strong&gt;’s probability density function, for more information, please check the fourth video.)&lt;/p&gt;
+
+&lt;p&gt;And in (19), we update the covariance &lt;strong&gt;p_k&lt;/strong&gt; too.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-loop&quot;&gt;Step 4: Loop&lt;/h2&gt;
+&lt;p&gt;After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.&lt;/p&gt;
+
+&lt;h2 id=&quot;result&quot;&gt;Result:&lt;/h2&gt;
+
+&lt;p&gt;First we need the process model and observation model to get necessary coefficients.&lt;/p&gt;
+
+&lt;p&gt;Then we do the prediction.&lt;/p&gt;
+
+&lt;p&gt;After that, we update the prediction state by combining predicted data and measured data together.&lt;/p&gt;
+
+&lt;p&gt;So, as a result, the updated data &lt;strong&gt;x_k&lt;/strong&gt; is what we want, it is more accurate than the predicted-only version.&lt;/p&gt;
+
+&lt;p&gt;And this system is an Iterative system.&lt;/p&gt;
+
+&lt;h2 id=&quot;non-linear-extended-kalman-filter&quot;&gt;Non-linear: extended kalman filter:&lt;/h2&gt;
+&lt;h2 id=&quot;step-1-build-system-model-1&quot;&gt;Step 1: Build system model&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/gpZMFsqU2HVY649.jpg&quot; alt=&quot;4.JPG&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;step-2-calculate-the-predicted-state-1&quot;&gt;Step 2: Calculate the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/IADLqcFiKsSPm6E.jpg&quot; alt=&quot;5.JPG&quot; /&gt;
+F_k is the Jacobian matrix of f(xk,uk).
+Q is used to refine the system’s performance. We can use diagonal matrix at the beginning, and correct it in future according to system’s performance.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-update-the-predicted-state-1&quot;&gt;Step 3: Update the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/XxrocHGyLihF4jW.jpg&quot; alt=&quot;6.JPG&quot; /&gt;
+H_k is the Jacobian matrix of h(xk).&lt;/p&gt;
+
+&lt;p&gt;For R,  we can use diagonal matrix too, and then correct it in future according to system’s performance.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-loop-1&quot;&gt;Step 4: Loop&lt;/h2&gt;
+&lt;p&gt;After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/05/04/Kalman-filter/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/05/04/Kalman-filter/</guid>
+        
+        <category>Kalman filter</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Shortest path - Dijkstra's algorithm</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm&quot;&gt;Dijkstra’s algorithm&lt;/a&gt; is an algorithm which is used to find the shortest path.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;dijkstras-algorithm-method&quot;&gt;Dijkstra’s algorithm method&lt;/h1&gt;
+&lt;h2 id=&quot;step-0--the-prerequisite&quot;&gt;Step: 0 – The prerequisite&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We need to have a map of nodes.&lt;/li&gt;
+  &lt;li&gt;We need to have a start node.&lt;/li&gt;
+  &lt;li&gt;The distance between each adjacent nodes should be known.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-1--start&quot;&gt;Step: 1 – Start&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set the start node to be the current node, which is the first visited
+node.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Introduce several concepts:&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;The current node is a already-visited node, and will be the predecessor node for the next node.&lt;/p&gt;
+
+      &lt;p&gt;The stored distance of each node is the shortest distance from the start node. We will use this later.&lt;/p&gt;
+
+      &lt;p&gt;The start node is an exception: 
+The shortest distance is 0, but the stored distance is always infinite (∞).&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-2--check-neighbours&quot;&gt;Step: 2 – Check neighbours&lt;/h2&gt;
+&lt;p&gt;Go through all the &lt;strong&gt;non-visited&lt;/strong&gt;  &lt;strong&gt;neighbour nodes&lt;/strong&gt; of the current node, and calculate the distance &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;=&lt;/strong&gt; the distance between current node and predecessor node &lt;strong&gt;+&lt;/strong&gt; the predecessor’s shortest distance.&lt;/p&gt;
+
+&lt;p&gt;(If one node can’t be reached from the current node, then &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt;=∞ )&lt;/p&gt;
+
+&lt;p&gt;For each node i, if &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; is smaller than the previously stored distance of i, then update the stored distance by &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt;. Otherwise, keep the previous stored distance unchanged.&lt;/p&gt;
+
+&lt;p&gt;After checking all the neighbour nodes (all the non-visited nodes of the current node), select one &lt;strong&gt;non-visited&lt;/strong&gt; node which has the &lt;strong&gt;smallest&lt;/strong&gt; stored distance as the next current node.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3--loop&quot;&gt;Step: 3 – Loop&lt;/h2&gt;
+&lt;p&gt;Return to step 2, unless the target node has been reached or all the nodes are visited.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I prepare 2 examples here, a simple one and a more complex one.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-1&quot;&gt;Example 1:&lt;/h2&gt;
+&lt;p&gt;Find the shortest path from 1 to 5.
+&lt;img src=&quot;https://i.loli.net/2020/04/30/HUD1s78WgMXVuOt.gif&quot; alt=&quot;example_1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;round-1&quot;&gt;Round 1:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  1.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Start from node 1, so we have 3 non-visited neighour nodes: 2 3 6, their distance D is: [7 9 14].&lt;/p&gt;
+
+&lt;p&gt;-So now the &lt;strong&gt;stored distance&lt;/strong&gt; is :&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2&lt;/th&gt;
+      &lt;th&gt;node 3&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark : visited node)&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 7, so &lt;strong&gt;node 2&lt;/strong&gt; is the next node.
+ -The shortest path to node 2: &lt;strong&gt;1 –&amp;gt; 2&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-2&quot;&gt;Round 2:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  2.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Now we have 2 non-visited neighbour nodes: 3 4, and their distance D now is :[17 22].&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt; is:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2*&lt;/th&gt;
+      &lt;th&gt;node 3&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 2&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark : visited node)&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 9,  so &lt;strong&gt;node 3&lt;/strong&gt; is the next node.
+   -The shortest path to node 3: &lt;strong&gt;1 –&amp;gt; 3&lt;/strong&gt;. (Since the distace is 9).&lt;/p&gt;
+
+&lt;h2 id=&quot;round-3&quot;&gt;Round 3:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  3.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Now we have 2 non-visited neighbour nodes: 4 6, and their distance D now is :[20 11].&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt;  is:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2*&lt;/th&gt;
+      &lt;th&gt;node 3*&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 11, so &lt;strong&gt;node 6&lt;/strong&gt; is the next node.
+   -The shortest path to node 6: &lt;strong&gt;1 –&amp;gt; 3 –&amp;gt; 6&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-4&quot;&gt;Round 4:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  6.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Now we &lt;strong&gt;only have 1&lt;/strong&gt; non-visited neighbour: 5.  D is 20.&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt;  is:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2*&lt;/th&gt;
+      &lt;th&gt;node 3*&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6*&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+      &lt;td&gt;through node 6&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Since now we only have 2 nodes left, and their stored distances are equal, we can stop. They both have 20 as the shortest path. (If these two distances are not equal, we still need to go to the next round).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-The shortest path to node 5: &lt;strong&gt;1 –&amp;gt; 3 –&amp;gt; 6 –&amp;gt; 5&lt;/strong&gt;. 
+   -Shortest distance is &lt;strong&gt;20&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;example-2&quot;&gt;Example 2:&lt;/h2&gt;
+&lt;p&gt;Find the shortest path from A to I.
+&lt;img src=&quot;https://i.loli.net/2020/04/30/usi2WDCGTexk9wg.jpg&quot; alt=&quot;example2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;round-1-1&quot;&gt;Round 1:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  A.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B&lt;/th&gt;
+      &lt;th&gt;node C&lt;/th&gt;
+      &lt;th&gt;node D&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;B&lt;/strong&gt;.
+Node &lt;strong&gt;B&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to B:   &lt;strong&gt;A –&amp;gt; B&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-2-1&quot;&gt;Round 2:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  B.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C&lt;/th&gt;
+      &lt;th&gt;node D&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;D&lt;/strong&gt;.
+  Node &lt;strong&gt;D&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to D: &lt;strong&gt;A –&amp;gt; D&lt;/strong&gt;. （Since the distance is 4）&lt;/p&gt;
+
+&lt;h2 id=&quot;round-3-1&quot;&gt;Round 3:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  D.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;C&lt;/strong&gt;.
+Node &lt;strong&gt;C&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to C: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-4-1&quot;&gt;Round 4:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  C.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;E&lt;/strong&gt;.
+Node &lt;strong&gt;E&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to E: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C –&amp;gt;E&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-5&quot;&gt;Round 5:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  E.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E*&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;through node E&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;F&lt;/strong&gt;.
+  Node &lt;strong&gt;F&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to G: &lt;strong&gt;A –&amp;gt; D –&amp;gt; F&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-6&quot;&gt;Round 6:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  F.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E*&lt;/th&gt;
+      &lt;th&gt;node F*&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;through node E&lt;/td&gt;
+      &lt;td&gt;through F&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;G&lt;/strong&gt;.
+  Node &lt;strong&gt;G&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to G: &lt;strong&gt;A–&amp;gt; B –&amp;gt; C –&amp;gt; E –&amp;gt; G&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-7&quot;&gt;Round 7:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  G.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E*&lt;/th&gt;
+      &lt;th&gt;node F*&lt;/th&gt;
+      &lt;th&gt;node G*&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;through node E&lt;/td&gt;
+      &lt;td&gt;through node F&lt;/td&gt;
+      &lt;td&gt;through node G&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;We get 2 equal distances again, stop.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to I: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C –&amp;gt;E –&amp;gt; G –&amp;gt;I&lt;/strong&gt;.
+The distance is 11.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Reference: https://blog.csdn.net/gamer_gyt/article/details/47184081&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Apr 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/04/29/Dijkstra's-algorithm/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/04/29/Dijkstra's-algorithm/</guid>
+        
+        <category>Dijkstra's algorithm</category>
+        
+        <category>algorithm</category>
+        
+        <category>shortest path</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu系统安装搜狗中文输入法</title>
+        <description>&lt;h1 id=&quot;ubuntu系统下安装中文输入法&quot;&gt;Ubuntu系统下安装中文输入法&lt;/h1&gt;
+&lt;p&gt;Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代码，但当我们想用到中文字符的时候就很受影响，因此本文将介绍如何在Ubuntu系统下安装中文输入法。&lt;/p&gt;
+
+&lt;h2 id=&quot;step1安装fcitx&quot;&gt;&lt;strong&gt;step1：安装fcitx&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;进入Ubuntu系统后打开命令窗口，输入：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install fcitx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/28/sEUk1cozDAHy9ST.jpg&quot; alt=&quot;安装fcitx&quot; /&gt;
+在提示进行选择的时候输入y，fcitx就安装成功了。&lt;/p&gt;
+&lt;h2 id=&quot;step2下载搜狗输入法&quot;&gt;&lt;strong&gt;step2：下载搜狗输入法&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;首先，点击系统右上角的设置选项：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/28/KABSjUIYVw1fhOz.jpg&quot; alt=&quot;系统设置&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;进入about，查看系统的OS类型，是64位或32位：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/28/VmFWpqrivZNMtYX.jpg&quot; alt=&quot;OS类型&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;接着进入搜狗输入法Linux版的&lt;a href=&quot;https://pinyin.sogou.com/linux/?r=pinyin&quot;&gt;官网&lt;/a&gt;，下载对应的安装包。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/28/Vrow3GMRuSIUNOH.jpg&quot; alt=&quot;下载搜狗输入法&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;注意，在这一步，选择保存文件而不是运行打开：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/28/hzQwOF5HXgM8LBR.jpg&quot; alt=&quot;保存文件&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在此推荐新建单独的文件夹，将安装包放于其中。打开命令窗口，进入该文件夹，运行：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：此处dpkg后面的参数应该为你下载的安装包的名称，需要进行单独更改。&lt;/strong&gt;
+&lt;img src=&quot;https://i.loli.net/2020/04/28/gIz8MiNH6W5vnZJ.jpg&quot; alt=&quot;安装搜狗输入法&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看到，我一开始没有更改安装包的名字，安装报了错。&lt;/p&gt;
+
+&lt;p&gt;修复依赖关系：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install -f
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/04/28/4xOR986MgXHEvjV.jpg&quot; alt=&quot;安装完成&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;到此，搜狗输入法就安装完成了。&lt;/p&gt;
+
+&lt;p&gt;接着我们重启系统，进行下一步的设置操作。&lt;/p&gt;
+
+&lt;h2 id=&quot;step3设置系统输入法&quot;&gt;&lt;strong&gt;step3：设置系统输入法&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;在系统桌面使用 win + a 打开应用界面，选择所有应用，搜索打开fcitx configuration。
+&lt;img src=&quot;https://i.loli.net/2020/04/28/V6DNjZ9EH3AeJqC.jpg&quot; alt=&quot;打开设置&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击左下角加号，添加新输入法。
+&lt;img src=&quot;https://i.loli.net/2020/04/28/sqc26d3iHnGCVB7.jpg&quot; alt=&quot;添加输入法&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;取消左下角勾选
+&lt;img src=&quot;https://i.loli.net/2020/04/28/rHC6sOBuZSD2teA.jpg&quot; alt=&quot;取消勾选&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;搜索Sougou Pinyin (&lt;strong&gt;要匹配大小写&lt;/strong&gt;)。
+或者直接列表拉到最底也能找到搜狗输入法。
+&lt;img src=&quot;https://i.loli.net/2020/04/28/JV6uDtUNHhcgFWQ.jpg&quot; alt=&quot;搜索搜狗输入法&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击OK添加。&lt;/p&gt;
+
+&lt;p&gt;可以选择将其为系统第一输入法：
+&lt;img src=&quot;https://i.loli.net/2020/04/28/HXRVDkfOUn9AvB4.jpg&quot; alt=&quot;置顶&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;重启系统即可正常输入中文文字。
+&lt;img src=&quot;https://i.loli.net/2020/04/28/jZ3JYwUvnlLtD6q.jpg&quot; alt=&quot;设置成功&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这是我的第一篇博文，希望对看到这篇的你有所帮助！&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Apr 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/04/28/ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/04/28/ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+        
+        <category>Ubuntu</category>
+        
+        <category>Linux</category>
+        
+        <category>教程</category>
+        
+        <category>Instruction</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

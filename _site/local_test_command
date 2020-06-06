@@ -1,0 +1,6 @@
+old command:
+'jekyll s'
+
+
+new command:
+'bundle exec jekyll serve'

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Something great is happening.">
+    <meta name="keywords"  content="Oscar, Bocheng, 博成的博客, Bocheng Jia">
+    <meta name="theme-color" content="#000000">
+    
+    <title>Kalman filter - Bocheng | Oscar</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Safari Webpage Icon    by-BY -->
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2020/05/04/Kalman-filter/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Bocheng</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post_bg_20200504.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/post_bg_20200504.jpg')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Kalman filter" title="Kalman filter">Kalman filter</a>
+                        
+                        <a class="tag" href="/tags/#study notes" title="study notes">study notes</a>
+                        
+                    </div>
+                    <h1>Kalman filter</h1>
+                    
+                    
+                    <h2 class="subheading">kalman filter introduction and implementation</h2>
+                    
+                    <span class="meta">Posted by oscar on May 4, 2020</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<blockquote>
+  <p>Wikipedia: <a href="https://en.wikipedia.org/wiki/Kalman_filter">Kalman filter</a>.</p>
+</blockquote>
+
+<h1 id="introduction-video">Introduction video</h1>
+<blockquote>
+  <p>video source: 
+如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224</p>
+</blockquote>
+
+<h2 id="1-why-use-kalman-filters">1. Why use Kalman Filters:</h2>
+
+<iframe src="//player.bilibili.com/player.html?aid=370545584&amp;bvid=BV1pZ4y1s7XB&amp;cid=187145554&amp;page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="2-state-observers">2. State Observers:</h2>
+
+<iframe src="//player.bilibili.com/player.html?aid=968070266&amp;bvid=BV11p4y197Ly&amp;cid=187145687&amp;page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="3-optimal-state-estimator">3. Optimal State Estimator:</h2>
+<iframe src="//player.bilibili.com/player.html?aid=285592413&amp;bvid=BV1Cf4y1m7wg&amp;cid=187145830&amp;page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="4-optimal-state-estimator-algorithm">4. Optimal State Estimator Algorithm:</h2>
+<iframe src="//player.bilibili.com/player.html?aid=200533156&amp;bvid=BV1ez411z7Qo&amp;cid=187146006&amp;page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="5-nonlinear-state-estimators">5. Nonlinear State Estimators:</h2>
+<iframe src="//player.bilibili.com/player.html?aid=710515346&amp;bvid=BV1sQ4y1N7e6&amp;cid=187146091&amp;page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="6-how-to-use-a-kalman-filter-in-simulink">6. How to Use a Kalman Filter in Simulink:</h2>
+<iframe src="//player.bilibili.com/player.html?aid=455533544&amp;bvid=BV1V541147dX&amp;cid=187146142&amp;page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="7-how-to-use-an-extended-kalman-filter-in-simulink">7. How to Use an Extended Kalman FIlter in SImulink:</h2>
+<iframe src="//player.bilibili.com/player.html?aid=968015764&amp;bvid=BV14p4y197Ue&amp;cid=187146193&amp;page=1" scrolling="no" width="100%" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h1 id="steps-to-set-a-kalman-filter">Steps to set a kalman filter:</h1>
+
+<h2 id="linear-systems">Linear systems:</h2>
+<h2 id="step-1-build-system-model">Step 1: Build system model</h2>
+<p>Build the process model (equation 13) 
+and the observation model (equation 14).</p>
+
+<p>Through these two models, we know how these two models work.
+Plus, we can get process model coefficient <strong>a</strong>, control signal <strong>U_k</strong>, and measurement noise <strong>V_k</strong>.</p>
+
+<p>We will use these coefficients in later steps.</p>
+
+<p><img src="https://i.loli.net/2020/05/05/dWJAzFu78eP2rUQ.jpg" alt="step1.JPG" /></p>
+
+<h2 id="step-2-calculate-the-predicted-state">Step 2: Calculate the predicted state</h2>
+<p><img src="https://i.loli.net/2020/05/05/Mmw6rYkpBVUCjRf.jpg" alt="step2.JPG" />
+ By using the state from previous time step (k-1),
+ equation (15) calculates <strong>x_k–</strong> the current (time step: k) priori estimate;
+ (the hat means estimated value)</p>
+
+<p>equation (16) calculates <strong>p_k–</strong>, the current covariance of this priori estimate.</p>
+
+<p><strong>But they are just our prediction, we need to use the measured data to refine them to get an optimal result.</strong>  And this is the point of using kalman filter.</p>
+
+<h2 id="step-3-update-the-predicted-state">Step 3: Update the predicted state</h2>
+<p><img src="https://i.loli.net/2020/05/05/1o8e9vEuJRYnpys.jpg" alt="step3.JPG" />
+First, in (17), we calculate the kalman gain <strong>g_k</strong> by using predicted covariance <strong>p_k–</strong>.</p>
+
+<p>Then in (18), we update the <strong>x_k</strong> by combining predicted data <strong>x_k–</strong> and measured data <strong>z_k</strong>. 
+(The essence of this step is to multiply <strong>x_k–</strong> and <strong>z_k</strong>’s probability density function, for more information, please check the fourth video.)</p>
+
+<p>And in (19), we update the covariance <strong>p_k</strong> too.</p>
+
+<h2 id="step-4-loop">Step 4: Loop</h2>
+<p>After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.</p>
+
+<h2 id="result">Result:</h2>
+
+<p>First we need the process model and observation model to get necessary coefficients.</p>
+
+<p>Then we do the prediction.</p>
+
+<p>After that, we update the prediction state by combining predicted data and measured data together.</p>
+
+<p>So, as a result, the updated data <strong>x_k</strong> is what we want, it is more accurate than the predicted-only version.</p>
+
+<p>And this system is an Iterative system.</p>
+
+<h2 id="non-linear-extended-kalman-filter">Non-linear: extended kalman filter:</h2>
+<h2 id="step-1-build-system-model-1">Step 1: Build system model</h2>
+
+<p><img src="https://i.loli.net/2020/05/05/gpZMFsqU2HVY649.jpg" alt="4.JPG" /></p>
+<h2 id="step-2-calculate-the-predicted-state-1">Step 2: Calculate the predicted state</h2>
+<p><img src="https://i.loli.net/2020/05/05/IADLqcFiKsSPm6E.jpg" alt="5.JPG" />
+F_k is the Jacobian matrix of f(xk,uk).
+Q is used to refine the system’s performance. We can use diagonal matrix at the beginning, and correct it in future according to system’s performance.</p>
+
+<h2 id="step-3-update-the-predicted-state-1">Step 3: Update the predicted state</h2>
+<p><img src="https://i.loli.net/2020/05/05/XxrocHGyLihF4jW.jpg" alt="6.JPG" />
+H_k is the Jacobian matrix of h(xk).</p>
+
+<p>For R,  we can use diagonal matrix too, and then correct it in future according to system’s performance.</p>
+
+<h2 id="step-4-loop-1">Step 4: Loop</h2>
+<p>After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.</p>
+
+
+                <hr style="visibility: hidden;">
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2020/04/29/Dijkstra's-algorithm/" data-toggle="tooltip" data-placement="top" title="Shortest path - Dijkstra's algorithm">
+                        Previous<br>
+                        <span>Shortest path - Dijkstra's algorithm</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2020/05/27/Ubuntu-%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%AE%B9/" data-toggle="tooltip" data-placement="top" title="oracle VM virtual box ubuntu系统扩容">
+                        Next<br>
+                        <span>oracle VM virtual box ubuntu系统扩容</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <!--Gitalk评论start  -->
+                
+                <!-- 引入Gitalk评论插件  -->
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+                <div id="gitalk-container"></div>
+                <!-- 引入一个生产md5的js，用于对id值进行处理，防止其过长 -->
+                <!-- Thank DF:https://github.com/NSDingFan/NSDingFan.github.io/issues/3#issuecomment-407496538 -->
+                <script src="/js/md5.min.js"></script>
+                <script type="text/javascript">
+                    var gitalk = new Gitalk({
+                    clientID: '4bb37e5ad9c0e0862e63',
+                    clientSecret: '3563a4ce1f911495299ffa8f3f07bb7867df3b94',
+                    repo: 'Bocheng-J.github.io',
+                    owner: 'Bocheng-J',
+                    admin: ['Bocheng-J'],
+                    distractionFreeMode: true,
+                    id: md5(location.pathname),
+                    });
+                    gitalk.render('gitalk-container');
+                </script>
+                
+                <!-- Gitalk end -->
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+                				<a href="/tags/#Ubuntu" title="Ubuntu" rel="2">
+                                    Ubuntu
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#Linux" title="Linux" rel="2">
+                                    Linux
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="4">
+                                    教程
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#Instruction" title="Instruction" rel="4">
+                                    Instruction
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#study notes" title="study notes" rel="5">
+                                    study notes
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#产品" title="产品" rel="2">
+                                    产品
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#学习笔记" title="学习笔记" rel="2">
+                                    学习笔记
+                                </a>
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="https://space.bilibili.com/384068749">CodeSheep</a></li>
+                    
+                        <li><a href="http://www.jianshu.com/u/e71990ada2fd">简书·BY</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        // BY Fix:去除标题前的‘#’ issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
+        // anchors.options = {
+        //   visible: 'always',
+        //   placement: 'right',
+        //   icon: '#'
+        // };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <!-- add jianshu add target = "_blank" to <a> by BY -->
+                    
+                            <li>
+                                <a target="_blank" href="https://www.jianshu.com/u/e8c99a5e0ef7">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
+                                    </span>
+                                </a>
+                            </li>
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/jiabc">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/oscar._.21">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                  
+                    
+                    <li>
+                        <a target="_blank" href="https://space.bilibili.com/4670891">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">哔</i>
+                            </span>
+                           
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/bocheng.jia">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/Bocheng-J">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/bocheng-jia-b42969197">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Bocheng 2020
+                    <br>
+                    Theme on <a href="https://github.com/Bocheng-J/Bocheng-J.github.io">GitHub</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=Bocheng-J&repo=Bocheng-J.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script type="text/javascript">
+    if(navigator.serviceWorker){
+        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {console.log('Service Worker Registered. ', registration)})
+            .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
+    }
+</script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/ 
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers   
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async('/js/jquery.tagcloud.js',function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '0aab206351df7456a401cbc521928a7a';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/apple-touch-icon.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

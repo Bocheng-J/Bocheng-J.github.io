@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Something great is happening.">
+    <meta name="keywords"  content="Oscar, Bocheng, 博成的博客, Bocheng Jia">
+    <meta name="theme-color" content="#000000">
+    
+    <title>Bocheng | Oscar</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Safari Webpage Icon    by-BY -->
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Bocheng</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/bocheng_bg2_compressed.jpg')">
+     <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-1 col-md-5 col-md-offset-0 ">
+                <div class="site-heading">
+                    <h1>Bocheng</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">Something great is happening.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- PostList Container -->
+    		<div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                postlist-container
+            ">
+    			
+<div class="post-preview">
+    <a href="/2020/06/06/Jekyll-github-page%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95/">
+        <h2 class="post-title">
+            Jekyll github page博客本地调试
+        </h2>
+        
+        <h3 class="post-subtitle">
+            github博客本地调试
+        </h3>
+        
+        <div class="post-content-preview">
+            Jekyll github page博客本地调试教程
+
+相信大家在调试博客时都有这样的烦恼，将更改commit到github进行调试，效率太低，操作太复杂。
+
+在本地调试博客, 能极大提升工作效率！！！
+
+（本教程所有操作全部在linux系统本地git仓库内完成）
+
+方法一：
+
+安装 jekyll和 jekyll bundler：
+
+$ gem install jekyll
+$ gem in...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on June 6, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/">
+        <h2 class="post-title">
+            UGC PGC OGC之间的区别
+        </h2>
+        
+        <h3 class="post-subtitle">
+            UGC PGC OGC介绍
+        </h3>
+        
+        <div class="post-content-preview">
+            UGC OGC和PGC
+UGC，OGC, PGC是当下三种主流的社区形式，他们的具体关系如下图：
+
+
+1. UGC
+
+
+  UGC: user generated content
+
+
+UGC指依靠用户创作内容的形式，主要代表产品有：虎扑，小红书等。
+
+2. PGC
+
+
+  PGC：professionally generated content
+
+
+PGC是指有行业专家，业内人士来创作内容的...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on June 4, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/">
+        <h2 class="post-title">
+            什么是AARRR模型？
+        </h2>
+        
+        <h3 class="post-subtitle">
+            AARRR模型介绍
+        </h3>
+        
+        <div class="post-content-preview">
+            AARRR用户增长模型
+AARRR是在产品及运营思维中具有重要意义的一个用户增长模型，其具体包括五个层级：Acquisition, Activation, Retention, Revenue, Refer. 
+
+
+Acquisition 获客
+Acquisition是指获取顾客的过程，获客按照用户种类可分为两类：
+
+  一是获取新用户
+  二是获取流失的老用户
+
+
+获客的手段可分为以下两种...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on June 4, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/05/27/markdown-instruction/">
+        <h2 class="post-title">
+            Markdown文本在线编辑教程
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Markdown
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  Written with StackEdit.
+
+
+1. Markdown 文本简介
+Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+
+Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。世界上最流行的博客平台WordPress和大型CMS如Joomla、Drupal都能很好的支持...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on May 27, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/05/27/autonomous-project/">
+        <h2 class="post-title">
+            Autonomous car project demonstration
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Design of a self-driving car
+        </h3>
+        
+        <div class="post-content-preview">
+            1. Project introduction
+The purpose of this project is to design one self-driving car, which can drive in the special track without hitting any cone.
+
+The track is formed by three kinds of differen...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on May 27, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/05/27/Ubuntu-%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%AE%B9/">
+        <h2 class="post-title">
+            oracle VM virtual box ubuntu系统扩容
+        </h2>
+        
+        <h3 class="post-subtitle">
+            ubuntu虚拟机磁盘扩容
+        </h3>
+        
+        <div class="post-content-preview">
+            oracle VM virtualbox ubuntu虚拟机系统磁盘扩容
+
+当初安装时，分配给了虚拟机25G空间，想着完全够用了，没想到两个月下来系统就被占满了。这里吐血推荐大家在第一次分配空间时就多分配点，最好按照预想空间的两倍来分配，否则日后再拓展会很麻烦，还容易丢失数据。
+
+今天把系统拓展的步骤记录一下，避免以后再踩坑。
+
+1. 为虚拟机拓展空间，并进入分区工具GParted
+
+教程点...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on May 27, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/05/04/Kalman-filter/">
+        <h2 class="post-title">
+            Kalman filter
+        </h2>
+        
+        <h3 class="post-subtitle">
+            kalman filter introduction and implementation
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  Wikipedia: Kalman filter.
+
+
+Introduction video
+
+  video source: 
+如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224
+
+
+1. Why use Kalman Filters:
+
+ 
+
+2. St...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on May 4, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/04/29/Dijkstra's-algorithm/">
+        <h2 class="post-title">
+            Shortest path - Dijkstra's algorithm
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Dijkstra's algorithm
+        </h3>
+        
+        <div class="post-content-preview">
+            
+  Dijkstra’s algorithm is an algorithm which is used to find the shortest path.
+
+
+Dijkstra’s algorithm method
+Step: 0 – The prerequisite
+
+
+  We need to have a map of nodes.
+  We need to have a sta...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on April 29, 2020
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2020/04/28/ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">
+        <h2 class="post-title">
+            Ubuntu系统安装搜狗中文输入法
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Ubuntu 安装中文输入法
+        </h3>
+        
+        <div class="post-content-preview">
+            Ubuntu系统下安装中文输入法
+Ubuntu 系统原生的输入法为英文输入法，虽然不影响我们敲代码，但当我们想用到中文字符的时候就很受影响，因此本文将介绍如何在Ubuntu系统下安装中文输入法。
+
+step1：安装fcitx
+进入Ubuntu系统后打开命令窗口，输入：
+
+sudo apt install fcitx
+
+
+
+在提示进行选择的时候输入y，fcitx就安装成功了。
+step2：下载...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by oscar on April 28, 2020
+    </p>
+</div>
+<hr>
+
+
+<!-- Pager -->
+
+
+    		</div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                            
+                                <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">
+                                    Ubuntu
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#Linux" title="Linux" rel="2">
+                                    Linux
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#教程" title="教程" rel="4">
+                                    教程
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#Instruction" title="Instruction" rel="4">
+                                    Instruction
+                                </a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#study notes" title="study notes" rel="5">
+                                    study notes
+                                </a>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <a href="/tags/#产品" title="产品" rel="2">
+                                    产品
+                                </a>
+                            
+                        
+                            
+                                <a href="/tags/#学习笔记" title="学习笔记" rel="2">
+                                    学习笔记
+                                </a>
+                            
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
+                    <div class="short-about">
+                        
+                            <a href="/about">
+                                <img src="img/profile_bc3_compressed.PNG"/>
+                            </a>
+                        
+                        
+                            <p>How many roads must a man walk down before you call him a man?<br>一万年太久 只争朝夕。</p>
+                        
+                        <!-- SNS Link -->
+                        <ul class="list-inline">
+                            
+                            <!-- add jianshu add target = "_blank" to <a> by BY -->
+                            
+                            <li>
+                                <a target="_blank" href="https://www.jianshu.com/u/e8c99a5e0ef7">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                            
+                            
+                            <li>
+                                <a target="_blank" href="http://weibo.com/jiabc">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com/bocheng.jia">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a target="_blank" href="https://github.com/Bocheng-J">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            
+                        </ul>
+                        
+                            <p>✉️ jiabc1997@163.com</p>
+                        
+                    </div>
+                </section>
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="https://space.bilibili.com/384068749">CodeSheep</a></li>
+                    
+                        <li><a href="http://www.jianshu.com/u/e71990ada2fd">简书·BY</a></li>
+                    
+                </ul>
+                
+    		</div>
+        
+	</div>
+</div>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <!-- add jianshu add target = "_blank" to <a> by BY -->
+                    
+                            <li>
+                                <a target="_blank" href="https://www.jianshu.com/u/e8c99a5e0ef7">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
+                                    </span>
+                                </a>
+                            </li>
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/jiabc">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/oscar._.21">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                  
+                    
+                    <li>
+                        <a target="_blank" href="https://space.bilibili.com/4670891">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">哔</i>
+                            </span>
+                           
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/bocheng.jia">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/Bocheng-J">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/bocheng-jia-b42969197">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Bocheng 2020
+                    <br>
+                    Theme on <a href="https://github.com/Bocheng-J/Bocheng-J.github.io">GitHub</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=Bocheng-J&repo=Bocheng-J.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script type="text/javascript">
+    if(navigator.serviceWorker){
+        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {console.log('Service Worker Registered. ', registration)})
+            .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
+    }
+</script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/ 
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers   
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async('/js/jquery.tagcloud.js',function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '0aab206351df7456a401cbc521928a7a';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/apple-touch-icon.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

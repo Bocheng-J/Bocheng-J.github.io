@@ -8,6 +8,8 @@ new local test command:
 push file to coding:
 git push https://e.coding.net/oscar-bocheng/oscar-bocheng.git --all
 
+查看隐藏文件：
+在相应文件夹图形化窗口内 control+H
 
 上传文章/网页修改提交步骤：
 1. 在BLog文件夹中进行相应添加或修改

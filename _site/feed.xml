@@ -5,12 +5,12 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 08 Jun 2020 10:13:48 +0200</pubDate>
-    <lastBuildDate>Mon, 08 Jun 2020 10:13:48 +0200</lastBuildDate>
+    <pubDate>Mon, 08 Jun 2020 11:41:53 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Jun 2020 11:41:53 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
-        <title>产品思维模型系列-2：产品分析七大模板</title>
+        <title>产品思维模型系列-2：产品分析七大模块</title>
         <description>&lt;h1 id=&quot;产品思维模型系列-2产品分析七大模块&quot;&gt;产品思维模型系列-2：产品分析七大模块&lt;/h1&gt;
 
 &lt;p&gt;&lt;em&gt;这是产品思维模型系列的第二篇文章。&lt;/em&gt;
@@ -35,7 +35,7 @@
 
 &lt;h1 id=&quot;产品分析七大模块&quot;&gt;产品分析七大模块&lt;/h1&gt;
 
-&lt;p&gt;今天介绍的是产品分析常用的七大基础模块，即从七个方面完整地分析一个产品。在产品分析领域，这个模板可以说是百试百灵，是做为产品人必须要掌握的基础分析方式。&lt;/p&gt;
+&lt;p&gt;今天介绍的是产品分析常用的七大基础模块，即从七个方面完整地分析一个产品。在产品分析领域，这个模型可以说是百试百灵，是做为产品人必须要掌握的基础分析方式。&lt;/p&gt;
 
 &lt;h2 id=&quot;1-产品初心&quot;&gt;1. 产品初心&lt;/h2&gt;
 

@@ -5,9 +5,144 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 06 Jun 2020 23:02:12 +0200</pubDate>
-    <lastBuildDate>Sat, 06 Jun 2020 23:02:12 +0200</lastBuildDate>
+    <pubDate>Mon, 08 Jun 2020 09:04:47 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Jun 2020 09:04:47 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>产品思维模型系列-2：产品分析七大模板</title>
+        <description>&lt;h1 id=&quot;产品思维模型系列-2产品分析七大模块&quot;&gt;产品思维模型系列-2：产品分析七大模块&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;这是产品思维模型系列的第二篇文章。&lt;/em&gt;
+&lt;img src=&quot;https://i.loli.net/2020/06/08/BSJFqGpkUycnPAT.jpg&quot; alt=&quot;timg.jpg&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;思考力=思维广度*思维深度&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;思考力的培养可以分为两步走：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;培养思维的广度&lt;/li&gt;
+  &lt;li&gt;培养思维的深度&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;罗马并非一天建成的，在培养思维深度之前，我们应该打好基础，首先确保自己的思维视野足够宽广。&lt;/p&gt;
+
+&lt;p&gt;如何快速培养思维的广度呢？答案是运用已有的思维模型进行思考。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;产品分析七大模块&quot;&gt;产品分析七大模块&lt;/h1&gt;
+
+&lt;p&gt;今天介绍的是产品分析常用的七大基础模块，即从七个方面完整地分析一个产品。在产品分析领域，这个模板可以说是百试百灵，是做为产品人必须要掌握的基础分析方式。&lt;/p&gt;
+
+&lt;h2 id=&quot;1-产品初心&quot;&gt;1. 产品初心&lt;/h2&gt;
+
+&lt;p&gt;一个产品可以是一款国民APP，也可以是楼下奶茶店上新的夏日新品，也可以是某软件中很小的一个功能点。不论你所分析的产品是什么，我们需要问自己的第一个问题就是这款产品的出发点是什么，为什么做这款产品？&lt;/p&gt;
+
+&lt;p&gt;例如如今微信已经以绝对优势牢牢统治了社交APP领域，那为什么三大运营商还要联合推出5G消息？是嫌曾经的飞信凉的不够透彻吗？
+&lt;img src=&quot;https://i.loli.net/2020/06/08/BV5RNaqJUt2pXoI.png&quot; alt=&quot;5g_1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;答案显然是否定的，新时代的到来往往伴随着巨大的社会变革，移动互联网时代到来之前，依托于短信的通讯社交可是三大运营商的嘴边肉，后来智能手机普及，移动互联网兴起，微信一家独大，短信业务已经彻底沦为了接收验证码，快递消息的“工具人”。&lt;/p&gt;
+
+&lt;p&gt;现在，一场新的变革又即将发生，三大运营商也想搭上5G这趟时代东风，不说把微信掀翻在地，多少也要在通讯社交领域找回一点曾经的场子。&lt;/p&gt;
+
+&lt;p&gt;所以，对于5G消息的产品初心，我们可以这么回答：
+&lt;strong&gt;新技术，新时代的到来往往意味着新的市场变革，三大运营商正是瞄准了5G即将大规模应用的契机，推出5G消息，与微信不同，瞄准B2C的细分市场，借助自身资源优势，企图抢占新时代下即时通讯领域的市场份额。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2产品定位&quot;&gt;2.产品定位&lt;/h2&gt;
+
+&lt;p&gt;产品定位从本质上决定了产品的设计理念，经营策略等。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/1apOrA3znkgliNX.jpg&quot; alt=&quot;bilibili.jpg&quot; /&gt;
+例如&lt;strong&gt;早期B站的产品定位为二次元视频社区，主要内容为二次元相关文化。但现在B站的定位逐渐向综合性年轻视频社区发展，即试图“破圈”。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;由于定位的转变，我们也可以发现B站做了很多的努力，比如购买了大量的影视作品版权，邀请明星、网络红人进站等，包括从今年联合央视推出的《后浪》中，也能看出B站的野心。&lt;/p&gt;
+
+&lt;h2 id=&quot;3目标用户&quot;&gt;3.目标用户&lt;/h2&gt;
+
+&lt;p&gt;即使是同一类型的产品，不同的目标用户也会造成产品天差地别的现象。&lt;/p&gt;
+
+&lt;p&gt;最简单的例子就是抖音和快手。
+二者同为短视频行业的头部选手，但其目标人群有着较大的差异。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/bdOtfiKWaHTevsG.jpg&quot; alt=&quot;dvsk.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;抖音的目标人群主要为一二线城市的年轻人。&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;快手的目标人群则主要为三四线城市的下沉市场，年龄覆盖面也相较抖音更广。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由于这一目标用户不同的根本差异，二者的营销手段，所产出的内容都有着巨大的影响。抖音的的内容更偏向潮流，音乐方向，快手则是草根内容居多。&lt;/p&gt;
+
+&lt;h2 id=&quot;4需求痛点&quot;&gt;4.需求痛点&lt;/h2&gt;
+
+&lt;p&gt;做产品的核心还是做需求，必须找到产品能解决的需求痛点，才能真正理解一款产品。&lt;strong&gt;而找需求的过程本质上就是考察人性，理解欲望的过程。&lt;/strong&gt; 人的最根本需求无非是衣、食、住、行；精神上的需求又包括与人交往的社交需求，展示自己的表达需求，炫耀自己的虚荣需求，提升自己的学习需求等等。只有从最基本的欲望出发，才能抓住核心的需求痛点。&lt;/p&gt;
+
+&lt;p&gt;例如：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;滴滴解决了用户想要便捷出行的基本出行需求&lt;/li&gt;
+  &lt;li&gt;抖音解决了新时代下用户的娱乐需求，表达展示自己的需求&lt;/li&gt;
+  &lt;li&gt;美团外卖解决了用户懒和吃的需求，用户无需出门就能吃到想吃的东西&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-核心功能&quot;&gt;5. 核心功能&lt;/h2&gt;
+
+&lt;p&gt;一款产品的特色往往是由其核心功能所决定的，产品能否做的成功出色，能否从同类产品中脱颖而出也要看核心功能是否出色。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/zy9VBm2nZe6tR5Y.jpg&quot; alt=&quot;pdd.jpg&quot; /&gt;
+做为电商类产品的后起之秀，拼多多就是依靠“拼团秒杀”这一核心功能在短时间内一跃成为行业巨头之一。&lt;/p&gt;
+
+&lt;p&gt;36kr/虎嗅的核心功能是能在第一时间提供新鲜，有深度的互联网行业资讯，从而也积累了大批的忠实用户。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-商业模式&quot;&gt;6. 商业模式&lt;/h2&gt;
+
+&lt;p&gt;做一款产品，归根到底还是要利用产品实现利润的转化，因此商业模式至关重要。&lt;/p&gt;
+
+&lt;p&gt;好的商业模式可以帮助一款产品迅速实现盈利，而不好的商业模式不但无法让产品赚到钱，还有可能招来用户的好感度下降甚至是厌恶。&lt;/p&gt;
+
+&lt;p&gt;例如，在视频行业发展的早期，用户版权意识淡薄，视频网站例如优酷、土豆寻找不到稳定的盈利模式，单靠广告收入难以抹平巨大的开销。随着行业的发展，用户的版权意识逐渐健全，愿意为更好的内容付费，各大视频APP也相继推出了付费会员的机制，广告+会员双管齐下，形成了视频APP的基本商业模式。&lt;/p&gt;
+
+&lt;p&gt;但有些APP的吃相过于难看，用户要是想要第一时间追剧，在付费会员的基础上，还需额外支付剧集的点播费用，甚至还有超前点播费用。这一系列过分的商业模式，直接导致了用户好感度的下降。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/awDychx6kdPMmo2.jpg&quot; alt=&quot;2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;7运营策略&quot;&gt;7.运营策略&lt;/h2&gt;
+
+&lt;p&gt;一款产品的上线只是这个产品生命周期的开始，上线之后，还必须投入大量的资源，精力做好运营工作，否则产品被人遗忘，口碑崩塌都只发生在一夜之间。&lt;/p&gt;
+
+&lt;p&gt;运营包括的内容有：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;推广&lt;/li&gt;
+  &lt;li&gt;营销&lt;/li&gt;
+  &lt;li&gt;建立产品口碑&lt;/li&gt;
+  &lt;li&gt;收集用户反馈，用于后续迭代优化&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;结语&quot;&gt;&lt;strong&gt;结语：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;使用七大模块进行产品分析，能够较清晰、全面地获得一个产品的画像。再针对每一个问题进行一定的深入思考，就能兼顾广度与深度。&lt;/p&gt;
+
+&lt;p&gt;当然，产品分析也并不局限于这七个模块，还有更多的内容和细节并不包含在这七个模块中，当我们有了一定的产品功力时，我们也不需要再局限于这些框架，可以去更加自由地分析产品。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;最后，你可能想看：
+&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/&quot;&gt;产品思维框架系列-1：什么是万能的AARRR模型？&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 08 Jun 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/</guid>
+        
+        <category>产品</category>
+        
+        <category>产品思维模型</category>
+        
+        
+      </item>
     
       <item>
         <title>Jekyll github page博客本地调试</title>
@@ -124,17 +259,39 @@ gem 'github-pages'
         
         <category>产品</category>
         
-        <category>学习笔记</category>
-        
-        <category>study notes</category>
-        
         
       </item>
     
       <item>
-        <title>什么是AARRR模型？</title>
-        <description>&lt;h1 id=&quot;aarrr用户增长模型&quot;&gt;AARRR用户增长模型&lt;/h1&gt;
-&lt;p&gt;AARRR是在产品及运营思维中具有重要意义的一个用户增长模型，其具体包括五个层级：Acquisition, Activation, Retention, Revenue, Refer. 
+        <title>产品思维模型系列-1：什么是万能的AARRR模型？</title>
+        <description>&lt;h1 id=&quot;产品思维模型系列-1aarrr用户增长模型&quot;&gt;产品思维模型系列-1：AARRR用户增长模型&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;这是产品思维模型系列的第一篇文章。&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;思考力=思维广度*思维深度&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;做为产品从业者，绕不过去的话题就是产品思维。在许许多多的“产品经理能力模型图”中，最核心的C位往往都被产品思维牢牢占据，那么如何培养独到的产品思维呢？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/3pQ98OCcHPjTZsF.jpg&quot; alt=&quot;pm1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我的答案是要使用本质思考力来分析一切产品问题，继续拆解一下可将思考力的培养分为两步走：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;培养思维的广度&lt;/li&gt;
+  &lt;li&gt;培养思维的深度&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;思维广度的培养可以借助现成的产品思维模型，换句话说，思维的广度可以速成，灵活运用现有的模型，就能达到一个基础的思维广度。&lt;/p&gt;
+
+&lt;p&gt;思维的深度则更多地需要个人的眼界，思考，学识的日积月累，要深入地探究每个问题背后的本质原因。&lt;/p&gt;
+
+&lt;p&gt;罗马并非一天建成的，在培养思维深度之前，应该先打好基础，首先确保自己的思维视野足够宽广。因此接下来，我会从一个学习者的角度入手，推出一系列文章，专门介绍产品思维的常见思维模型，拓展思维的广度。本文以AARRR模型作为这个系列的开头。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;AARRR是在产品及运营思维中具有重要意义的一个用户增长模型，其具体包括五个层级：Acquisition, Activation, Retention, Revenue, Refer.&lt;/strong&gt; 
 &lt;img src=&quot;https://i.loli.net/2020/06/04/c6N7miTe9W4MfJQ.jpg&quot; alt=&quot;aarrr.jpg&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;acquisition-获客&quot;&gt;Acquisition 获客&lt;/h2&gt;
@@ -235,9 +392,7 @@ gem 'github-pages'
         
         <category>产品</category>
         
-        <category>学习笔记</category>
-        
-        <category>study notes</category>
+        <category>产品思维模型</category>
         
         
       </item>

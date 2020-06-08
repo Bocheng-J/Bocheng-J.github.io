@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Something great is happening.">
+    <meta name="keywords"  content="Oscar, Bocheng, 博成的博客, Bocheng Jia">
+    <meta name="theme-color" content="#000000">
+    
+    <title>产品思维模型系列-2：产品分析七大模板 - Bocheng | Oscar</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Safari Webpage Icon    by-BY -->
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Bocheng</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/bg_post_200607.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/bg_post_200607.jpg')
+    }
+
+    
+</style>
+<header class="intro-header" >
+    <div class="header-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#产品" title="产品">产品</a>
+                        
+                        <a class="tag" href="/tags/#产品思维模型" title="产品思维模型">产品思维模型</a>
+                        
+                    </div>
+                    <h1>产品思维模型系列-2：产品分析七大模板</h1>
+                    
+                    
+                    <h2 class="subheading">产品分析七大模板</h2>
+                    
+                    <span class="meta">Posted by oscar on June 8, 2020</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<h1 id="产品思维模型系列-2产品分析七大模块">产品思维模型系列-2：产品分析七大模块</h1>
+
+<p><em>这是产品思维模型系列的第二篇文章。</em>
+<img src="https://i.loli.net/2020/06/08/BSJFqGpkUycnPAT.jpg" alt="timg.jpg" /></p>
+
+<blockquote>
+  <p><strong>思考力=思维广度×思维深度</strong></p>
+</blockquote>
+
+<p>思考力的培养可以分为两步走：</p>
+
+<ol>
+  <li>培养思维的广度</li>
+  <li>培养思维的深度</li>
+</ol>
+
+<p>罗马并非一天建成的，在培养思维深度之前，我们应该打好基础，首先确保自己的思维视野足够宽广。</p>
+
+<p>如何快速培养思维的广度呢？答案是运用已有的思维模型进行思考。</p>
+
+<hr />
+
+<h1 id="产品分析七大模块">产品分析七大模块</h1>
+
+<p>今天介绍的是产品分析常用的七大基础模块，即从七个方面完整地分析一个产品。在产品分析领域，这个模板可以说是百试百灵，是做为产品人必须要掌握的基础分析方式。</p>
+
+<h2 id="1-产品初心">1. 产品初心</h2>
+
+<p>一个产品可以是一款国民APP，也可以是楼下奶茶店上新的夏日新品，也可以是某软件中很小的一个功能点。不论你所分析的产品是什么，我们需要问自己的第一个问题就是这款产品的出发点是什么，为什么做这款产品？</p>
+
+<p>例如如今微信已经以绝对优势牢牢统治了社交APP领域，那为什么三大运营商还要联合推出5G消息？是嫌曾经的飞信凉的不够透彻吗？
+<img src="https://i.loli.net/2020/06/08/BV5RNaqJUt2pXoI.png" alt="5g_1.png" /></p>
+
+<p>答案显然是否定的，新时代的到来往往伴随着巨大的社会变革，移动互联网时代到来之前，依托于短信的通讯社交可是三大运营商的嘴边肉，后来智能手机普及，移动互联网兴起，微信一家独大，短信业务已经彻底沦为了接收验证码，快递消息的“工具人”。</p>
+
+<p>现在，一场新的变革又即将发生，三大运营商也想搭上5G这趟时代东风，不说把微信掀翻在地，多少也要在通讯社交领域找回一点曾经的场子。</p>
+
+<p>所以，对于5G消息的产品初心，我们可以这么回答：
+<strong>新技术，新时代的到来往往意味着新的市场变革，三大运营商正是瞄准了5G即将大规模应用的契机，推出5G消息，与微信不同，瞄准B2C的细分市场，借助自身资源优势，企图抢占新时代下即时通讯领域的市场份额。</strong></p>
+
+<h2 id="2产品定位">2.产品定位</h2>
+
+<p>产品定位从本质上决定了产品的设计理念，经营策略等。</p>
+
+<p><img src="https://i.loli.net/2020/06/08/1apOrA3znkgliNX.jpg" alt="bilibili.jpg" />
+例如<strong>早期B站的产品定位为二次元视频社区，主要内容为二次元相关文化。但现在B站的定位逐渐向综合性年轻视频社区发展，即试图“破圈”。</strong></p>
+
+<p>由于定位的转变，我们也可以发现B站做了很多的努力，比如购买了大量的影视作品版权，邀请明星、网络红人进站等，包括从今年联合央视推出的《后浪》中，也能看出B站的野心。</p>
+
+<h2 id="3目标用户">3.目标用户</h2>
+
+<p>即使是同一类型的产品，不同的目标用户也会造成产品天差地别的现象。</p>
+
+<p>最简单的例子就是抖音和快手。
+二者同为短视频行业的头部选手，但其目标人群有着较大的差异。</p>
+
+<p><img src="https://i.loli.net/2020/06/08/bdOtfiKWaHTevsG.jpg" alt="dvsk.jpg" /></p>
+
+<ul>
+  <li><strong>抖音的目标人群主要为一二线城市的年轻人。</strong></li>
+  <li><strong>快手的目标人群则主要为三四线城市的下沉市场，年龄覆盖面也相较抖音更广。</strong></li>
+</ul>
+
+<p>由于这一目标用户不同的根本差异，二者的营销手段，所产出的内容都有着巨大的影响。抖音的的内容更偏向潮流，音乐方向，快手则是草根内容居多。</p>
+
+<h2 id="4需求痛点">4.需求痛点</h2>
+
+<p>做产品的核心还是做需求，必须找到产品能解决的需求痛点，才能真正理解一款产品。<strong>而找需求的过程本质上就是考察人性，理解欲望的过程。</strong> 人的最根本需求无非是衣、食、住、行；精神上的需求又包括与人交往的社交需求，展示自己的表达需求，炫耀自己的虚荣需求，提升自己的学习需求等等。只有从最基本的欲望出发，才能抓住核心的需求痛点。</p>
+
+<p>例如：</p>
+
+<ul>
+  <li>滴滴解决了用户想要便捷出行的基本出行需求</li>
+  <li>抖音解决了新时代下用户的娱乐需求，表达展示自己的需求</li>
+  <li>美团外卖解决了用户懒和吃的需求，用户无需出门就能吃到想吃的东西</li>
+</ul>
+
+<h2 id="5-核心功能">5. 核心功能</h2>
+
+<p>一款产品的特色往往是由其核心功能所决定的，产品能否做的成功出色，能否从同类产品中脱颖而出也要看核心功能是否出色。</p>
+
+<p><img src="https://i.loli.net/2020/06/08/zy9VBm2nZe6tR5Y.jpg" alt="pdd.jpg" />
+做为电商类产品的后起之秀，拼多多就是依靠“拼团秒杀”这一核心功能在短时间内一跃成为行业巨头之一。</p>
+
+<p>36kr/虎嗅的核心功能是能在第一时间提供新鲜，有深度的互联网行业资讯，从而也积累了大批的忠实用户。</p>
+
+<h2 id="6-商业模式">6. 商业模式</h2>
+
+<p>做一款产品，归根到底还是要利用产品实现利润的转化，因此商业模式至关重要。</p>
+
+<p>好的商业模式可以帮助一款产品迅速实现盈利，而不好的商业模式不但无法让产品赚到钱，还有可能招来用户的好感度下降甚至是厌恶。</p>
+
+<p>例如，在视频行业发展的早期，用户版权意识淡薄，视频网站例如优酷、土豆寻找不到稳定的盈利模式，单靠广告收入难以抹平巨大的开销。随着行业的发展，用户的版权意识逐渐健全，愿意为更好的内容付费，各大视频APP也相继推出了付费会员的机制，广告+会员双管齐下，形成了视频APP的基本商业模式。</p>
+
+<p>但有些APP的吃相过于难看，用户要是想要第一时间追剧，在付费会员的基础上，还需额外支付剧集的点播费用，甚至还有超前点播费用。这一系列过分的商业模式，直接导致了用户好感度的下降。</p>
+
+<p><img src="https://i.loli.net/2020/06/08/awDychx6kdPMmo2.jpg" alt="2.jpg" /></p>
+
+<h2 id="7运营策略">7.运营策略</h2>
+
+<p>一款产品的上线只是这个产品生命周期的开始，上线之后，还必须投入大量的资源，精力做好运营工作，否则产品被人遗忘，口碑崩塌都只发生在一夜之间。</p>
+
+<p>运营包括的内容有：</p>
+
+<ul>
+  <li>推广</li>
+  <li>营销</li>
+  <li>建立产品口碑</li>
+  <li>收集用户反馈，用于后续迭代优化</li>
+  <li>…</li>
+</ul>
+
+<h2 id="结语"><strong>结语：</strong></h2>
+
+<p>使用七大模块进行产品分析，能够较清晰、全面地获得一个产品的画像。再针对每一个问题进行一定的深入思考，就能兼顾广度与深度。</p>
+
+<p>当然，产品分析也并不局限于这七个模块，还有更多的内容和细节并不包含在这七个模块中，当我们有了一定的产品功力时，我们也不需要再局限于这些框架，可以去更加自由地分析产品。</p>
+
+<hr />
+<p>最后，你可能想看：
+<a href="https://oscar-bocheng.com/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/">产品思维框架系列-1：什么是万能的AARRR模型？</a></p>
+
+<p>后续我会推出更多关于产品思维的文章，欢迎持续关注！</p>
+
+
+                <hr style="visibility: hidden;">
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2020/06/06/Jekyll-github-page%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95/" data-toggle="tooltip" data-placement="top" title="Jekyll github page博客本地调试">
+                        Previous<br>
+                        <span>Jekyll github page博客本地调试</span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <!--Gitalk评论start  -->
+                
+                <!-- 引入Gitalk评论插件  -->
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+                <div id="gitalk-container"></div>
+                <!-- 引入一个生产md5的js，用于对id值进行处理，防止其过长 -->
+                <!-- Thank DF:https://github.com/NSDingFan/NSDingFan.github.io/issues/3#issuecomment-407496538 -->
+                <script src="/js/md5.min.js"></script>
+                <script type="text/javascript">
+                    var gitalk = new Gitalk({
+                    clientID: '4bb37e5ad9c0e0862e63',
+                    clientSecret: '3563a4ce1f911495299ffa8f3f07bb7867df3b94',
+                    repo: 'Bocheng-J.github.io',
+                    owner: 'Bocheng-J',
+                    admin: ['Bocheng-J'],
+                    distractionFreeMode: true,
+                    id: md5(location.pathname),
+                    });
+                    gitalk.render('gitalk-container');
+                </script>
+                
+                <!-- Gitalk end -->
+
+                
+
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+                				<a href="/tags/#Ubuntu" title="Ubuntu" rel="2">
+                                    Ubuntu
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#Linux" title="Linux" rel="2">
+                                    Linux
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#教程" title="教程" rel="4">
+                                    教程
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#Instruction" title="Instruction" rel="4">
+                                    Instruction
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#study notes" title="study notes" rel="3">
+                                    study notes
+                                </a>
+                            
+        				
+                            
+        				
+                            
+        				
+                            
+                				<a href="/tags/#产品" title="产品" rel="3">
+                                    产品
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#产品思维模型" title="产品思维模型" rel="2">
+                                    产品思维模型
+                                </a>
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                        <li><a href="https://space.bilibili.com/384068749">CodeSheep</a></li>
+                    
+                        <li><a href="http://www.jianshu.com/u/e71990ada2fd">简书·BY</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        // BY Fix:去除标题前的‘#’ issues:<https://github.com/qiubaiying/qiubaiying.github.io/issues/137>
+        // anchors.options = {
+        //   visible: 'always',
+        //   placement: 'right',
+        //   icon: '#'
+        // };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <!-- add jianshu add target = "_blank" to <a> by BY -->
+                    
+                            <li>
+                                <a target="_blank" href="https://www.jianshu.com/u/e8c99a5e0ef7">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
+                                    </span>
+                                </a>
+                            </li>
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/jiabc">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/oscar._.21">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                  
+                    
+                    <li>
+                        <a target="_blank" href="https://space.bilibili.com/4670891">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">哔</i>
+                            </span>
+                           
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/bocheng.jia">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/Bocheng-J">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/bocheng-jia-b42969197">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Bocheng 2020
+                    <br>
+                    Theme on <a href="https://github.com/Bocheng-J/Bocheng-J.github.io">GitHub</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=Bocheng-J&repo=Bocheng-J.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script type="text/javascript">
+    if(navigator.serviceWorker){
+        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
+        navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {console.log('Service Worker Registered. ', registration)})
+            .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
+    }
+</script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/ 
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers   
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async('/js/jquery.tagcloud.js',function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '0aab206351df7456a401cbc521928a7a';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog (selector) {
+        var P = $('div.post-container'),a,n,t,l,i,c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#"+$(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
+            l = $('<li class="'+n+'_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;    
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function(e){
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/apple-touch-icon.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

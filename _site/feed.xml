@@ -5,8 +5,8 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 17 Jun 2020 09:40:44 +0200</pubDate>
-    <lastBuildDate>Wed, 17 Jun 2020 09:40:44 +0200</lastBuildDate>
+    <pubDate>Wed, 17 Jun 2020 10:06:43 +0200</pubDate>
+    <lastBuildDate>Wed, 17 Jun 2020 10:06:43 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -777,6 +777,11 @@ gem 'github-pages'
 &lt;h2 id=&quot;2-在线编辑器&quot;&gt;2. 在线编辑器&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://stackedit.io/&quot;&gt;StackEdit&lt;/a&gt;是一款功能全面的免费在线Markdown编辑器，在StackEdit的网页客户端中可直接进行文本输入，StackEdit系统会自动将文字转为Markdown格式或HTML格式，PDF格式等。可直接插入于博客。&lt;/p&gt;
 
+&lt;hr /&gt;
+&lt;p&gt;2020/06/17更新：&lt;/p&gt;
+
+&lt;p&gt;国内解决方案：&lt;a href=&quot;https://www.zybuluo.com/cmd/#&quot;&gt;Cmd Markdown&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;3-添加图片&quot;&gt;3. 添加图片&lt;/h2&gt;
 &lt;p&gt;在Markdown中添加图片，首先需要将图片上传至云端，获取图片链接再进行插入。&lt;/p&gt;
 
@@ -791,9 +796,10 @@ gem 'github-pages'
 &lt;img src=&quot;https://i.loli.net/2020/05/28/9PFwbmdE8ao3QxW.jpg&quot; alt=&quot;smms3.JPG&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;2020/06/06更新：&lt;/em&gt;
-增加图片压缩工具：
-使用在线图片压缩网站&lt;a href=&quot;https://docsmall.com/image-compress&quot;&gt;Docsmall&lt;/a&gt;提升图片载入速度。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;2020/06/17更新：&lt;/p&gt;
+
+&lt;p&gt;国内解决方案：&lt;a href=&quot;https://www.superbed.cn/&quot;&gt;聚合图床&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;4-添加视频&quot;&gt;4. 添加视频&lt;/h2&gt;
 &lt;p&gt;在Markdown中添加视频，与添加照片一样，较为简单的办法是先将视频上传至云端，再添加链接。这里以&lt;a href=&quot;https://www.bilibili.com/&quot;&gt;B站&lt;/a&gt;作为视频储存端为例。&lt;/p&gt;
@@ -809,6 +815,7 @@ gem 'github-pages'
 
 &lt;p&gt;&lt;strong&gt;插入视频&lt;/strong&gt;
 最后，和插入图片一样，在Markdown文本中直接插入上述链接就可以了。&lt;/p&gt;
+
 </description>
         <pubDate>Wed, 27 May 2020 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/2020/05/27/markdown-instruction/</link>

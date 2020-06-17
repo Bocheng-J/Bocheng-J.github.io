@@ -24,6 +24,12 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 [StackEdit](https://stackedit.io/)是一款功能全面的免费在线Markdown编辑器，在StackEdit的网页客户端中可直接进行文本输入，StackEdit系统会自动将文字转为Markdown格式或HTML格式，PDF格式等。可直接插入于博客。
 
 
+----------
+2020/06/17更新：
+
+国内解决方案：[Cmd Markdown][1]
+
+
 ## 3. 添加图片
 在Markdown中添加图片，首先需要将图片上传至云端，获取图片链接再进行插入。
 
@@ -38,9 +44,11 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 3. 复制Markdown格式链接，将其粘贴在StackEdit文本框内想要添加图片的位置即可。
 ![smms3.JPG](https://i.loli.net/2020/05/28/9PFwbmdE8ao3QxW.jpg)
 
-*2020/06/06更新：*
-增加图片压缩工具：
-使用在线图片压缩网站[Docsmall](https://docsmall.com/image-compress)提升图片载入速度。
+
+----------
+2020/06/17更新：
+
+国内解决方案：[聚合图床][2]
 
 ## 4. 添加视频
 在Markdown中添加视频，与添加照片一样，较为简单的办法是先将视频上传至云端，再添加链接。这里以[B站](https://www.bilibili.com/)作为视频储存端为例。
@@ -56,3 +64,8 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 
 **插入视频**
 最后，和插入图片一样，在Markdown文本中直接插入上述链接就可以了。
+    
+
+
+  [1]: https://www.zybuluo.com/cmd/#
+  [2]: https://www.superbed.cn/

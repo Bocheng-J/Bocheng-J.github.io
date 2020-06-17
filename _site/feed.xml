@@ -5,9 +5,41 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 14 Jun 2020 14:00:07 +0200</pubDate>
-    <lastBuildDate>Sun, 14 Jun 2020 14:00:07 +0200</lastBuildDate>
+    <pubDate>Wed, 17 Jun 2020 09:40:44 +0200</pubDate>
+    <lastBuildDate>Wed, 17 Jun 2020 09:40:44 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>社交产品思考</title>
+        <description>&lt;h1 id=&quot;产品经理常用公式持续更新中&quot;&gt;产品经理常用公式（持续更新中）&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/14/jdT3cBGibAa6hpw.jpg&quot; alt=&quot;1.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;产品价值=新价值-旧价值-替代价值&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;ol&gt;
+  &lt;li&gt;产品体验=峰值体验+结束体验&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;ol&gt;
+  &lt;li&gt;上瘾模式：触发–&amp;gt;行动–&amp;gt;奖励–&amp;gt;投入&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+</description>
+        <pubDate>Wed, 17 Jun 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</guid>
+        
+        <category>产品</category>
+        
+        
+      </item>
     
       <item>
         <title>产品经理常用公式(持续更新中)</title>
@@ -860,118 +892,6 @@ gem 'github-pages'
         <category>教程</category>
         
         <category>Instruction</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Kalman filter</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Wikipedia: &lt;a href=&quot;https://en.wikipedia.org/wiki/Kalman_filter&quot;&gt;Kalman filter&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;introduction-video&quot;&gt;Introduction video&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;video source: 
-如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;1-why-use-kalman-filters&quot;&gt;1. Why use Kalman Filters:&lt;/h2&gt;
-
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=370545584&amp;amp;bvid=BV1pZ4y1s7XB&amp;amp;cid=187145554&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
-
-&lt;h2 id=&quot;2-state-observers&quot;&gt;2. State Observers:&lt;/h2&gt;
-
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=968070266&amp;amp;bvid=BV11p4y197Ly&amp;amp;cid=187145687&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
-
-&lt;h2 id=&quot;3-optimal-state-estimator&quot;&gt;3. Optimal State Estimator:&lt;/h2&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=285592413&amp;amp;bvid=BV1Cf4y1m7wg&amp;amp;cid=187145830&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
-
-&lt;h2 id=&quot;4-optimal-state-estimator-algorithm&quot;&gt;4. Optimal State Estimator Algorithm:&lt;/h2&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=200533156&amp;amp;bvid=BV1ez411z7Qo&amp;amp;cid=187146006&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
-
-&lt;h2 id=&quot;5-nonlinear-state-estimators&quot;&gt;5. Nonlinear State Estimators:&lt;/h2&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=710515346&amp;amp;bvid=BV1sQ4y1N7e6&amp;amp;cid=187146091&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
-
-&lt;h2 id=&quot;6-how-to-use-a-kalman-filter-in-simulink&quot;&gt;6. How to Use a Kalman Filter in Simulink:&lt;/h2&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=455533544&amp;amp;bvid=BV1V541147dX&amp;amp;cid=187146142&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
-
-&lt;h2 id=&quot;7-how-to-use-an-extended-kalman-filter-in-simulink&quot;&gt;7. How to Use an Extended Kalman FIlter in SImulink:&lt;/h2&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=968015764&amp;amp;bvid=BV14p4y197Ue&amp;amp;cid=187146193&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
-
-&lt;h1 id=&quot;steps-to-set-a-kalman-filter&quot;&gt;Steps to set a kalman filter:&lt;/h1&gt;
-
-&lt;h2 id=&quot;linear-systems&quot;&gt;Linear systems:&lt;/h2&gt;
-&lt;h2 id=&quot;step-1-build-system-model&quot;&gt;Step 1: Build system model&lt;/h2&gt;
-&lt;p&gt;Build the process model (equation 13) 
-and the observation model (equation 14).&lt;/p&gt;
-
-&lt;p&gt;Through these two models, we know how these two models work.
-Plus, we can get process model coefficient &lt;strong&gt;a&lt;/strong&gt;, control signal &lt;strong&gt;U_k&lt;/strong&gt;, and measurement noise &lt;strong&gt;V_k&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;We will use these coefficients in later steps.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/dWJAzFu78eP2rUQ.jpg&quot; alt=&quot;step1.JPG&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;step-2-calculate-the-predicted-state&quot;&gt;Step 2: Calculate the predicted state&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/Mmw6rYkpBVUCjRf.jpg&quot; alt=&quot;step2.JPG&quot; /&gt;
- By using the state from previous time step (k-1),
- equation (15) calculates &lt;strong&gt;x_k–&lt;/strong&gt; the current (time step: k) priori estimate;
- (the hat means estimated value)&lt;/p&gt;
-
-&lt;p&gt;equation (16) calculates &lt;strong&gt;p_k–&lt;/strong&gt;, the current covariance of this priori estimate.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;But they are just our prediction, we need to use the measured data to refine them to get an optimal result.&lt;/strong&gt;  And this is the point of using kalman filter.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-3-update-the-predicted-state&quot;&gt;Step 3: Update the predicted state&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/1o8e9vEuJRYnpys.jpg&quot; alt=&quot;step3.JPG&quot; /&gt;
-First, in (17), we calculate the kalman gain &lt;strong&gt;g_k&lt;/strong&gt; by using predicted covariance &lt;strong&gt;p_k–&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then in (18), we update the &lt;strong&gt;x_k&lt;/strong&gt; by combining predicted data &lt;strong&gt;x_k–&lt;/strong&gt; and measured data &lt;strong&gt;z_k&lt;/strong&gt;. 
-(The essence of this step is to multiply &lt;strong&gt;x_k–&lt;/strong&gt; and &lt;strong&gt;z_k&lt;/strong&gt;’s probability density function, for more information, please check the fourth video.)&lt;/p&gt;
-
-&lt;p&gt;And in (19), we update the covariance &lt;strong&gt;p_k&lt;/strong&gt; too.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-4-loop&quot;&gt;Step 4: Loop&lt;/h2&gt;
-&lt;p&gt;After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.&lt;/p&gt;
-
-&lt;h2 id=&quot;result&quot;&gt;Result:&lt;/h2&gt;
-
-&lt;p&gt;First we need the process model and observation model to get necessary coefficients.&lt;/p&gt;
-
-&lt;p&gt;Then we do the prediction.&lt;/p&gt;
-
-&lt;p&gt;After that, we update the prediction state by combining predicted data and measured data together.&lt;/p&gt;
-
-&lt;p&gt;So, as a result, the updated data &lt;strong&gt;x_k&lt;/strong&gt; is what we want, it is more accurate than the predicted-only version.&lt;/p&gt;
-
-&lt;p&gt;And this system is an Iterative system.&lt;/p&gt;
-
-&lt;h2 id=&quot;non-linear-extended-kalman-filter&quot;&gt;Non-linear: extended kalman filter:&lt;/h2&gt;
-&lt;h2 id=&quot;step-1-build-system-model-1&quot;&gt;Step 1: Build system model&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/gpZMFsqU2HVY649.jpg&quot; alt=&quot;4.JPG&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;step-2-calculate-the-predicted-state-1&quot;&gt;Step 2: Calculate the predicted state&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/IADLqcFiKsSPm6E.jpg&quot; alt=&quot;5.JPG&quot; /&gt;
-F_k is the Jacobian matrix of f(xk,uk).
-Q is used to refine the system’s performance. We can use diagonal matrix at the beginning, and correct it in future according to system’s performance.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-3-update-the-predicted-state-1&quot;&gt;Step 3: Update the predicted state&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/XxrocHGyLihF4jW.jpg&quot; alt=&quot;6.JPG&quot; /&gt;
-H_k is the Jacobian matrix of h(xk).&lt;/p&gt;
-
-&lt;p&gt;For R,  we can use diagonal matrix too, and then correct it in future according to system’s performance.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-4-loop-1&quot;&gt;Step 4: Loop&lt;/h2&gt;
-&lt;p&gt;After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 04 May 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/05/04/Kalman-filter/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/05/04/Kalman-filter/</guid>
-        
-        <category>Kalman filter</category>
-        
-        <category>study notes</category>
         
         
       </item>

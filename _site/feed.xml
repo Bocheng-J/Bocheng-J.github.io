@@ -5,9 +5,126 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 25 Jun 2020 13:40:29 +0200</pubDate>
-    <lastBuildDate>Thu, 25 Jun 2020 13:40:29 +0200</lastBuildDate>
+    <pubDate>Tue, 07 Jul 2020 10:30:05 +0200</pubDate>
+    <lastBuildDate>Tue, 07 Jul 2020 10:30:05 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>产品思维模型系列-4：SWOT分析法</title>
+        <description>&lt;h1 id=&quot;产品思维模型系列-4swot分析法&quot;&gt;产品思维模型系列-4：SWOT分析法&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这是产品思维模型系列的第四篇文章。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/07/du1UW4CejATIkNz.jpg&quot; alt=&quot;pic1.JPG&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;思考力=思维广度×思维深度&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;前面我们已经学习过两种产品思维模型：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/&quot;&gt;产品思维模型系列-1：什么是万能的AARRR模型？&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/&quot;&gt;产品思维模型系列-2：产品分析七大模块&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/08/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E6%91%86%E5%9C%B0%E6%91%8A/&quot;&gt;产品思维模型系列-3：产品思维应用-如何用产品思维摆地摊？&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今天介绍的思维模型是：SWOT分析法。&lt;/p&gt;
+
+&lt;h1 id=&quot;1-swot分析法定义&quot;&gt;1. SWOT分析法定义&lt;/h1&gt;
+
+&lt;p&gt;SWOT分析法，是20世纪80年代初，最早由美国旧金山大学的管理学教授韦里克提出的，后来常被用于进行企业战略分析的模型方法。&lt;/p&gt;
+
+&lt;p&gt;“S-W-O-T” 这四个字母，代表Strength（优势）、Weakness（劣势）、Opportunity（机会）、和Threat（威胁）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/07/wyqB2VoJcnLtlEQ.png&quot; alt=&quot;swot_1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;2-swot坐标系&quot;&gt;2. SWOT坐标系&lt;/h1&gt;
+
+&lt;p&gt;SWOT分析法的四个分析方面，可分为两个维度：1.企业发展内部情况维度，优势S、劣势W；2.企业外部环境维度，机会O、威胁T。&lt;/p&gt;
+
+&lt;p&gt;按照这两个维度，就构成了SWOT坐标系。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/07/r4txqUySvmJn85L.png&quot; alt=&quot;swot_coordinate_1_.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;3-swot定位与行动战略&quot;&gt;3. SWOT定位与行动战略&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/07/ZWOviS6ufhrUXFC.png&quot; alt=&quot;swot_2.png&quot; /&gt;
+在得到SWOT坐标系后，坐标系将平面划分为了四大部分，将每个部分代表的两个字母相互结合，我们可以得到四大SWOT场景：WO、WT、SO、ST，从而得到四大战略：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SO–&amp;gt;增长型战略：优势+机会场景，利用内部优势，翘取外部机会。&lt;/li&gt;
+  &lt;li&gt;WO–&amp;gt;扭转型战略：劣势+机会场景，利用外部机会，扭转内部劣势。&lt;/li&gt;
+  &lt;li&gt;ST–&amp;gt;多元化战略：优势+威胁场景，利用自身优势，规避外部威胁。&lt;/li&gt;
+  &lt;li&gt;WT–&amp;gt;防御型战略：劣势+威胁场景，克服内部弱点，避免外部威胁。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;4-swot分析法分析步骤&quot;&gt;4. SWOT分析法分析步骤&lt;/h1&gt;
+
+&lt;p&gt;使用SWOT分析法进行分析，要求能对企业的内部情况（S、W）和外部环境（O、T）都给出准确、全面的定义与分析，从而以这四个方向为基础，将其相互交叉组合，得出企业战略层面的分析结论。&lt;/p&gt;
+
+&lt;p&gt;**1. 确认企业的内部发展情况，即优势S，劣势W&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;确认企业的外部环境，即机会O、威胁T&lt;/li&gt;
+  &lt;li&gt;利用S、W、O、T建立SWOT坐标系&lt;/li&gt;
+  &lt;li&gt;结合实际情况，将结果在坐标系上定位&lt;/li&gt;
+  &lt;li&gt;选择合适的发展战略及行动计划**&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;5-实战用swot方法搭讪女神&quot;&gt;5. 实战：用SWOT方法搭讪女神&lt;/h1&gt;
+
+&lt;p&gt;情景：炎热夏日的下午，你在咖啡店等朋友，窗边角落里坐着一个女孩，拿着一本书正在看。你内心知道，她就是你喜欢的类型，这时候应该怎么去搭讪呢？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/07/MiJfFctAaNyolIg.jpg&quot; alt=&quot;girl.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SWOT分析：&lt;/strong&gt;
+S（优势）：你智商很高，细心，会琢磨女孩的小心思，会制造小浪漫。
+W（劣势）：你不高、不富、不帅，扔进人群中连个泡也没有，立马埋没在人海中。
+O（机会）：咖啡店里只有你们俩，粉色系的装修，轻柔的背景音乐营造出了一种浪漫的氛围。
+T（威胁）：女神时不时在看手机，很可能在跟别的男生聊天，有别的男生也在追求她。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;四大场景：&lt;/strong&gt;
+&lt;strong&gt;SO：你的优势和机会相匹配吗？如果匹配，能将他们结合起来，创造增长机会吗？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;通过你的细心观察，你发现了女孩在看的书是《橡果姐妹》，作者吉本芭娜娜。从没看过这本书的你用几分钟百度了故事梗概和一些书评，你发现这是一本日式治愈系小说，你联想到了你曾看过的《解忧杂货店》。&lt;/p&gt;
+
+&lt;p&gt;你用查到的书籍信息作为开场，跟女孩聊了起来，果然她也看过《解忧杂货店》，这样一来，话题既是你熟悉的场景，又是女孩感兴趣的，聊天的热度直线上升。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WO：面对机会，不但你没有优势，相反，你的劣势阻碍了你的发展前景。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;女神相貌出众，你相貌平平，直接搭讪很难给女神留下一个优秀的第一印象，很有可能见光死，那怎么办呢？如何利用机会扭转劣势？&lt;/p&gt;
+
+&lt;p&gt;你刚刚在朋友圈分享过几张角度合适的帅气照片，同时高逼格的旅行、美食、玩乐、阅读等内容在朋友圈中一应俱全。因此你写了张纸条，托咖啡店服务员递给女孩，要到了女孩的微信，从现实场景转战微信场景，利用朋友圈营造出来的“高端人设”，博取女孩第一印象的好感。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ST：面对威胁，如何利用你的优势，合理规避威胁？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;女孩可能在和其他男生聊天，那个男生已经和女孩相识，认识的比你早，了解的比你深，你如何在这场竞争中抢占领先身位？&lt;/p&gt;
+
+&lt;p&gt;女孩是可能在和其他男孩聊天没错，但你通过观察女孩手机震动的频率和拿起手机回复的频率，发现对方发送消息的频次明显高于女孩，因此你推断，手机那头的那个男生还只是处于初阶追求阶段，女孩对他没有明显的好感。&lt;/p&gt;
+
+&lt;p&gt;当女孩手机频繁震动时，你看到女孩脸上一闪而过的不快表情，因此你知道，舔狗战术对这个女孩没用。通过SO战略，搭讪加上女孩微信后，你有意营造一种神秘的人设，和女孩保持若即若离的关系，渐渐的，女孩的好奇心被调动起来，越来越主动地和你聊天。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WT：当外部威胁直指你的内部劣势时，你该如何防守，扳回一城？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;你加上了女孩的微信后，发现女孩朋友圈中都是同样高颜值的朋友，女孩告诉你，有一个帅气多金的男生最近总在约她。&lt;/p&gt;
+
+&lt;p&gt;这时，你遇到了最根本性的问题，外部威胁撞上了你的软肋，你该怎么办？赶紧采取防御型战略吧，通过观察女孩朋友圈，你全面掌握了女孩的兴趣爱好，你发现女孩喜欢玩狼人杀，因此你拉上身边的朋友一起，成立了一个小型狼人杀社群，并以只加熟人为由将情敌排除在外。这样，通过社群，你建立起了一道无形的防御围墙，避免了和情敌正面厮杀。&lt;/p&gt;
+
+&lt;h1 id=&quot;6-总结&quot;&gt;6. 总结&lt;/h1&gt;
+&lt;p&gt;SWOT分析，就是通过对内部优势和劣势，外部机会和威胁的分析，产生四大场景，以及对应的四大战略的分析工具。&lt;/p&gt;
+
+&lt;p&gt;这些场景和战略是：在“优势+机会”场景下，采取增长型战略；在“劣势+机会”的抑制性场景中，采取扭转型战略；在“优势+威胁”的脆弱性场景中，采取多元化战略；在“劣势+威胁”的问题性场景中，采取防御型战略。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Jul 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/07/07/SWOT/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/07/SWOT/</guid>
+        
+        <category>产品</category>
+        
+        <category>产品思维模型</category>
+        
+        
+      </item>
     
       <item>
         <title>成长还是衰老？小众社区的扩张陷阱</title>
@@ -1438,71 +1555,6 @@ gem 'github-pages'
         <category>产品</category>
         
         <category>产品思维模型</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Markdown文本在线编辑教程</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Written with &lt;a href=&quot;https://stackedit.io/&quot;&gt;StackEdit&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;1-markdown-文本简介&quot;&gt;1. Markdown 文本简介&lt;/h2&gt;
-&lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的&lt;a href=&quot;https://baike.baidu.com/item/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/5964436&quot;&gt;标记语言&lt;/a&gt;，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
-
-&lt;p&gt;Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。世界上最流行的博客平台&lt;a href=&quot;https://baike.baidu.com/item/WordPress&quot;&gt;WordPress&lt;/a&gt;和大型CMS如&lt;a href=&quot;https://baike.baidu.com/item/Joomla&quot;&gt;Joomla&lt;/a&gt;、&lt;a href=&quot;https://baike.baidu.com/item/Drupal&quot;&gt;Drupal&lt;/a&gt;都能很好的支持Markdown。完全采用Markdown编辑器的博客平台有&lt;a href=&quot;https://baike.baidu.com/item/Ghost/17013737&quot;&gt;Ghost&lt;/a&gt;和&lt;a href=&quot;https://baike.baidu.com/item/Typecho&quot;&gt;Typecho&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-在线编辑器&quot;&gt;2. 在线编辑器&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://stackedit.io/&quot;&gt;StackEdit&lt;/a&gt;是一款功能全面的免费在线Markdown编辑器，在StackEdit的网页客户端中可直接进行文本输入，StackEdit系统会自动将文字转为Markdown格式或HTML格式，PDF格式等。可直接插入于博客。&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;2020/06/17更新：&lt;/p&gt;
-
-&lt;p&gt;国内解决方案：&lt;a href=&quot;https://www.zybuluo.com/cmd/#&quot;&gt;Cmd Markdown&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3-添加图片&quot;&gt;3. 添加图片&lt;/h2&gt;
-&lt;p&gt;在Markdown中添加图片，首先需要将图片上传至云端，获取图片链接再进行插入。&lt;/p&gt;
-
-&lt;p&gt;这里我推荐&lt;a href=&quot;https://sm.ms/&quot;&gt;SM.MS&lt;/a&gt;，SM.MS是一款免费的在线图床软件。使用方法如下：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;打开 SM.MS，将图片拖拽至上传框内，或点击右下角上传图片。
- &lt;img src=&quot;https://i.loli.net/2020/05/28/USEL5jDZKkRBp2l.jpg&quot; alt=&quot;smms1.JPG&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;上传完成后，点击upload按钮，将图片传至云端。
- &lt;img src=&quot;https://i.loli.net/2020/05/28/cBQw15qKyYP2Oex.jpg&quot; alt=&quot;smms2.JPG&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;复制Markdown格式链接，将其粘贴在StackEdit文本框内想要添加图片的位置即可。
-&lt;img src=&quot;https://i.loli.net/2020/05/28/9PFwbmdE8ao3QxW.jpg&quot; alt=&quot;smms3.JPG&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;2020/06/17更新：&lt;/p&gt;
-
-&lt;p&gt;国内解决方案：&lt;a href=&quot;https://www.superbed.cn/&quot;&gt;聚合图床&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;4-添加视频&quot;&gt;4. 添加视频&lt;/h2&gt;
-&lt;p&gt;在Markdown中添加视频，与添加照片一样，较为简单的办法是先将视频上传至云端，再添加链接。这里以&lt;a href=&quot;https://www.bilibili.com/&quot;&gt;B站&lt;/a&gt;作为视频储存端为例。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;嵌入链接格式：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;iframe src=&quot;http://player.bilibili.com/player.html?aid=24931813&amp;amp;cid=42084760&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;800px&quot; height=&quot;600px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&amp;gt; &amp;lt;/iframe&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;获取视频链接：&lt;/strong&gt;
-进入视频页面，复制下面的嵌入代码，再用其替换上面链接中的视频地址。
-&lt;img src=&quot;https://i.loli.net/2020/05/28/SEMDjL2PfZRVsyi.jpg&quot; alt=&quot;bilibili1.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;插入视频&lt;/strong&gt;
-最后，和插入图片一样，在Markdown文本中直接插入上述链接就可以了。&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 27 May 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/05/27/markdown-instruction/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/05/27/markdown-instruction/</guid>
-        
-        <category>教程</category>
-        
-        <category>Instruction</category>
         
         
       </item>

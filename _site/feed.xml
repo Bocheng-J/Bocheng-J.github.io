@@ -5,9 +5,82 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 09 Jul 2020 10:44:27 +0200</pubDate>
-    <lastBuildDate>Thu, 09 Jul 2020 10:44:27 +0200</lastBuildDate>
+    <pubDate>Thu, 09 Jul 2020 12:11:02 +0200</pubDate>
+    <lastBuildDate>Thu, 09 Jul 2020 12:11:02 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>产品思维模型系列-5：漏斗模型</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;这是产品思维模型系列的第五篇文章。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/09/QyIFKr3oYdOwJh2.jpg&quot; alt=&quot;1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;思考力=思维广度×思维深度&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;前面我们已经学习过三种产品思维模型：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/&quot;&gt;产品思维模型系列-1：什么是万能的AARRR模型？&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/&quot;&gt;产品思维模型系列-2：产品分析七大模块&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/08/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E6%91%86%E5%9C%B0%E6%91%8A/&quot;&gt;产品思维模型系列-3：产品思维应用-如何用产品思维摆地摊？&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/07/07/SWOT/&quot;&gt;产品思维模型系列-4：SWOT分析法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今天介绍的思维模型是：漏斗模型。&lt;/p&gt;
+
+&lt;h2 id=&quot;1漏斗模型定义&quot;&gt;1.漏斗模型定义&lt;/h2&gt;
+
+&lt;p&gt;首先我们要明确一个定义，世界上任何事物的转化过程，都是有损耗的。也就是说，你所投入的资源和成本，是不可能100%转化为你想要的结果的。在产品设计过程中也是这样，任何一款产品在用户转化的路径中，都无法达到100%的转化率。（利润率可能达到100%,但转化率不可能）&lt;/p&gt;
+
+&lt;p&gt;因此在用户的转化路径中，每一步都存在一定的损耗，即人数会逐层递减，这就是漏斗模型。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-aidma漏斗模型&quot;&gt;2. AIDMA漏斗模型&lt;/h2&gt;
+
+&lt;p&gt;下面我们来介绍漏斗模型的基本理论：AIDMA模型。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;AIDMA：Attention(获得关注), Interest(引起兴趣), Desire(产生欲望), Memory(留存记忆), Action(行动购买)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/07/09/IdnwD5ms8KHXZfQ.png&quot; alt=&quot;AIDMIA.png&quot; /&gt;
+AIDMA是一个基本的用户转化模型，面对一款新产品，用户首先会被吸引注意，接着引起用户兴趣，勾起用户深入了解的欲望，然后用户对产品产生记忆，最终付费行动购买。&lt;/p&gt;
+
+&lt;p&gt;在五个步骤中，每一步都存在着用户损耗，因此形成了漏斗模型。&lt;/p&gt;
+
+&lt;h2 id=&quot;3aidma模型和aarrr模型的对比&quot;&gt;3.AIDMA模型和AARRR模型的对比&lt;/h2&gt;
+&lt;p&gt;AIDMA和AARRR十分相似，这里我们将二者做一个对比&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;相同之处&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;AIDMA和&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/&quot;&gt;AARRR&lt;/a&gt;都属于用户增长、转化模型，研究的是如何从零开始获取用户，最终转化用户。&lt;/li&gt;
+  &lt;li&gt;AIDMA和AARRR在每一级转化过程中都存在一定损耗，即都属于漏斗模型。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;不同之处&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;AARRR是从平台侧出发，是平台获取用户转化用户的路径，AIDMA是从用户侧出发，是用户接触新产品的主动动作。&lt;/li&gt;
+  &lt;li&gt;AARRR和AIDMA的起点都是从获客出发，但AARRR的终点比AIDMA更深一层，AIDMA到转化购买就停止了，AARRR还额外有一层Refer自传播。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;希望本文对你有帮助！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Thu, 09 Jul 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/07/09/%E6%BC%8F%E6%96%97%E6%A8%A1%E5%9E%8B/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/07/09/%E6%BC%8F%E6%96%97%E6%A8%A1%E5%9E%8B/</guid>
+        
+        <category>产品</category>
+        
+        <category>产品思维模型</category>
+        
+        
+      </item>
     
       <item>
         <title>产品思维模型系列-4：SWOT分析法</title>
@@ -1422,144 +1495,6 @@ gem 'github-pages'
         <guid isPermaLink="true">http://localhost:4000/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
         
         <category>产品</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>产品思维模型系列-1：什么是万能的AARRR模型？</title>
-        <description>&lt;h1 id=&quot;产品思维模型系列-1aarrr用户增长模型&quot;&gt;产品思维模型系列-1：AARRR用户增长模型&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;这是产品思维模型系列的第一篇文章。&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;思考力=思维广度×思维深度&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;做为产品从业者，绕不过去的话题就是产品思维。在许许多多的“产品经理能力模型图”中，最核心的C位往往都被产品思维牢牢占据，那么如何培养独到的产品思维呢？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/3pQ98OCcHPjTZsF.jpg&quot; alt=&quot;pm1.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我的答案是要使用本质思考力来分析一切产品问题，继续拆解一下可将思考力的培养分为两步走：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;培养思维的广度&lt;/li&gt;
-  &lt;li&gt;培养思维的深度&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;思维广度的培养可以借助现成的产品思维模型，换句话说，思维的广度可以速成，灵活运用现有的模型，就能达到一个基础的思维广度。&lt;/p&gt;
-
-&lt;p&gt;思维的深度则更多地需要个人的眼界，思考，学识的日积月累，要深入地探究每个问题背后的本质原因。&lt;/p&gt;
-
-&lt;p&gt;罗马并非一天建成的，在培养思维深度之前，应该先打好基础，首先确保自己的思维视野足够宽广。因此接下来，我会从一个学习者的角度入手，推出一系列文章，专门介绍产品思维的常见思维模型，拓展思维的广度。本文以AARRR模型作为这个系列的开头。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;AARRR是在产品及运营思维中具有重要意义的一个用户增长模型，其具体包括五个层级：Acquisition, Activation, Retention, Revenue, Refer.&lt;/strong&gt; 
-&lt;img src=&quot;https://i.loli.net/2020/06/04/c6N7miTe9W4MfJQ.jpg&quot; alt=&quot;aarrr.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;acquisition-获客&quot;&gt;Acquisition 获客&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Acquisition是指获取顾客的过程&lt;/strong&gt;，获客按照用户种类可分为两类：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;一是获取新用户&lt;/li&gt;
-  &lt;li&gt;二是获取流失的老用户&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;获客的手段可分为以下两种：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;线下推广&lt;/li&gt;
-  &lt;li&gt;线上推广&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;具体的获客措施有很多，比如：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;活动推广&lt;/li&gt;
-  &lt;li&gt;广告推广&lt;/li&gt;
-  &lt;li&gt;软文（KOL）推广&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;activation-促活&quot;&gt;Activation 促活&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;促活是指提高产品用户活跃度的过程&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;促活的手段大概可分为以下三种：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;价格优惠促活&lt;/li&gt;
-  &lt;li&gt;高质量内容促活&lt;/li&gt;
-  &lt;li&gt;多种类商品/产品/功能促活&lt;/li&gt;
-  &lt;li&gt;利用活动促活&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;另外，设立会员激励成长体制也是较为常用的一种促活手段，即会员等级成长制，等级越高便可解锁更多特权。例如：B站的会员机制，会员等级越高就能发送越高级的弹幕。&lt;/p&gt;
-
-&lt;h2 id=&quot;retention-留存&quot;&gt;Retention 留存&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;留存是在提高活跃度得到了忠实用户后，将其长期保留，沉淀于产品中的操作。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;留存的本质：由PGC向UGC发展转变。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;关于PGC和UGC，可以点击我的这篇博文：&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/&quot;&gt;UGC PGC OGC之间的区别&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;几类常见的留存方法：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;简单粗暴捆绑式：充会员，办理储值卡等。  举例：各大视频网站&lt;/li&gt;
-  &lt;li&gt;做社区，通过PGC-&amp;gt;UGC的社交留存。  举例：虎扑，soul&lt;/li&gt;
-  &lt;li&gt;做内容，输出目标用户喜欢的内容。  举例：知乎。&lt;/li&gt;
-  &lt;li&gt;设立账号成长机制，例如每日签到奖励，高等级解锁更多特权等。  举例：B站会员&lt;/li&gt;
-  &lt;li&gt;其他：APP推送，短信广告等。  举例：网易云音乐&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;revenue-收益转化&quot;&gt;Revenue 收益转化&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;做产品的最终目的还是要将用户转化为收益，即提高产品的商业能力，变现能力。收益转化的关键是提高付费用户的转化率。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;目前互联网生态中主流的几种收入方式：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;付费应用，必须付费才能使用该应用。   举例：专业的PS，视频剪辑软件等。&lt;/li&gt;
-  &lt;li&gt;应用内付费，通过付费解锁内容或者增值服务。  举例：王者荣耀内购买英雄皮肤。&lt;/li&gt;
-  &lt;li&gt;广告收益，通过广告来获取广告主的收益。  举例：爱奇艺视频广告。&lt;/li&gt;
-  &lt;li&gt;电商收益，通过自营电商来赚取利润。  举例：拼多多，京东等。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;按照变现模式分，有以下几类主流方式：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;内容变现&lt;/li&gt;
-  &lt;li&gt;增值服务变现&lt;/li&gt;
-  &lt;li&gt;广告变现&lt;/li&gt;
-  &lt;li&gt;电商变现&lt;/li&gt;
-  &lt;li&gt;流量变现&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;refer-自传播&quot;&gt;Refer 自传播&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;自传播是指忠实用户在自身社交网中，自主二次推广传播产品的过程。&lt;/strong&gt; 
- 自传播是依赖于社交网络产生的。&lt;/p&gt;
-
-&lt;p&gt;通过用户的自传播，产品又能获得新的用户，即这是一个良性的螺旋上升过程：
-&lt;strong&gt;口碑&lt;/strong&gt; –&amp;gt; 分享 –&amp;gt; 获客&lt;/p&gt;
-
-&lt;p&gt;自传播的重点，也是前提：&lt;strong&gt;良好的口碑&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;自传播可分为两类：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;纯粹用户自主分享 （可能性较小）&lt;/li&gt;
-  &lt;li&gt;在产品引导下的自传播  （可能性较大）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;这也是为什么很多软件都具有“分享”功能，包括网易云音乐的年终盘点也是一次很好的自传播营销活动。&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;后续我会推出更多关于产品思维的文章，欢迎持续关注！&lt;/p&gt;
-</description>
-        <pubDate>Thu, 04 Jun 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/</guid>
-        
-        <category>产品</category>
-        
-        <category>产品思维模型</category>
         
         
       </item>

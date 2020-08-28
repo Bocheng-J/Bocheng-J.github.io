@@ -5,9 +5,165 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 09 Jul 2020 12:11:02 +0200</pubDate>
-    <lastBuildDate>Thu, 09 Jul 2020 12:11:02 +0200</lastBuildDate>
+    <pubDate>Fri, 28 Aug 2020 22:15:32 +0200</pubDate>
+    <lastBuildDate>Fri, 28 Aug 2020 22:15:32 +0200</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>常见产品方向介绍</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;输入+输出=我的学习方法论&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/29/wC8cMTb3K9RXUdf.jpg&quot; alt=&quot;bg1.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最近在实习+秋招，每天忙碌的事很多，却很少有时间停下来总结、思考、沉淀做过的东西。仔细想想，其实这是捡了芝麻丢西瓜，做的事情再多，不去思考，只能浮于表面，难以真正提高。&lt;/p&gt;
+
+&lt;p&gt;因此本文以读书笔记的方式，总结我近期阅读《决胜B端》一书的收获与思考，重拾输入+输出的学习模式。&lt;/p&gt;
+
+&lt;h2 id=&quot;常见的产品方向类型&quot;&gt;常见的产品方向类型&lt;/h2&gt;
+
+&lt;p&gt;根据互联网产品的属性和目标，可将常见产品方向分为以下几大类：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;C端产品&lt;/li&gt;
+  &lt;li&gt;B端产品&lt;/li&gt;
+  &lt;li&gt;AI产品&lt;/li&gt;
+  &lt;li&gt;数据与策略产品&lt;/li&gt;
+  &lt;li&gt;商业化产品&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;接下来我会对这几种产品方向进行逐个介绍。&lt;/p&gt;
+
+&lt;h2 id=&quot;1-c端产品&quot;&gt;1. C端产品&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/29/TsX6fbQLgUaR8c7.jpg&quot; alt=&quot;2.jpg&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;C端产品是面向终端用户或消费者的产品，往往承担流量获取和转化的重任。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;用户通过C端产品接触、使用企业提供的商品或服务，因此C端产品时企业和用户进行价值交换的重要媒介。&lt;/p&gt;
+
+&lt;p&gt;C端产品有以下几个特点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;用户是个体&lt;/strong&gt;。按俞军老师的思维，也可以理解为用户是需求的集合。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;强调用户体验&lt;/strong&gt;。用户体验往往决定了一款C端产品的存亡。eg: 微信极致的用户体验造就了IM之王的地位。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;收益容易量化&lt;/strong&gt;。核心指标包括：UV、PV、MAU、DAU、转化率等等，项目收益容易量化和评判。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;运营决定存亡&lt;/strong&gt;。对于C端产品，产品运营和产品设计同样重要，共同决定了产品的成败。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;按照实现平台，C端产品可分为：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PC端产品，如百度网盘、迅雷、360电脑管家等。&lt;/li&gt;
+  &lt;li&gt;移动端产品，包括APP、小程序、H5等等。&lt;/li&gt;
+  &lt;li&gt;其他产品，如智能硬件、车载产品等。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;按照实现的功能，C端产品可分为：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;工具类产品&lt;/strong&gt;，作为工具解决某一类具体需求。例如美图秀秀、WPS等。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;内容类产品&lt;/strong&gt;，为原创或聚合内容提供分享平台。其中内容生产形式有UGC、PGC、OGC。（相关阅读：&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/&quot;&gt;UGC、PGC、OGC之间的区别&lt;/a&gt;）例如B站、今日头条等。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;社交类产品&lt;/strong&gt;，实现人与人之间的社交沟通，例如微信、陌陌等。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;平台类产品&lt;/strong&gt;，做为平台服务方，为买卖双方提供交易平台，撮合双方交易。例如淘宝、滴滴等。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;创造的价值：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;C端产品创造的&lt;strong&gt;用户价值&lt;/strong&gt;：提供服务，解决用户的某些个性化需求&lt;/li&gt;
+  &lt;li&gt;C端产品创造的&lt;strong&gt;商业价值&lt;/strong&gt;：获取流量，并进行转化。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-b端产品&quot;&gt;2. B端产品&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/29/GXmIxkg9yE6dz1Z.jpg&quot; alt=&quot;3.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;B端产品是面向企业或组织的产品，承担着为企业/组织提高收入、提升效率、降低成本、控制风险的重任。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;做为普通用户，我们可能接触不到B端产品，但实际B端产品无处不在。例如一个业务可能只需要一个C端产品，但在其背后，还需要有多个B端产品来支持产品、业务、公司运作。&lt;/p&gt;
+
+&lt;p&gt;B端产品的特点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;目标用户是一个群体&lt;/strong&gt;。B端产品的用户一般是某个业务团队或组织。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;效率为王&lt;/strong&gt;。由于B端产品是提供给行业内人士使用的产品，因此用户体验并不那么重要，而在商业场景下，效率才是最重要的因素。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;强调抽象和逻辑&lt;/strong&gt;。B端产品的设计需要对一个行业有较深的了解和认知，与C端相比，B端产品背后的业务复杂度高，需要PM有很强的抽象能力和逻辑能力。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;收益难以量化&lt;/strong&gt;。B端产品的使命是支持、解决业务问题，但实际业务问题的影响因素非常多，很多时候并非取决于B端产品设计的好坏。因此B端产品对业务价值的贡献很难衡量，这也是B端PM面临的烦恼：难以外化效果。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;B端产品按业务方向可以分为：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;对企业内部的B端产品：&lt;strong&gt;业务支撑类产品&lt;/strong&gt;（CRM系统）、&lt;strong&gt;办公协同类产品&lt;/strong&gt;（IM系统）。&lt;/li&gt;
+  &lt;li&gt;对企业外部的产品：&lt;strong&gt;商家平台产品&lt;/strong&gt;，例如美团外卖的商家端。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;SaaS产品&lt;/strong&gt;：software-as-a-service, 意思为软件即服务，即通过网络提供软件服务。SaaS平台供应商将应用软件统一部署在自己的服务器上，售卖给客户使用。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;创造的价值：（对于B端产品，用户和企业很多场景下是同一个组织/机构）&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;B端产品创造的&lt;strong&gt;用户价值&lt;/strong&gt;：提高收入、效率，降低成本、风险&lt;/li&gt;
+  &lt;li&gt;B端产品创造的&lt;strong&gt;商业价值&lt;/strong&gt;：获取利润、提高效率、降低成本、风险&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-数据与策略产品&quot;&gt;3. 数据与策略产品&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/29/iYL1xgjflDGMvzr.jpg&quot; alt=&quot;4.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;数据类产品是对企业内外部所有数据进行挖掘并利用的产品，通过数据反映出来的深层次信息来提高对应业务的绩效。由于策略产品同样是基于数据的应用，所以把数据产品和策略产品归为一类。&lt;/p&gt;
+
+&lt;p&gt;数据与策略产品的工作方向：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;数据仓库建设&lt;/strong&gt;：设计公司底层数据仓库。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;报表设计&lt;/strong&gt;：实现数据可视化。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;算法策略输出&lt;/strong&gt;：结合业务诉求，对数据进行探查与挖掘，设计出各种策略算法。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;数据监控&lt;/strong&gt;：设计并持续优化监控工具，向用户售卖监控工具并提供服务，例如谷歌统计、百度统计。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;价值：&lt;strong&gt;对于数据与策略产品，报表、可视化工具只是表面。数据的挖分析和价值输出才是产品灵魂。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-商业化产品&quot;&gt;4. 商业化产品&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/29/72GFAzCwKdZnxbS.jpg&quot; alt=&quot;5.jpg&quot; /&gt;
+商业化变现产品，是帮助互联网企业将流量转化为收入的产品。&lt;/p&gt;
+
+&lt;p&gt;产品变现的方式主要有以下四种：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;广告变现&lt;/strong&gt;。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;佣金提成&lt;/strong&gt;。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;增值服务&lt;/strong&gt;。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;买卖差价&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;其中广告变现又可分为：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;搜索引擎营销&lt;/strong&gt;：例如百度的竞价排名、淘宝的直通车推广&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;广告投放平台&lt;/strong&gt;：对于流量行互联网公司，可以在自家平台上投放广告赚取利润，例如抖音、爱奇艺等。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;在线广告联盟&lt;/strong&gt;：拥有流量的中小网站、APP可以通过在线广告联盟实现变现。例如谷歌Adsense、百度网盟等。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;增值服务&lt;/strong&gt;：给消费者提供付费的高阶服务，来赚取利润。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-ai产品&quot;&gt;5. AI产品&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/08/29/jNZg5tVSf8nQXdP.jpg&quot; alt=&quot;6.JPG&quot; /&gt;
+凡是利用人工智能技术的产品，都属于AI产品。AI产品包罗万象，包括操作系统、图像识别、语音交互、无人驾驶等。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;AI产品的核心：
+ 数据、算法与应用场景的结合。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;目前的应用：
+自动鉴黄、语音交互机器人、无人驾驶等等。&lt;/p&gt;
+</description>
+        <pubDate>Fri, 28 Aug 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/08/28/%E5%B8%B8%E8%A7%81%E4%BA%A7%E5%93%81%E5%88%86%E7%B1%BB/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/28/%E5%B8%B8%E8%A7%81%E4%BA%A7%E5%93%81%E5%88%86%E7%B1%BB/</guid>
+        
+        <category>产品</category>
+        
+        <category>读书笔记</category>
+        
+        
+      </item>
     
       <item>
         <title>产品思维模型系列-5：漏斗模型</title>
@@ -1456,45 +1612,6 @@ gem 'github-pages'
         <category>教程</category>
         
         <category>Instruction</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>UGC PGC OGC之间的区别</title>
-        <description>&lt;h1 id=&quot;ugc-ogc和pgc&quot;&gt;UGC OGC和PGC&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;UGC，OGC, PGC是当下三种主流的社区形式，他们的具体关系如下图：&lt;/strong&gt;
-&lt;img src=&quot;https://i.loli.net/2020/06/04/URcx9WsK3pPBymH.png&quot; alt=&quot;UGC.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1-ugc&quot;&gt;1. UGC&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;UGC: user generated content&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;UGC指依靠用户创作内容的形式，主要代表产品有：虎扑，小红书等。&lt;/p&gt;
-
-&lt;h1 id=&quot;2-pgc&quot;&gt;2. PGC&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;PGC：professionally generated content&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;PGC是指有行业专家，业内人士来创作内容的社区形式，代表产品有：知乎，果壳网等。&lt;/p&gt;
-
-&lt;h1 id=&quot;3-ogc&quot;&gt;3. OGC&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;OGC：occupationally generated content&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;OGC是指由网站、社区职业人士创作内容的形式，此形式下往往是社区付费请人来专职创作内容。代表产品有：各大公司的官方网站，公司论坛等。&lt;/p&gt;
-</description>
-        <pubDate>Thu, 04 Jun 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/04/UGC-PGC-OGC-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
-        
-        <category>产品</category>
         
         
       </item>

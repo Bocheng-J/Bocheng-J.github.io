@@ -2,7 +2,7 @@
 layout:     post
 title:      Kalman filter
 subtitle:   kalman filter introduction and implementation
-date:       2020-05-04
+date:       2020-09-04
 author:     oscar
 header-img: img/post_bg_20200504.jpg
 catalog: true

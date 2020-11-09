@@ -5,9 +5,846 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 28 Aug 2020 22:15:32 +0200</pubDate>
-    <lastBuildDate>Fri, 28 Aug 2020 22:15:32 +0200</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2020 10:11:41 +0100</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2020 10:11:41 +0100</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>Autonomous car project demonstration</title>
+        <description>&lt;h1 id=&quot;1-project-introduction&quot;&gt;1. Project introduction&lt;/h1&gt;
+&lt;p&gt;The purpose of this project is to design one self-driving car, which can drive in the special track without hitting any cone.&lt;/p&gt;
+
+&lt;p&gt;The track is formed by three kinds of different cones:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blue cone&lt;/strong&gt; represents the right side of the track&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Yellow cone&lt;/strong&gt; represents the left side of the track&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Red cone&lt;/strong&gt; represents the start/end of the track&lt;/p&gt;
+
+&lt;h1 id=&quot;2-implementation&quot;&gt;2. Implementation&lt;/h1&gt;
+&lt;p&gt;The autonomous car uses camera as the input sensor, by applying Opencv algorithm to find color and contour of the cones, we can recognize blue cones and yellow cones.&lt;/p&gt;
+
+&lt;p&gt;After getting blue cones and yellow cones, we can find the middle point of the track, and set that point as the aim point, where we want our car to drive to.&lt;/p&gt;
+
+&lt;p&gt;By calculating the angle between aim point and current car point, we can get the steering angle, sending this angle to motor block, the car can be controlled autonomously.&lt;/p&gt;
+
+&lt;p&gt;The total project is built based on docker, using microservices. So we can achieve cross-compilation inside our system.&lt;/p&gt;
+
+&lt;h1 id=&quot;3-simulation-video&quot;&gt;3. Simulation video&lt;/h1&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=370853141&amp;amp;bvid=BV1KZ4y1W73F&amp;amp;cid=194873648&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;p&gt;As seen in video, the car can self-drive in the track without hitting any cones.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Oct 2020 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2020/10/27/autonomous-project/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/10/27/autonomous-project/</guid>
+        
+        <category>project demonstration</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Kalman filter</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Wikipedia: &lt;a href=&quot;https://en.wikipedia.org/wiki/Kalman_filter&quot;&gt;Kalman filter&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;introduction-video&quot;&gt;Introduction video&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;video source: 
+如何通俗并尽可能详细地解释卡尔曼滤波？ - 云羽落的回答 - 知乎 https://www.zhihu.com/question/23971601/answer/839664224&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;1-why-use-kalman-filters&quot;&gt;1. Why use Kalman Filters:&lt;/h2&gt;
+
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=370545584&amp;amp;bvid=BV1pZ4y1s7XB&amp;amp;cid=187145554&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;2-state-observers&quot;&gt;2. State Observers:&lt;/h2&gt;
+
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=968070266&amp;amp;bvid=BV11p4y197Ly&amp;amp;cid=187145687&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;3-optimal-state-estimator&quot;&gt;3. Optimal State Estimator:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=285592413&amp;amp;bvid=BV1Cf4y1m7wg&amp;amp;cid=187145830&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;4-optimal-state-estimator-algorithm&quot;&gt;4. Optimal State Estimator Algorithm:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=200533156&amp;amp;bvid=BV1ez411z7Qo&amp;amp;cid=187146006&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;5-nonlinear-state-estimators&quot;&gt;5. Nonlinear State Estimators:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=710515346&amp;amp;bvid=BV1sQ4y1N7e6&amp;amp;cid=187146091&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;6-how-to-use-a-kalman-filter-in-simulink&quot;&gt;6. How to Use a Kalman Filter in Simulink:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=455533544&amp;amp;bvid=BV1V541147dX&amp;amp;cid=187146142&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h2 id=&quot;7-how-to-use-an-extended-kalman-filter-in-simulink&quot;&gt;7. How to Use an Extended Kalman FIlter in SImulink:&lt;/h2&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=968015764&amp;amp;bvid=BV14p4y197Ue&amp;amp;cid=187146193&amp;amp;page=1&quot; scrolling=&quot;no&quot; width=&quot;100%&quot; height=&quot;450px&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+
+&lt;h1 id=&quot;steps-to-set-a-kalman-filter&quot;&gt;Steps to set a kalman filter:&lt;/h1&gt;
+
+&lt;h2 id=&quot;linear-systems&quot;&gt;Linear systems:&lt;/h2&gt;
+&lt;h2 id=&quot;step-1-build-system-model&quot;&gt;Step 1: Build system model&lt;/h2&gt;
+&lt;p&gt;Build the process model (equation 13) 
+and the observation model (equation 14).&lt;/p&gt;
+
+&lt;p&gt;Through these two models, we know how these two models work.
+Plus, we can get process model coefficient &lt;strong&gt;a&lt;/strong&gt;, control signal &lt;strong&gt;U_k&lt;/strong&gt;, and measurement noise &lt;strong&gt;V_k&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We will use these coefficients in later steps.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/dWJAzFu78eP2rUQ.jpg&quot; alt=&quot;step1.JPG&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-calculate-the-predicted-state&quot;&gt;Step 2: Calculate the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/Mmw6rYkpBVUCjRf.jpg&quot; alt=&quot;step2.JPG&quot; /&gt;
+ By using the state from previous time step (k-1),
+ equation (15) calculates &lt;strong&gt;x_k–&lt;/strong&gt; the current (time step: k) priori estimate;
+ (the hat means estimated value)&lt;/p&gt;
+
+&lt;p&gt;equation (16) calculates &lt;strong&gt;p_k–&lt;/strong&gt;, the current covariance of this priori estimate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;But they are just our prediction, we need to use the measured data to refine them to get an optimal result.&lt;/strong&gt;  And this is the point of using kalman filter.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-update-the-predicted-state&quot;&gt;Step 3: Update the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/1o8e9vEuJRYnpys.jpg&quot; alt=&quot;step3.JPG&quot; /&gt;
+First, in (17), we calculate the kalman gain &lt;strong&gt;g_k&lt;/strong&gt; by using predicted covariance &lt;strong&gt;p_k–&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then in (18), we update the &lt;strong&gt;x_k&lt;/strong&gt; by combining predicted data &lt;strong&gt;x_k–&lt;/strong&gt; and measured data &lt;strong&gt;z_k&lt;/strong&gt;. 
+(The essence of this step is to multiply &lt;strong&gt;x_k–&lt;/strong&gt; and &lt;strong&gt;z_k&lt;/strong&gt;’s probability density function, for more information, please check the fourth video.)&lt;/p&gt;
+
+&lt;p&gt;And in (19), we update the covariance &lt;strong&gt;p_k&lt;/strong&gt; too.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-loop&quot;&gt;Step 4: Loop&lt;/h2&gt;
+&lt;p&gt;After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.&lt;/p&gt;
+
+&lt;h2 id=&quot;result&quot;&gt;Result:&lt;/h2&gt;
+
+&lt;p&gt;First we need the process model and observation model to get necessary coefficients.&lt;/p&gt;
+
+&lt;p&gt;Then we do the prediction.&lt;/p&gt;
+
+&lt;p&gt;After that, we update the prediction state by combining predicted data and measured data together.&lt;/p&gt;
+
+&lt;p&gt;So, as a result, the updated data &lt;strong&gt;x_k&lt;/strong&gt; is what we want, it is more accurate than the predicted-only version.&lt;/p&gt;
+
+&lt;p&gt;And this system is an Iterative system.&lt;/p&gt;
+
+&lt;h2 id=&quot;non-linear-extended-kalman-filter&quot;&gt;Non-linear: extended kalman filter:&lt;/h2&gt;
+&lt;h2 id=&quot;step-1-build-system-model-1&quot;&gt;Step 1: Build system model&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/gpZMFsqU2HVY649.jpg&quot; alt=&quot;4.JPG&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;step-2-calculate-the-predicted-state-1&quot;&gt;Step 2: Calculate the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/IADLqcFiKsSPm6E.jpg&quot; alt=&quot;5.JPG&quot; /&gt;
+F_k is the Jacobian matrix of f(xk,uk).
+Q is used to refine the system’s performance. We can use diagonal matrix at the beginning, and correct it in future according to system’s performance.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-update-the-predicted-state-1&quot;&gt;Step 3: Update the predicted state&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/05/05/XxrocHGyLihF4jW.jpg&quot; alt=&quot;6.JPG&quot; /&gt;
+H_k is the Jacobian matrix of h(xk).&lt;/p&gt;
+
+&lt;p&gt;For R,  we can use diagonal matrix too, and then correct it in future according to system’s performance.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-loop-1&quot;&gt;Step 4: Loop&lt;/h2&gt;
+&lt;p&gt;After getting the updated data, we use this set of data, return back to step 2 to calculate the predicted state of next time step. Over and over again.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 04 Sep 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/09/04/Kalman-filter/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/04/Kalman-filter/</guid>
+        
+        <category>Kalman filter</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Shortest path - Dijkstra's algorithm</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm&quot;&gt;Dijkstra’s algorithm&lt;/a&gt; is an algorithm which is used to find the shortest path.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;dijkstras-algorithm-method&quot;&gt;Dijkstra’s algorithm method&lt;/h1&gt;
+&lt;h2 id=&quot;step-0--the-prerequisite&quot;&gt;Step: 0 – The prerequisite&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We need to have a map of nodes.&lt;/li&gt;
+  &lt;li&gt;We need to have a start node.&lt;/li&gt;
+  &lt;li&gt;The distance between each adjacent nodes should be known.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;step-1--start&quot;&gt;Step: 1 – Start&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set the start node to be the current node, which is the first visited
+node.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Introduce several concepts:&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;The current node is a already-visited node, and will be the predecessor node for the next node.&lt;/p&gt;
+
+      &lt;p&gt;The stored distance of each node is the shortest distance from the start node. We will use this later.&lt;/p&gt;
+
+      &lt;p&gt;The start node is an exception: 
+The shortest distance is 0, but the stored distance is always infinite (∞).&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-2--check-neighbours&quot;&gt;Step: 2 – Check neighbours&lt;/h2&gt;
+&lt;p&gt;Go through all the &lt;strong&gt;non-visited&lt;/strong&gt;  &lt;strong&gt;neighbour nodes&lt;/strong&gt; of the current node, and calculate the distance &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;=&lt;/strong&gt; the distance between current node and predecessor node &lt;strong&gt;+&lt;/strong&gt; the predecessor’s shortest distance.&lt;/p&gt;
+
+&lt;p&gt;(If one node can’t be reached from the current node, then &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt;=∞ )&lt;/p&gt;
+
+&lt;p&gt;For each node i, if &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; is smaller than the previously stored distance of i, then update the stored distance by &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt;. Otherwise, keep the previous stored distance unchanged.&lt;/p&gt;
+
+&lt;p&gt;After checking all the neighbour nodes (all the non-visited nodes of the current node), select one &lt;strong&gt;non-visited&lt;/strong&gt; node which has the &lt;strong&gt;smallest&lt;/strong&gt; stored distance as the next current node.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3--loop&quot;&gt;Step: 3 – Loop&lt;/h2&gt;
+&lt;p&gt;Return to step 2, unless the target node has been reached or all the nodes are visited.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I prepare 2 examples here, a simple one and a more complex one.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-1&quot;&gt;Example 1:&lt;/h2&gt;
+&lt;p&gt;Find the shortest path from 1 to 5.
+&lt;img src=&quot;https://i.loli.net/2020/04/30/HUD1s78WgMXVuOt.gif&quot; alt=&quot;example_1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;round-1&quot;&gt;Round 1:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  1.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Start from node 1, so we have 3 non-visited neighour nodes: 2 3 6, their distance D is: [7 9 14].&lt;/p&gt;
+
+&lt;p&gt;-So now the &lt;strong&gt;stored distance&lt;/strong&gt; is :&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2&lt;/th&gt;
+      &lt;th&gt;node 3&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark : visited node)&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 7, so &lt;strong&gt;node 2&lt;/strong&gt; is the next node.
+ -The shortest path to node 2: &lt;strong&gt;1 –&amp;gt; 2&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-2&quot;&gt;Round 2:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  2.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Now we have 2 non-visited neighbour nodes: 3 4, and their distance D now is :[17 22].&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt; is:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2*&lt;/th&gt;
+      &lt;th&gt;node 3&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 2&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark : visited node)&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 9,  so &lt;strong&gt;node 3&lt;/strong&gt; is the next node.
+   -The shortest path to node 3: &lt;strong&gt;1 –&amp;gt; 3&lt;/strong&gt;. (Since the distace is 9).&lt;/p&gt;
+
+&lt;h2 id=&quot;round-3&quot;&gt;Round 3:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  3.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Now we have 2 non-visited neighbour nodes: 4 6, and their distance D now is :[20 11].&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt;  is:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2*&lt;/th&gt;
+      &lt;th&gt;node 3*&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 11, so &lt;strong&gt;node 6&lt;/strong&gt; is the next node.
+   -The shortest path to node 6: &lt;strong&gt;1 –&amp;gt; 3 –&amp;gt; 6&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-4&quot;&gt;Round 4:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  6.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-Now we &lt;strong&gt;only have 1&lt;/strong&gt; non-visited neighbour: 5.  D is 20.&lt;/p&gt;
+
+&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt;  is:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node 1*&lt;/th&gt;
+      &lt;th&gt;node 2*&lt;/th&gt;
+      &lt;th&gt;node 3*&lt;/th&gt;
+      &lt;th&gt;node 4&lt;/th&gt;
+      &lt;th&gt;node 5&lt;/th&gt;
+      &lt;th&gt;node 6*&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 1&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+      &lt;td&gt;through node 6&lt;/td&gt;
+      &lt;td&gt;through node 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Since now we only have 2 nodes left, and their stored distances are equal, we can stop. They both have 20 as the shortest path. (If these two distances are not equal, we still need to go to the next round).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-The shortest path to node 5: &lt;strong&gt;1 –&amp;gt; 3 –&amp;gt; 6 –&amp;gt; 5&lt;/strong&gt;. 
+   -Shortest distance is &lt;strong&gt;20&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;example-2&quot;&gt;Example 2:&lt;/h2&gt;
+&lt;p&gt;Find the shortest path from A to I.
+&lt;img src=&quot;https://i.loli.net/2020/04/30/usi2WDCGTexk9wg.jpg&quot; alt=&quot;example2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;round-1-1&quot;&gt;Round 1:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  A.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B&lt;/th&gt;
+      &lt;th&gt;node C&lt;/th&gt;
+      &lt;th&gt;node D&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;B&lt;/strong&gt;.
+Node &lt;strong&gt;B&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to B:   &lt;strong&gt;A –&amp;gt; B&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-2-1&quot;&gt;Round 2:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  B.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C&lt;/th&gt;
+      &lt;th&gt;node D&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;D&lt;/strong&gt;.
+  Node &lt;strong&gt;D&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to D: &lt;strong&gt;A –&amp;gt; D&lt;/strong&gt;. （Since the distance is 4）&lt;/p&gt;
+
+&lt;h2 id=&quot;round-3-1&quot;&gt;Round 3:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  D.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;C&lt;/strong&gt;.
+Node &lt;strong&gt;C&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to C: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-4-1&quot;&gt;Round 4:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  C.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;E&lt;/strong&gt;.
+Node &lt;strong&gt;E&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to E: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C –&amp;gt;E&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-5&quot;&gt;Round 5:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  E.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E*&lt;/th&gt;
+      &lt;th&gt;node F&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;through node E&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;F&lt;/strong&gt;.
+  Node &lt;strong&gt;F&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to G: &lt;strong&gt;A –&amp;gt; D –&amp;gt; F&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-6&quot;&gt;Round 6:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  F.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E*&lt;/th&gt;
+      &lt;th&gt;node F*&lt;/th&gt;
+      &lt;th&gt;node G&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;∞&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;through node E&lt;/td&gt;
+      &lt;td&gt;through F&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;G&lt;/strong&gt;.
+  Node &lt;strong&gt;G&lt;/strong&gt; is the next one.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to G: &lt;strong&gt;A–&amp;gt; B –&amp;gt; C –&amp;gt; E –&amp;gt; G&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;round-7&quot;&gt;Round 7:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Current node:  G.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stored distance:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NODE&lt;/th&gt;
+      &lt;th&gt;node A*&lt;/th&gt;
+      &lt;th&gt;node B*&lt;/th&gt;
+      &lt;th&gt;node C*&lt;/th&gt;
+      &lt;th&gt;node D*&lt;/th&gt;
+      &lt;th&gt;node E*&lt;/th&gt;
+      &lt;th&gt;node F*&lt;/th&gt;
+      &lt;th&gt;node G*&lt;/th&gt;
+      &lt;th&gt;node H&lt;/th&gt;
+      &lt;th&gt;node I&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node B&lt;/td&gt;
+      &lt;td&gt;through node A&lt;/td&gt;
+      &lt;td&gt;through node C&lt;/td&gt;
+      &lt;td&gt;through node D&lt;/td&gt;
+      &lt;td&gt;through node E&lt;/td&gt;
+      &lt;td&gt;through node F&lt;/td&gt;
+      &lt;td&gt;through node G&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
+
+&lt;p&gt;We get 2 equal distances again, stop.&lt;/p&gt;
+
+&lt;p&gt;So shortest Path to I: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C –&amp;gt;E –&amp;gt; G –&amp;gt;I&lt;/strong&gt;.
+The distance is 11.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Reference: https://blog.csdn.net/gamer_gyt/article/details/47184081&lt;/p&gt;
+</description>
+        <pubDate>Sat, 29 Aug 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/08/29/Dijkstra's-algorithm/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/08/29/Dijkstra's-algorithm/</guid>
+        
+        <category>Dijkstra's algorithm</category>
+        
+        <category>algorithm</category>
+        
+        <category>shortest path</category>
+        
+        <category>study notes</category>
+        
+        
+      </item>
     
       <item>
         <title>常见产品方向介绍</title>
@@ -1099,519 +1936,6 @@ T（威胁）：女神时不时在看手机，很可能在跟别的男生聊天�
         <guid isPermaLink="true">http://localhost:4000/2020/06/14/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F/</guid>
         
         <category>产品</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>产品思维模型系列-3：产品思维应用-如何用产品思维摆地摊？</title>
-        <description>&lt;h1 id=&quot;如何用产品思维摆地摊&quot;&gt;如何用产品思维摆地摊？&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;这是产品思维模型系列的第三篇文章。&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/oxLXw9Zfcm7lEMC.jpg&quot; alt=&quot;pic1.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;思考力=思维广度×思维深度&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;前面我们已经学习过两种产品思维模型：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/&quot;&gt;产品思维模型系列-1：什么是万能的AARRR模型？&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://oscar-bocheng.com/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/&quot;&gt;产品思维模型系列-2：产品分析七大模块&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;最近摆地摊的话题非常火，这篇文章我们就尝试使用这两种思维框架，对摆地摊进行思考，做一个简单的应用练习，即&lt;strong&gt;如何用产品思维摆地摊？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/qkYcreJgPdVzKau.jpg&quot; alt=&quot;dt_2.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在本次分析中，我们以产品分析七大模块为主要框架，以AARRR模型为辅主框架进行分析。&lt;/p&gt;
-
-&lt;h2 id=&quot;1-产品初心&quot;&gt;1. 产品初心&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;为什么摆地摊？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;响应国家号召，顺承当今疫情特殊形式下的消费降级经济特点。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;地摊经济作为当下最新的社会热点，可以吸引来较多的眼球，也更有可能将其转化为更多的利润。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;出摊时间多为下班后的傍晚，地点灵活多变，成本较低，适合作为年轻人下班后的副业或失业人群的过渡选择。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“地摊货”作为便宜的代名词，可以减少人们消费的压力和“负罪感”，在当前特殊经济形势下，使得人们更有意愿掏钱消费。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;2-产品定位&quot;&gt;2. 产品定位&lt;/h2&gt;
-
-&lt;p&gt;对于地摊产品来说，产品定位简而言之就是两句话：&lt;strong&gt;在哪卖&lt;/strong&gt;，&lt;strong&gt;卖什么&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;首先要确定在哪卖的问题，选地点的第一要素：&lt;strong&gt;人流量一定要大&lt;/strong&gt;，一般存在以下几种选择：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;大学城附近，大学生较多&lt;/li&gt;
-  &lt;li&gt;城市核心商圈附近，年轻人较多&lt;/li&gt;
-  &lt;li&gt;上下班时期的办公区附近，年轻人较多&lt;/li&gt;
-  &lt;li&gt;居民区附近，年龄覆盖较广，中老年用户偏多 （因为相比年轻人，他们拥有更多的自由时间）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;根据自己的熟悉程度，通勤时间进行合理选择即可。&lt;/p&gt;
-
-&lt;p&gt;具体卖什么的问题，在选定了地点之后，可以根据目标用户的需求痛点进行细分思考。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;若年轻人居多，可多卖一些数码周边产品，比如数据线，充电器，手机支架，手机膜，耳机等。&lt;/li&gt;
-  &lt;li&gt;若中老年人居多，可多买一些生活化的产品，比如袜子，小商品，锅碗瓢盆等等&lt;/li&gt;
-  &lt;li&gt;若选择上下班时期在办公区附近出摊，可以多卖一些食品，最好是可以便捷食用，已经封包好的，例如面包，切好的水果等等。&lt;/li&gt;
-  &lt;li&gt;最后呢，也可以参考竞品分析，多看看别人卖什么卖的火，也可考虑卖同样的商品。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/4XuTt7VeyvSDzdp.jpg&quot; alt=&quot;dt_1.jpg&quot; /&gt;
- 总而言之，不管卖什么，产品的定位一定要具备两个属性，&lt;strong&gt;“便捷性”，“性价比”&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;便捷性：大多数地摊交易的场景和经验告诉我们，人们不会在地摊购物上浪费过多时间。大多场景都是路过，刚好看中某个商品，然后花上几分钟挑选–&amp;gt;问价–&amp;gt;砍价–&amp;gt;决定购买与否。所以便利性是地摊非常重要的属性，所选的商品不能是一些需要精挑细选的产品。&lt;/li&gt;
-  &lt;li&gt;性价比：人们印象中对地摊的期望值主要表现在价格方面，人们期望在地毯购买到便宜，实惠的商品。因此，所售卖的商品货单价一定不能过高。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3目标用户&quot;&gt;3.目标用户&lt;/h2&gt;
-
-&lt;p&gt;目标用户在地摊经济里就是 &lt;strong&gt;“卖给谁”&lt;/strong&gt; 的问题。在解决了产品定位中的“在哪卖”问题后，这一问题也就随之迎刃而解。&lt;/p&gt;
-
-&lt;p&gt;概括来说，目标群体无非两类：&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. 年轻人/学生&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. 大众用户&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;在商圈，办公区，大学城附近出摊，目标用户大多为年轻人。
-在居民区出摊，目标用户为各个年龄段都有的普通大众用户。&lt;/p&gt;
-
-&lt;h2 id=&quot;4需求痛点&quot;&gt;4.需求痛点&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;分析需求归根结底就是理解人性的过程。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;根据我们所确定的两类目标用户，我们可以分析出他们的需求痛点。&lt;/p&gt;
-
-&lt;p&gt;针对&lt;strong&gt;年轻人/学生&lt;/strong&gt;：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/tK45SWZDzBdgUFo.jpg&quot; alt=&quot;td_3.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- 懒：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;衣：懒得出门买衣服，懒得上网选衣服。使用场景：大学生小王回宿舍路上看到一件还不错的短袖，价钱也便宜，顺手就买了。&lt;/li&gt;
-  &lt;li&gt;食：对于需要剥皮或者较难处理的水果，懒得处理，或者对于一些街头食物比较偏爱。使用场景：上班族小李早上上班时间紧迫，没时间准备早餐，路上发现地摊有切好的西瓜、芒果、香蕉块，还有烤冷面，各买了一份拿到公司吃。&lt;/li&gt;
-  &lt;li&gt;住：一些居家日用品懒得去超市买。使用场景：小张下班后，看到地摊上有卖充电器，想起来家里充电器刚好坏了，于是进行购买。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;- 时尚：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;穿衣打扮：年轻人喜欢一些潮流服饰，潮流装饰品，比如帽子、墨镜、项链、耳环耳钉等等。女孩还喜欢化妆品。&lt;/li&gt;
-  &lt;li&gt;日常小物件：年轻人喜欢一些时尚的小商品，摆饰，挂件等等。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;- 猎奇：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;好玩的：一些好玩的小玩意，比如魔术扑克牌，小玩具等。&lt;/li&gt;
-  &lt;li&gt;可爱的：女生比较喜欢可爱的娃娃，抱枕，毛绒玩具等。&lt;/li&gt;
-  &lt;li&gt;新奇的：一些别人没有的/从未见过的商品、玩具。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;- 性价比：&lt;/strong&gt; 
-所有人在地摊上买东西，最核心的需求一定是便宜低价。&lt;/p&gt;
-
-&lt;p&gt;针对&lt;strong&gt;大众用户&lt;/strong&gt;：&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- 实用性：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;日常必需品：每个人都需要生活，柴米油盐酱醋茶是离不开的必需品。&lt;/li&gt;
-  &lt;li&gt;实用性高的物品：实用性高即在生活中使用频次高的物品，例如一些厨房用品，文具等等。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;- 性价比：&lt;/strong&gt; 
-同年轻人，大众用户在地摊上买东西，核心需求也是便宜低价。&lt;/p&gt;
-
-&lt;h2 id=&quot;5核心功能&quot;&gt;5.核心功能&lt;/h2&gt;
-
-&lt;p&gt;地摊产品的核心功能：
-&lt;strong&gt;便捷性+性价比&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;便捷性：提前为商品明码标价，准备好付款码，尽可能简化付款流程，提高用户购买效率。&lt;/li&gt;
-  &lt;li&gt;性价比：尽可能降低定价，做到薄利多销，多搞促销活动，例如买的越多送的越多，买的越多价格越低等等。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;此外，我们还可以增加一些特色功能：
-&lt;strong&gt;边直播边出摊&lt;/strong&gt;
-开直播出摊，并且可以边出摊边表演才艺，如唱歌跳舞等提高关注度。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-商业模式&quot;&gt;6. 商业模式&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;收入=（售价-进价）×售出数量&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;要想提高收入，我们可以从三方面入手：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;降低进价：
- 通过进货时货比三家，找到性价比最高的进货渠道。另外，可以也利用网络资源寻找合适的进货源。
- 若自己的销量已经有一定保障，可以给进货商施压，保证一定规模的进货数量来压低进价。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;提高售价：
-在顾客可接受范围内，可以酌情提高售价。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;增加销量：
-增加销量又可拆解为两点：&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;增加出摊时长，可由只在晚上出摊延长至早晚均出摊，出摊时长增长，销量势必增加。&lt;/li&gt;
-  &lt;li&gt;优化宣传手段，招揽更多顾客。具体手段见第七点AARRR模型中的获客部分。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/4DgEWwTumK9oSMc.jpg&quot; alt=&quot;dt_3.jpeg&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;7-运营策略&quot;&gt;7. 运营策略&lt;/h2&gt;
-
-&lt;p&gt;到了这一步，是时候祭出我们万能的&lt;strong&gt;AARRR用户增长模型&lt;/strong&gt;了。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;获客–Acquisition：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;选一个人流量大的地段，一个黄金地段是地摊成功的一半。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;打入小区业主群，公司职员群等发布广告。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;制作醒目，有创意吸引眼球的招牌。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;出摊时大声吆喝招揽顾客&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;主动出击，发放传单进行宣传&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;开直播出摊，并且可以边出摊边表演才艺，如唱歌跳舞等提高关注度。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;老用户介绍新用户前来购买，两人都可享受一定折扣。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;经营私域流量，从中获取用户。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;促活—Activation:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;建立微信群，让顾客加入，在群内告知每天的出摊时间地点以及商品上新信息。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;群内发布一些促销活动信息，如发放优惠券，拼团，满减，买二送一等，要想参加活动就必须进群。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;针对性确定贩卖商品，若顾客群体以老年人为主，则可以多卖衣服，袜子，小生活用品等；若年轻顾客居多，则可多卖数据线，手机贴膜等数码产品；如果摊位在篮球场，体育场旁边，可以多卖水，饮料等。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;扩大经营范围，除了上述商品外，还可以卖一些水果，小零食等老少皆宜的商品。经营范围扩大了，用户购买的可能性也就大了。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;严格把关产品质量，提高服务态度，生成良好的顾客口碑。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;准备一些小礼品，因为在地摊场景中购物时，人们会习惯性砍价，这时可以使用小礼品代替价格上的降低，即让顾客得到了砍价的成就感，又能对我们留下一个好印象。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;留存—retention:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;可向用户发放记分式会员卡，购买次数越多，能享受的福利（折扣，礼品等）越多。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;经营微信群，在群内发一些小红包来提高顾客留存意愿。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;积极响应顾客反馈，提高顾客口碑来培养忠实用户。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;及时更新商品，靠全面的商品种类吸引顾客留存。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;利润转化—revenue&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;用户对地摊的购买期望主要是“便利”，“实惠“这两点。利润转化也主要围绕这两点展开。&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;每件商品明码标价，提前备好支付码，准备好会员微信群二维码，提高顾客购买效率。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;尽量降低商品定价，多做活动，做到薄利多销。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;拓展变现渠道：出摊的同时直播，可赚取直播打赏这一部分额外收入。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;增长出摊时间：由每天晚上出摊可改为早晚都出摊，早上卖早餐，水果等；晚上可以增加衣服，数码产品等其他商品。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;传播—Refer&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;若顾客愿意在朋友圈内分享宣传信息，可享受额外返现优惠。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;老带新，二人都可享受优惠。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;通过商品质量，低廉定价，优质服务等方面做好摊位口碑，用户会自主向亲友传播介绍。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;通过直播表演才艺的方式，吸引顾客拍小视频，发朋友圈，无形中也宣传了自己的摊位。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Mon, 08 Jun 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/06/08/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E6%91%86%E5%9C%B0%E6%91%8A/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/08/%E4%BA%A7%E5%93%81%E6%80%9D%E7%BB%B4%E6%91%86%E5%9C%B0%E6%91%8A/</guid>
-        
-        <category>产品</category>
-        
-        <category>产品思维模型</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>产品思维模型系列-2：产品分析七大模块</title>
-        <description>&lt;h1 id=&quot;产品思维模型系列-2产品分析七大模块&quot;&gt;产品思维模型系列-2：产品分析七大模块&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;这是产品思维模型系列的第二篇文章。&lt;/em&gt;
-&lt;img src=&quot;https://i.loli.net/2020/06/08/BSJFqGpkUycnPAT.jpg&quot; alt=&quot;timg.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;思考力=思维广度×思维深度&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;思考力的培养可以分为两步走：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;培养思维的广度&lt;/li&gt;
-  &lt;li&gt;培养思维的深度&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;罗马并非一天建成的，在培养思维深度之前，我们应该打好基础，首先确保自己的思维视野足够宽广。&lt;/p&gt;
-
-&lt;p&gt;如何快速培养思维的广度呢？答案是运用已有的思维模型进行思考。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;产品分析七大模块&quot;&gt;产品分析七大模块&lt;/h1&gt;
-
-&lt;p&gt;今天介绍的是产品分析常用的七大基础模块，即从七个方面完整地分析一个产品。在产品分析领域，这个模型可以说是百试百灵，是做为产品人必须要掌握的基础分析方式。&lt;/p&gt;
-
-&lt;h2 id=&quot;1-产品初心&quot;&gt;1. 产品初心&lt;/h2&gt;
-
-&lt;p&gt;一个产品可以是一款国民APP，也可以是楼下奶茶店上新的夏日新品，也可以是某软件中很小的一个功能点。不论你所分析的产品是什么，我们需要问自己的第一个问题就是这款产品的出发点是什么，为什么做这款产品？&lt;/p&gt;
-
-&lt;p&gt;例如如今微信已经以绝对优势牢牢统治了社交APP领域，那为什么三大运营商还要联合推出5G消息？是嫌曾经的飞信凉的不够透彻吗？
-&lt;img src=&quot;https://i.loli.net/2020/06/08/BV5RNaqJUt2pXoI.png&quot; alt=&quot;5g_1.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;答案显然是否定的，新时代的到来往往伴随着巨大的社会变革，移动互联网时代到来之前，依托于短信的通讯社交可是三大运营商的嘴边肉，后来智能手机普及，移动互联网兴起，微信一家独大，短信业务已经彻底沦为了接收验证码，快递消息的“工具人”。&lt;/p&gt;
-
-&lt;p&gt;现在，一场新的变革又即将发生，三大运营商也想搭上5G这趟时代东风，不说把微信掀翻在地，多少也要在通讯社交领域找回一点曾经的场子。&lt;/p&gt;
-
-&lt;p&gt;所以，对于5G消息的产品初心，我们可以这么回答：
-&lt;strong&gt;新技术，新时代的到来往往意味着新的市场变革，三大运营商正是瞄准了5G即将大规模应用的契机，推出5G消息，与微信不同，瞄准B2C的细分市场，借助自身资源优势，企图抢占新时代下即时通讯领域的市场份额。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2产品定位&quot;&gt;2.产品定位&lt;/h2&gt;
-
-&lt;p&gt;产品定位从本质上决定了产品的设计理念，经营策略等。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/1apOrA3znkgliNX.jpg&quot; alt=&quot;bilibili.jpg&quot; /&gt;
-例如&lt;strong&gt;早期B站的产品定位为二次元视频社区，主要内容为二次元相关文化。但现在B站的定位逐渐向综合性年轻视频社区发展，即试图“破圈”。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;由于定位的转变，我们也可以发现B站做了很多的努力，比如购买了大量的影视作品版权，邀请明星、网络红人进站等，包括从今年联合央视推出的《后浪》中，也能看出B站的野心。&lt;/p&gt;
-
-&lt;h2 id=&quot;3目标用户&quot;&gt;3.目标用户&lt;/h2&gt;
-
-&lt;p&gt;即使是同一类型的产品，不同的目标用户也会造成产品天差地别的现象。&lt;/p&gt;
-
-&lt;p&gt;最简单的例子就是抖音和快手。
-二者同为短视频行业的头部选手，但其目标人群有着较大的差异。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/bdOtfiKWaHTevsG.jpg&quot; alt=&quot;dvsk.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;抖音的目标人群主要为一二线城市的年轻人。&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;快手的目标人群则主要为三四线城市的下沉市场，年龄覆盖面也相较抖音更广。&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;由于这一目标用户不同的根本差异，二者的营销手段，所产出的内容都有着巨大的影响。抖音的的内容更偏向潮流，音乐方向，快手则是草根内容居多。&lt;/p&gt;
-
-&lt;h2 id=&quot;4需求痛点&quot;&gt;4.需求痛点&lt;/h2&gt;
-
-&lt;p&gt;做产品的核心还是做需求，必须找到产品能解决的需求痛点，才能真正理解一款产品。&lt;strong&gt;而找需求的过程本质上就是考察人性，理解欲望的过程。&lt;/strong&gt; 人的最根本需求无非是衣、食、住、行；精神上的需求又包括与人交往的社交需求，展示自己的表达需求，炫耀自己的虚荣需求，提升自己的学习需求等等。只有从最基本的欲望出发，才能抓住核心的需求痛点。&lt;/p&gt;
-
-&lt;p&gt;例如：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;滴滴解决了用户想要便捷出行的基本出行需求&lt;/li&gt;
-  &lt;li&gt;抖音解决了新时代下用户的娱乐需求，表达展示自己的需求&lt;/li&gt;
-  &lt;li&gt;美团外卖解决了用户懒和吃的需求，用户无需出门就能吃到想吃的东西&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5-核心功能&quot;&gt;5. 核心功能&lt;/h2&gt;
-
-&lt;p&gt;一款产品的特色往往是由其核心功能所决定的，产品能否做的成功出色，能否从同类产品中脱颖而出也要看核心功能是否出色。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/zy9VBm2nZe6tR5Y.jpg&quot; alt=&quot;pdd.jpg&quot; /&gt;
-做为电商类产品的后起之秀，拼多多就是依靠“拼团秒杀”这一核心功能在短时间内一跃成为行业巨头之一。&lt;/p&gt;
-
-&lt;p&gt;36kr/虎嗅的核心功能是能在第一时间提供新鲜，有深度的互联网行业资讯，从而也积累了大批的忠实用户。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-商业模式&quot;&gt;6. 商业模式&lt;/h2&gt;
-
-&lt;p&gt;做一款产品，归根到底还是要利用产品实现利润的转化，因此商业模式至关重要。&lt;/p&gt;
-
-&lt;p&gt;好的商业模式可以帮助一款产品迅速实现盈利，而不好的商业模式不但无法让产品赚到钱，还有可能招来用户的好感度下降甚至是厌恶。&lt;/p&gt;
-
-&lt;p&gt;例如，在视频行业发展的早期，用户版权意识淡薄，视频网站例如优酷、土豆寻找不到稳定的盈利模式，单靠广告收入难以抹平巨大的开销。随着行业的发展，用户的版权意识逐渐健全，愿意为更好的内容付费，各大视频APP也相继推出了付费会员的机制，广告+会员双管齐下，形成了视频APP的基本商业模式。&lt;/p&gt;
-
-&lt;p&gt;但有些APP的吃相过于难看，用户要是想要第一时间追剧，在付费会员的基础上，还需额外支付剧集的点播费用，甚至还有超前点播费用。这一系列过分的商业模式，直接导致了用户好感度的下降。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/08/awDychx6kdPMmo2.jpg&quot; alt=&quot;2.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;7运营策略&quot;&gt;7.运营策略&lt;/h2&gt;
-
-&lt;p&gt;一款产品的上线只是这个产品生命周期的开始，上线之后，还必须投入大量的资源，精力做好运营工作，否则产品被人遗忘，口碑崩塌都只发生在一夜之间。&lt;/p&gt;
-
-&lt;p&gt;运营包括的内容有：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;推广&lt;/li&gt;
-  &lt;li&gt;营销&lt;/li&gt;
-  &lt;li&gt;建立产品口碑&lt;/li&gt;
-  &lt;li&gt;收集用户反馈，用于后续迭代优化&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;结语&quot;&gt;&lt;strong&gt;结语：&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;使用七大模块进行产品分析，能够较清晰、全面地获得一个产品的画像。再针对每一个问题进行一定的深入思考，就能兼顾广度与深度。&lt;/p&gt;
-
-&lt;p&gt;当然，产品分析并不局限于这七个模块，还有更多的内容和细节不包含于这七个模块中，当我们有了一定的产品功力时，我们也不需要再局限于这些框架，可以去更加自由地分析产品。&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;最后，你可能想看：
-&lt;a href=&quot;https://oscar-bocheng.com/2020/06/04/AARRR%E6%A8%A1%E5%9E%8B/&quot;&gt;产品思维框架系列-1：什么是万能的AARRR模型？&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;后续我会推出更多关于产品思维的文章，欢迎持续关注！&lt;/p&gt;
-</description>
-        <pubDate>Mon, 08 Jun 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/08/%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90%E4%B8%83%E5%A4%A7%E6%A8%A1%E6%9D%BF/</guid>
-        
-        <category>产品</category>
-        
-        <category>产品思维模型</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll github page博客本地调试</title>
-        <description>&lt;h1 id=&quot;jekyll-github-page博客本地调试教程&quot;&gt;Jekyll github page博客本地调试教程&lt;/h1&gt;
-
-&lt;p&gt;相信大家在调试博客时都有这样的烦恼，将更改commit到github进行调试，效率太低，操作太复杂。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;在本地调试博客, 能极大提升工作效率！！！&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;（本教程所有操作全部在linux系统本地git仓库内完成）&lt;/p&gt;
-
-&lt;h2 id=&quot;方法一&quot;&gt;方法一：&lt;/h2&gt;
-
-&lt;p&gt;安装 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt;和 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll bundler&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll
-$ gem install jekyll bundler
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;cd进入博客所在目录&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;接着就可以在 http://127.0.0.1:4000/ 看到博客，任何本地git仓库中的修改，只需刷新一次就能更新显示在这个页面中。&lt;/p&gt;
-
-&lt;p&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+c&lt;/code&gt;来停止本地博客调试。&lt;/p&gt;
-
-&lt;p&gt;参考：&lt;a href=&quot;https://www.jianshu.com/p/e68fba58f75c&quot;&gt;简书-BYQiu&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;方法二&quot;&gt;方法二:&lt;/h2&gt;
-&lt;p&gt;之前在国外的时候一直使用方法一，回国之后不知道怎么方法一就不好用了，挂了VPN也还是不行，后来发现了方法二，重新实现了本地调试。&lt;/p&gt;
-
-&lt;p&gt;首先安装bundler包管理器&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; gem install bundler
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在github-page的git本地仓库主目录下创建&lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gedit Gemfile
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;该文件内的具体内容如下:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'      
-gem 'github-pages'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;执行bundle：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在git仓库主目录下启动本地调试：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exec jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;默认访问地址为：&lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;至此就大功告成啦。&lt;/p&gt;
-
-&lt;p&gt;当然也可以手动更新本地jekyll：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;同样，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+c&lt;/code&gt;来停止本地博客调试。&lt;/p&gt;
-
-&lt;p&gt;参考：&lt;a href=&quot;http://lazybios.com/2014/09/install-jekyll-in-locate/&quot;&gt;安装Jekyll本地调试环境–lazybios&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 06 Jun 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/06/06/Jekyll-github-page%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/06/Jekyll-github-page%E5%8D%9A%E5%AE%A2%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95/</guid>
-        
-        <category>教程</category>
-        
-        <category>Instruction</category>
         
         
       </item>

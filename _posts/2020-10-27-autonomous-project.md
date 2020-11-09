@@ -2,7 +2,7 @@
 layout:     post
 title:      Autonomous car project demonstration
 subtitle:   Design of a self-driving car
-date:       2020-05-27
+date:       2020-10-27
 author:     oscar
 header-img: img/post_0527_bacground.jpg
 catalog: true

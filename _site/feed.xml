@@ -5,9 +5,128 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Feb 2021 22:05:45 +0100</pubDate>
-    <lastBuildDate>Wed, 10 Feb 2021 22:05:45 +0100</lastBuildDate>
+    <pubDate>Sun, 14 Mar 2021 18:23:53 +0100</pubDate>
+    <lastBuildDate>Sun, 14 Mar 2021 18:23:53 +0100</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>电商产品推荐策略</title>
+        <description>&lt;h1 id=&quot;电商产品推荐策略为什么你总觉得淘宝在窃听你的手机&quot;&gt;电商产品推荐策略：为什么你总觉得淘宝在窃听你的手机？&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;内容参考自B站视频： &lt;a href=&quot;https://www.bilibili.com/video/BV1Vp4y1r7m5&quot;&gt;阿里的核武器 正在监视你的生活&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/03/14/HLPSnW3NGbAvsV5.jpg&quot; alt=&quot;pic1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;你有没有这样一种感觉，下午才和朋友聊天聊到了一款球鞋，结果晚上回家打开淘宝，在首页，淘宝赫然就为你推送了这款球鞋。你皱皱眉头说，MD，淘宝绝对窃听了我的手机，偷听了我们的谈话。&lt;/p&gt;
+
+&lt;p&gt;以上是出于小白用户视角的故事，那如果从产品经理的视角来看这个故事，又会是什么样的版本呢？&lt;/p&gt;
+
+&lt;p&gt;首先，淘宝并没有直接窃听我们的手机，其他大型互联网公司也不会窃听（只要他们还想长久发展下去），但这些公司依旧能实现和“窃听”一样的效果，为我们精准推荐商品，这是怎么做到的呢？&lt;/p&gt;
+
+&lt;h2 id=&quot;一协同过滤&quot;&gt;一、协同过滤&lt;/h2&gt;
+
+&lt;p&gt;协同过滤：协同过滤简单来说是利用某兴趣相投、拥有共同经验之群体的喜好来推荐用户感兴趣的信息。（摘自百度百科）&lt;/p&gt;
+
+&lt;p&gt;协同过滤是各大电商产品用以实现个性化推荐的最基础手段，其又分为基于人的协同过滤和基于物的协同过滤。&lt;/p&gt;
+
+&lt;h3 id=&quot;1-基于人的协同过滤&quot;&gt;1. 基于人的协同过滤&lt;/h3&gt;
+
+&lt;p&gt;简单来说，就是和你类似的人喜欢什么，就给你也会推荐什么。&lt;/p&gt;
+
+&lt;p&gt;实现手段：平台通过大数据，找到和你用户画像三围一致的用户，然后根据这类用户的兴趣进行推荐。例如小A和小B都是22岁，都在上大学，都是男性，都喜欢NBA，都爱消费篮球用品，因此当小A反复浏览一款球鞋并收藏加购物车的时候，淘宝也会给小B同样推荐这款球鞋。&lt;/p&gt;
+
+&lt;p&gt;以上是最基础的套路，因为即使是在大数据中，要找到和你类似的人还是有一定难度的。&lt;strong&gt;所以平台想出了一个更简单的解决方案：你朋友喜欢什么，我就直接给你推荐什么不就完了。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;问题就转变为了如何找到你朋友，这对于手上掌握着我们海量数据的大互联网公司来说简直太简单了：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;收货地址收敛：根据用户的收货地址，在同一个大学，同一个办公楼中的人更有可能具有相同兴趣，更有可能是朋友。&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IP地址收敛：淘宝会获取我们的IP地址，也就知道了谁和你在同一个WIFI下，而他们大概率会是你的朋友/同事/室友。&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;系统内部互动数据：你的淘宝亲情账号，集五福的时候和谁互动过，玩淘宝组队战车时和谁组了队，经常给谁分享淘宝商品等等，这些数据都描绘出了你的社交关系网。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;将以上几条综合起来交叉使用，淘宝很轻松的就能找到我们的朋友，再根据朋友的兴趣给我们推荐商品。基于这一点，开头那个故事可以改写成这个版本：&lt;/p&gt;
+
+&lt;p&gt;无聊的周六下午，你和你的大学室友在寝室吹水，你俩YY着等下个月生活费发了要去买最新款的詹姆斯球鞋，穿上新鞋，下个月的篮球赛上可以在女神面前好好表现一番了。聊完，你和隔壁寝室王老狗一起出门去看最新的《唐人街探案》，室友却没你这么淡定，急不可耐的打开手机，反复比价，终于找到了心仪的一家店，把球鞋放进了购物车，连颜色都选好了。晚上你回到寝室，打开淘宝发现淘宝为你精确推送了詹姆斯球鞋，你说，MD，淘宝绝对窃听了我的手机。&lt;/p&gt;
+
+&lt;p&gt;但实际上淘宝第一步通过收货地址、WIFI地址、历史互动记录确定了你室友是你朋友，第二步通过你室友今天对詹姆斯球鞋的一系列操作确定了你朋友喜欢这款商品，最后才推送到了你的手机上，完成了看似“窃听”的神操作。&lt;/p&gt;
+
+&lt;h3 id=&quot;2基于物的协同过滤&quot;&gt;2.基于物的协同过滤&lt;/h3&gt;
+
+&lt;p&gt;在喜欢物品A的人中，有一大部分同时喜欢物品B，那么平台就会给同样喜欢物品A的你推荐物品B。&lt;/p&gt;
+
+&lt;h2 id=&quot;二重定向广告retarging-advertisement&quot;&gt;二、重定向广告（retarging advertisement）&lt;/h2&gt;
+
+&lt;p&gt;重定向广告（retargeting）简单地说就是一种广告的定向技术，即针对广告受众（Audience）的某个属性，在同一个广告位，推送为他定制的广告到他的页面。（&lt;a href=&quot;%E9%87%8D%E5%AE%9A%E5%90%91%E5%B9%BF%E5%91%8A%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%20-%20RRRRLIU%E7%9A%84%E5%9B%9E%E7%AD%94%20-%20%E7%9F%A5%E4%B9%8E%20https://www.zhihu.com/question/21737987/answer/19157963&quot;&gt;来源&lt;/a&gt;）&lt;/p&gt;
+
+&lt;p&gt;应用场景：
+你在淘宝上反复看一款球鞋，甚至收藏、加购物车、下单。这时淘宝会记下你的手机号、IP、设备号等设备信息，然后交给短视频广告商，付费让短视频广告商给你推送类似的球鞋广告。&lt;/p&gt;
+
+&lt;h2 id=&quot;三基于历史数据的个性化推送&quot;&gt;三、基于历史数据的个性化推送&lt;/h2&gt;
+
+&lt;p&gt;最后一种方法就比较基础了，就是平台根据你在平台上的历史浏览数据、购买数据等，为你推送你可能喜欢的同类型商品。&lt;/p&gt;
+
+&lt;h2 id=&quot;四数据中台的力量&quot;&gt;四、数据中台的力量&lt;/h2&gt;
+
+&lt;p&gt;前面所讲的都是电商商家个性化精准推荐的实现方法，不难发现每种方法都需要用到海量用户数据，我们在此顺藤摸瓜，稍微延展一下，讲讲数据中台。&lt;/p&gt;
+
+&lt;h3 id=&quot;1-什么是数据中台&quot;&gt;1. 什么是数据中台&lt;/h3&gt;
+
+&lt;p&gt;数据中台定义：
+从字面上理解，&lt;strong&gt;中台位于前台和后台之间&lt;/strong&gt;，起到衔接的作用。数据中台是一套可持续“让企业的数据用起来”的机制，是依据企业特有的业务模式和组织架构，通过有形的产品和实施方法论支撑，构建一套持续&lt;strong&gt;不断把数据变成资产并服务于业务的机制&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;本质：
+&lt;strong&gt;把多个产品、业务的数据交叉汇总，打通到一起，形成一个较完整的用户画像和数据模型，再为用户量身定做服务（例如广告推送，商品策略，用户评级等），达到千人千面的产品策略。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;应用场景举例：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;通过花呗消费记录，阿里知道你是一个爱旅行的人，因此淘宝会给你推荐旅行用品。&lt;/li&gt;
+  &lt;li&gt;通过淘宝消费记录，支付宝收支账单，淘宝亲情账号，阿里知道大学生小王每月月光，但通过父母的亲情账号，每月依旧可以保持一个很高的消费水平。淘宝推断小王是具有高消费欲望，目前手头没钱，但依托于家庭，依然保有一定偿还能力的用户。于是阿里给小王一个很高的花呗额度，刺激小王进行更多消费并使用他们的小额贷来赚取更多利润。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;2-中台如何获取数据&quot;&gt;2. 中台如何获取数据&lt;/h3&gt;
+
+&lt;p&gt;中台如何获取数据，说白了就是大公司集团内部的各条产品线如何获取数据，目前主要有两种手段，一是“棒棒糖”套路引诱用户主动交出数据，二是从外界购买数据。&lt;/p&gt;
+
+&lt;h4 id=&quot;1棒棒糖套路&quot;&gt;（1）“棒棒糖”套路：&lt;/h4&gt;
+
+&lt;p&gt;给与用户一定的好处，在不知不觉中引诱用户主动交出数据。&lt;/p&gt;
+
+&lt;p&gt;应用场景举例：
+高花呗分可以享受免押金骑车，免押金订酒店等福利，这就是平台像用户抛出的棒棒糖。用户中招后，为了享受福利，会努力提高花呗分，为了提高花呗分，用户需要：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;多消费，也就&lt;strong&gt;给了平台消费数据&lt;/strong&gt;。&lt;/li&gt;
+  &lt;li&gt;绑定个人信息，例如身份证，学校，房产，资产证明，人脉关系等。这&lt;strong&gt;给了平台详细的个人数据&lt;/strong&gt;，包括年龄，性别，学历，贫富程度等等。&lt;/li&gt;
+  &lt;li&gt;多使用产品内部其他功能来提升花呗分，例如支付宝种树、集五福、组队上车等等。而所有这些小功能，在玩的过程中，都需要你和朋友进行互动，比如种树你一定会去偷能量，集五福需要相互分享，组队上车就更不用说了，必须和朋友组队。这些，&lt;strong&gt;就给了平台你的社交数据&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;2买数据&quot;&gt;（2）买数据&lt;/h4&gt;
+
+&lt;p&gt;相比于棒棒糖套路从内部挖掘，直接从外部购买无疑是一种更简单粗暴的方法，这里的数据来源也分为两种：其他平台数据和灰产数据。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;其他平台数据：各大平台之间会相互合作，例如阿里就入股了微博、陌陌，可以获得他们的用户数据。这给了阿里进行超前预见性推荐的能力，阿里根据微博的热搜数据，可以预测某种商品会在未来几天大卖，就可以针对目标人群进行精准的提前推送。&lt;/li&gt;
+  &lt;li&gt;灰产数据：大数据行业里也存在着一些见不得光的灰产，通过游走在法律边缘的方式偷取用户信息，在高价卖给有需求的互联网公司。例如经常能见到的“姻缘测试”等等小游戏，只要我们输入姓名、年龄、生日等信息，就能得到两个人之间的姻缘指数。其实这些小游戏可能就在借“姻缘测试”为幌子，偷偷收集我们的个人数据，再转卖给其他人。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;
+
+&lt;p&gt;本篇文章，我们一起学习了电商产品的推荐策略，并了解了数据中台的概念。最后顺便做个预告，下一期我会针对社交产品讲讲“你可能感兴趣的用户”的朋友推荐策略。&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2021/03/14/%E7%94%B5%E5%95%86%E4%BA%A7%E5%93%81%E6%8E%A8%E8%8D%90%E7%AD%96%E7%95%A5/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/03/14/%E7%94%B5%E5%95%86%E4%BA%A7%E5%93%81%E6%8E%A8%E8%8D%90%E7%AD%96%E7%95%A5/</guid>
+        
+        <category>电商产品</category>
+        
+        <category>推荐策略</category>
+        
+        
+      </item>
     
       <item>
         <title>学习如何学习</title>
@@ -1925,134 +2044,6 @@ T（威胁）：女神时不时在看手机，很可能在跟别的男生聊天�
         <category>产品</category>
         
         <category>产品体验报告</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>社交产品简论</title>
-        <description>&lt;h1 id=&quot;社交产品简论&quot;&gt;社交产品简论&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5ee9d0dda240b370e3eea61a.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5ee9d0dda240b370e3eea61a.jpg&quot; alt=&quot;社交思考&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;1-社交产品本质&quot;&gt;1. 社交产品本质&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;社交产品的本质就是实现用户之间的价值交换。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;这个价值可以是很多东西，有形的亦或无形的。例如，用户之间的陪伴是价值，分享的专业信息也是价值，甚至在电商社交场景里，社交还可以真金白银地带来商品价格的优惠（拼团）。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-社交关系发展路径&quot;&gt;2. 社交关系发展路径&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;陌生人–&amp;gt;弱关系–&amp;gt;强关系–&amp;gt;熟人&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;社交关系的发展路径，就是生活中我们与他人相认相识相知的过程。&lt;/p&gt;
-
-&lt;p&gt;从陌生人到熟人，不同的应用场景下的用户需求是不同的，因此产品的设计逻辑也不同。&lt;/p&gt;
-
-&lt;p&gt;陌生人社交场景，&lt;strong&gt;用户社交成本高&lt;/strong&gt;，其中包括推进关系的发展成本高，维系关系的维护成本高，产品需要将解决用户社交成本高的需求放在首位。因此我们可以看到陌生人社交产品中，有很多帮助用户发展、维护关系的功能，例如soul中的陌生人随机匹配，以及聊天越多可以点亮特殊标识等。&lt;/p&gt;
-
-&lt;p&gt;熟人社交场景，用户没有那么高的社交成本，相反，由于熟人之间互动更频繁，因此&lt;strong&gt;用户使用产品的频率更高，这也要求产品必须能提供极致的用户体验&lt;/strong&gt;，能在高频次、长时间的使用中让用户满意。这也是为什么简洁、轻快的微信能取代QQ成为社交龙头的核心原因。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5eead58c14195aa594f01475.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5eead58c14195aa594f01475.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;由于微信在熟人社交领域的绝对统治权，我们可将社交产品路径写为：&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;陌生人社交产品–&amp;gt;弱关系社交产品–&amp;gt;强关系社交产品–&amp;gt;微信&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3-社交产品分类&quot;&gt;3. 社交产品分类&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5eead7f014195aa594f250c6.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5eead7f014195aa594f250c6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;根据社交产品发展路径，我们可以将社交产品分为两大类：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;强关系社交&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;弱关系社交&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;强关系社交包括熟人社交，半熟人社交，职业化社交等，代表产品有微信，领英，脉脉。&lt;/p&gt;
-
-&lt;p&gt;弱关系社交主要为陌生人社交，也包括兴趣社交等其他非职业化社交，代表产品有陌陌，探探，soul等。&lt;/p&gt;
-
-&lt;h2 id=&quot;4-社交困局&quot;&gt;4. 社交困局&lt;/h2&gt;
-
-&lt;p&gt;（1）强关系社交&lt;/p&gt;
-
-&lt;p&gt;目前制约强关系社交产品发展的因素主要有以下两点：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;大块市场已经被微信霸占，&lt;strong&gt;发展空间较为狭窄&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;职业化社交产品难以提升用户黏性&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;微信作为一款亿级月活的国民产品，已经牢牢把持住了泛场景下的熟人社交领域，其他产品想要寻求突破，只能着手于二级细分市场，如应用于职场社交的脉脉。因此对于除微信外的其他强关系社交产品来说，他们的发展空间非常狭窄。&lt;/p&gt;
-
-&lt;p&gt;另外，对于职业化社交产品，其使用场景具有较强局限性，给人留下“办公软件”的印象，用户好感度低，粘性差。用户在下班后往往不情愿打开钉钉、脉脉，因此职业化社交产品很难深耕提高用户的使用时长。&lt;/p&gt;
-
-&lt;p&gt;（2）弱关系社交&lt;/p&gt;
-
-&lt;p&gt;弱关系社交的困局主要体现在以下几个方面：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;核心原因：社交关系发展路径决定了弱关系社交只是社交的其中一条途径，而并不是终点。&lt;/strong&gt;
- 结果：用户留存率低。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;产品微创新，内容同质化严重。&lt;/strong&gt;
- 结果：产品价值=新价值-旧价值-替代价值，内容千篇一律导致新旧价值间的差值小，产品价值不高。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;互动性差，往往少数优质用户会获得大量关注度，普通用户的互动体验较差。&lt;/strong&gt;
- 结果：用户使用频次下降，打开率低。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;变现难，弱关系社交难以找到持续有效的变现方式。&lt;/strong&gt;
- 结果：商业模式无法持久。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;5-破局&quot;&gt;5. 破局？&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5eeae50314195aa59403c315.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5eeae50314195aa59403c315.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;改变路径终点，打破策略边界，即社交+或+社交&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;由社交产品路径我们可得知，社交产品的路径终点最终都会指向微信，且这一结果在短期内不会发生变化。想要提高用户粘性，有两种方式可供选择：&lt;/p&gt;
-
-&lt;p&gt;（1）&lt;strong&gt;改变路径终点，将用户从微信中分流&lt;/strong&gt;
- 在拼多多的电商社交模式中，用户不再是以单纯的社交为目的，相反，用户社交是为了在电商购物中获得一个更低的价格，因此社交路径的终点就从微信转向了拼多多，自然提高了用户留存。这种模式是社交+模式，即社交+电商。&lt;/p&gt;
-
-&lt;p&gt;（2）&lt;strong&gt;打破策略边界，将社交依附于新内容形式，深耕提高用户粘性，抢占微信中的使用时长&lt;/strong&gt;
-除了另辟蹊径改变路径终点，我们还可以提高路径内容的吸引力，将用户留在路径中间不再向前驶去。
-最好的例子就是抖音，抖音的产品逻辑是+社交，也就是短视频+社交。抖音的社交终点依然是微信，但由于短视频内容的强大吸引力，极大抢占了用户在微信中的使用时长，从而也实现了社交破局。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;功能上强化穿透，真正解决痛点需求&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;小王是一名互联网公司程序员，马上就要奔三却还没有女朋友，他自己也十分焦虑。听朋友介绍下载了探探，发现上面确实有很多优秀的女孩子，可是自己相貌平平加上平时工作忙也没有时间发展别的兴趣爱好，一个星期过去了，和他配对的女孩寥寥无几，仅有的几个里面还充斥着酒托、骗子，小王十分失望，绝望地得出了普通人不配拥有社交的结论，默默卸载了App。&lt;/p&gt;
-
-&lt;p&gt;上面的例子并不是个例，在众多社交产品中，少数优质用户吸引了大量关注度，而普通用户无人问津，始终处于”单方面社交”的尴尬局面。&lt;strong&gt;因此如何帮助普通用户获取关注度，真正做到“人人互动”，打破社交领域的二八定律是目前社交产品的真正痛点&lt;/strong&gt;。如果能将这一痛点解决，在获取大量用户的同时还能打通社交领域的下沉市场，拼多多的成功告诉了我们下沉市场的潜力，在社交领域中谁能掌握这一部分，成为下一个社交霸主也不是不可能。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;探索细分市场，开辟新社交战场&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;在熟人社交领域，还可以继续开拓新细分市场，例如专门为大学生、研究生设计的高校社交产品；为小学生设计的少儿教育社交产品等。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-总结&quot;&gt;6. 总结&lt;/h2&gt;
-
-&lt;p&gt;在当今社交领域，微信是无论如何都绕不过去的一尊大佛，微信占据了社交路径的终点，导致其他社交产品做的再好，也只是一个为微信引流的社交入口。想要改变这一局面，可以从改变路径终点，打破策略边界；强化穿透功能，解决痛点需求；探索细分市场，开辟新社交战场这三个方面展开思考。&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 17 Jun 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</guid>
-        
-        <category>产品</category>
         
         
       </item>

@@ -5,9 +5,163 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 09 Nov 2020 10:11:41 +0100</pubDate>
-    <lastBuildDate>Mon, 09 Nov 2020 10:11:41 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Feb 2021 22:05:45 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Feb 2021 22:05:45 +0100</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
+    
+      <item>
+        <title>学习如何学习</title>
+        <description>&lt;h1 id=&quot;学习如何学习&quot;&gt;学习如何学习&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/02/10/ABZY2MHhWfOovGb.jpg&quot; alt=&quot;thinking.jpg&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;参考内容：
+&lt;a href=&quot;https://www.notion.so/4d92410d370849c1be0bde496b6d60bb&quot;&gt;《产品沉思录》-学习如何学习&lt;/a&gt;；
+ &lt;a href=&quot;https://www.bilibili.com/video/BV1NW411C7d8/&quot;&gt;B站：【coursera公开课】学会如何学习&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;集中式思维vs发散式思维&quot;&gt;集中式思维VS发散式思维&lt;/h2&gt;
+
+&lt;h3 id=&quot;集中式思维&quot;&gt;集中式思维&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;思维适用于解决已经掌握的内容&lt;/li&gt;
+  &lt;li&gt;顺序思考模式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;分布式思维&quot;&gt;分布式思维&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;分布式是一种放松的思考模式&lt;/li&gt;
+  &lt;li&gt;适用于学习新事物&lt;/li&gt;
+  &lt;li&gt;整体思考模式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;关于两种思维方式的训练&quot;&gt;关于两种思维方式的训练&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;番茄学习法&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;25分钟focus，5分钟diffuse&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;chunking&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;把新知识和已学知识联系起来。将不同部分的知识像拼拼图一样拼在一起。&lt;/li&gt;
+      &lt;li&gt;结构性思维框架&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;训练技巧：&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;拆分&lt;/li&gt;
+          &lt;li&gt;思维路线图&lt;/li&gt;
+          &lt;li&gt;bottom-up + top-down&lt;/li&gt;
+          &lt;li&gt;自下而下的思维框架：通过练习来形成、巩固&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;自上而下的思维框架：脑海中要有big picture&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;比喻、类比：能更好地把新知识和所学的知识联系起来&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;在日常学习中要时常提醒自己兼顾集中式学习和分布式学习&quot;&gt;在日常学习中，要时常提醒自己兼顾集中式学习和分布式学习！&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;陷入一个问题太深时，可以通过眨眨眼、晃晃头等方式，来帮助自己跳脱出来，并激发diffuse模式。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;working-memory-vs-long-term-memory&quot;&gt;Working memory VS Long-term memory&lt;/h2&gt;
+
+&lt;h3 id=&quot;working-memory运行内存&quot;&gt;Working memory(运行内存)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;短期记忆&lt;/li&gt;
+  &lt;li&gt;大脑用于处理当下任务的记忆&lt;/li&gt;
+  &lt;li&gt;大小、对事物的接受程度因人而异&lt;/li&gt;
+  &lt;li&gt;会出现学了后面忘前面的现象&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;训练方法&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;间歇性重复-不断增大两次反复之间的间隙&lt;/li&gt;
+      &lt;li&gt;睡前花五分钟回顾今天学过的内容，利用睡眠来加深记忆效果&lt;/li&gt;
+      &lt;li&gt;图像可以唤醒右脑的视觉空间部分，能更好地封装记忆&lt;/li&gt;
+      &lt;li&gt;用笔写下来的东西更容易被记住&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;能力错觉现象&quot;&gt;能力错觉现象&lt;/h2&gt;
+
+&lt;h3 id=&quot;听老师讲解或者看习题答案或者看谷歌就认为自己理解了其实并没有&quot;&gt;听老师讲解，或者看习题答案，或者看谷歌就认为自己理解了。其实并没有。:)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;解决方法：自我测试&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;拖延症&quot;&gt;拖延症&lt;/h2&gt;
+
+&lt;h3 id=&quot;来源&quot;&gt;来源&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;僵尸模式：大脑在受到特定外界刺激下做出的习惯性反应&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;当你感受到不快时，大脑会把注意力转移到另外一件更愉快的事情上，从而使你在短期内好过一点。&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;举例：你不想做题，大脑会联想到抖音，帮助你获得暂时的快感，来补偿不想做题带来的焦虑。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;这种模式一旦成为习惯，就形成了拖延症的源头&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;解决办法&quot;&gt;解决办法&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;专注于过程，而非产物&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;产物往往是拖延的导火索，而过程才是大脑真正喜欢的。一旦进入了过程，大脑就可以进入僵尸模式一路狂奔了。&lt;/li&gt;
+      &lt;li&gt;每个人都会对学习感到不快和厌恶，这是正常的。但有研究表明，当人开始做自己厌恶的事一段时间后，这种感觉就消失了。&lt;/li&gt;
+      &lt;li&gt;解决重点：开始做事！&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;把最困难，也是最厌恶的一件事放在早上第一件事做&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;制订好每日结束学习的时间&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;有助于日程规律，并留下更多时间发展身心健康，从而反哺学习，在学业上更加成功。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;其他技巧&quot;&gt;其他技巧&lt;/h2&gt;
+
+&lt;h3 id=&quot;费曼技巧&quot;&gt;费曼技巧&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;回想、理解所学内容&lt;/li&gt;
+  &lt;li&gt;用一句话把概念解释清楚&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 10 Feb 2021 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2021/02/10/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/02/10/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/</guid>
+        
+        <category>学习方法</category>
+        
+        
+      </item>
     
       <item>
         <title>Autonomous car project demonstration</title>
@@ -1897,43 +2051,6 @@ T（威胁）：女神时不时在看手机，很可能在跟别的男生聊天�
         <pubDate>Wed, 17 Jun 2020 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</guid>
-        
-        <category>产品</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>产品经理常用公式(持续更新中)</title>
-        <description>&lt;h1 id=&quot;产品经理常用公式持续更新中&quot;&gt;产品经理常用公式（持续更新中）&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/06/14/jdT3cBGibAa6hpw.jpg&quot; alt=&quot;1.JPG&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;用户价值=新体验-旧体验-替代成本&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-&lt;ol&gt;
-  &lt;li&gt;产品体验=峰值体验+结束体验&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-&lt;ol&gt;
-  &lt;li&gt;上瘾模式：触发–&amp;gt;行动–&amp;gt;奖励–&amp;gt;投入&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-&lt;ol&gt;
-  &lt;li&gt;幸福=效用/欲望&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Sun, 14 Jun 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/06/14/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/06/14/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F/</guid>
         
         <category>产品</category>
         

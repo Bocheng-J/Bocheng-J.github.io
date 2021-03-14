@@ -1,12 +1,22 @@
 old local test command:
 'jekyll s'
 
+
 new local test command:
 'bundle exec jekyll serve'
 
 
+push file to github:
+git add -A .
+git commit -m 'new post'
+git push origin master
+
+
 push file to coding:
 git push https://e.coding.net/oscar-bocheng/oscar-bocheng.git --all
+
+account：jiabc1997@163.com
+password:464857301
 
 查看隐藏文件：
 在相应文件夹图形化窗口内 control+H

@@ -2,7 +2,7 @@
 layout:     post
 title:      Shortest path - Dijkstra's algorithm
 subtitle:   Dijkstra's algorithm
-date:       2020-08-29
+date:       2020-06-07
 author:     oscar
 header-img: img/bg_Dijkstra.jpg
 catalog: true

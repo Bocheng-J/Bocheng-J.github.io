@@ -5,8 +5,8 @@
     <description>Something great is happening.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Mar 2021 18:47:25 +0100</pubDate>
-    <lastBuildDate>Mon, 15 Mar 2021 18:47:25 +0100</lastBuildDate>
+    <pubDate>Mon, 15 Mar 2021 19:01:03 +0100</pubDate>
+    <lastBuildDate>Mon, 15 Mar 2021 19:01:03 +0100</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -426,693 +426,6 @@ H_k is the Jacobian matrix of h(xk).&lt;/p&gt;
         <guid isPermaLink="true">http://localhost:4000/2020/09/04/Kalman-filter/</guid>
         
         <category>Kalman filter</category>
-        
-        <category>study notes</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Shortest path - Dijkstra's algorithm</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm&quot;&gt;Dijkstra’s algorithm&lt;/a&gt; is an algorithm which is used to find the shortest path.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;dijkstras-algorithm-method&quot;&gt;Dijkstra’s algorithm method&lt;/h1&gt;
-&lt;h2 id=&quot;step-0--the-prerequisite&quot;&gt;Step: 0 – The prerequisite&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;We need to have a map of nodes.&lt;/li&gt;
-  &lt;li&gt;We need to have a start node.&lt;/li&gt;
-  &lt;li&gt;The distance between each adjacent nodes should be known.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;step-1--start&quot;&gt;Step: 1 – Start&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Set the start node to be the current node, which is the first visited
-node.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Introduce several concepts:&lt;/p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;The current node is a already-visited node, and will be the predecessor node for the next node.&lt;/p&gt;
-
-      &lt;p&gt;The stored distance of each node is the shortest distance from the start node. We will use this later.&lt;/p&gt;
-
-      &lt;p&gt;The start node is an exception: 
-The shortest distance is 0, but the stored distance is always infinite (∞).&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;step-2--check-neighbours&quot;&gt;Step: 2 – Check neighbours&lt;/h2&gt;
-&lt;p&gt;Go through all the &lt;strong&gt;non-visited&lt;/strong&gt;  &lt;strong&gt;neighbour nodes&lt;/strong&gt; of the current node, and calculate the distance &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; .&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;=&lt;/strong&gt; the distance between current node and predecessor node &lt;strong&gt;+&lt;/strong&gt; the predecessor’s shortest distance.&lt;/p&gt;
-
-&lt;p&gt;(If one node can’t be reached from the current node, then &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt;=∞ )&lt;/p&gt;
-
-&lt;p&gt;For each node i, if &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt; is smaller than the previously stored distance of i, then update the stored distance by &lt;strong&gt;&lt;em&gt;D&lt;/em&gt;&lt;/strong&gt;. Otherwise, keep the previous stored distance unchanged.&lt;/p&gt;
-
-&lt;p&gt;After checking all the neighbour nodes (all the non-visited nodes of the current node), select one &lt;strong&gt;non-visited&lt;/strong&gt; node which has the &lt;strong&gt;smallest&lt;/strong&gt; stored distance as the next current node.&lt;/p&gt;
-
-&lt;h2 id=&quot;step-3--loop&quot;&gt;Step: 3 – Loop&lt;/h2&gt;
-&lt;p&gt;Return to step 2, unless the target node has been reached or all the nodes are visited.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;I prepare 2 examples here, a simple one and a more complex one.&lt;/p&gt;
-
-&lt;h2 id=&quot;example-1&quot;&gt;Example 1:&lt;/h2&gt;
-&lt;p&gt;Find the shortest path from 1 to 5.
-&lt;img src=&quot;https://i.loli.net/2020/04/30/HUD1s78WgMXVuOt.gif&quot; alt=&quot;example_1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;round-1&quot;&gt;Round 1:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  1.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;-Start from node 1, so we have 3 non-visited neighour nodes: 2 3 6, their distance D is: [7 9 14].&lt;/p&gt;
-
-&lt;p&gt;-So now the &lt;strong&gt;stored distance&lt;/strong&gt; is :&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node 1*&lt;/th&gt;
-      &lt;th&gt;node 2&lt;/th&gt;
-      &lt;th&gt;node 3&lt;/th&gt;
-      &lt;th&gt;node 4&lt;/th&gt;
-      &lt;th&gt;node 5&lt;/th&gt;
-      &lt;th&gt;node 6&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark : visited node)&lt;/p&gt;
-
-&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 7, so &lt;strong&gt;node 2&lt;/strong&gt; is the next node.
- -The shortest path to node 2: &lt;strong&gt;1 –&amp;gt; 2&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;round-2&quot;&gt;Round 2:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  2.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;-Now we have 2 non-visited neighbour nodes: 3 4, and their distance D now is :[17 22].&lt;/p&gt;
-
-&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt; is:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node 1*&lt;/th&gt;
-      &lt;th&gt;node 2*&lt;/th&gt;
-      &lt;th&gt;node 3&lt;/th&gt;
-      &lt;th&gt;node 4&lt;/th&gt;
-      &lt;th&gt;node 5&lt;/th&gt;
-      &lt;th&gt;node 6&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;22&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;through node 2&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark : visited node)&lt;/p&gt;
-
-&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 9,  so &lt;strong&gt;node 3&lt;/strong&gt; is the next node.
-   -The shortest path to node 3: &lt;strong&gt;1 –&amp;gt; 3&lt;/strong&gt;. (Since the distace is 9).&lt;/p&gt;
-
-&lt;h2 id=&quot;round-3&quot;&gt;Round 3:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  3.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;-Now we have 2 non-visited neighbour nodes: 4 6, and their distance D now is :[20 11].&lt;/p&gt;
-
-&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt;  is:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node 1*&lt;/th&gt;
-      &lt;th&gt;node 2*&lt;/th&gt;
-      &lt;th&gt;node 3*&lt;/th&gt;
-      &lt;th&gt;node 4&lt;/th&gt;
-      &lt;th&gt;node 5&lt;/th&gt;
-      &lt;th&gt;node 6&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;through node 3&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;through node 3&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;-The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is 11, so &lt;strong&gt;node 6&lt;/strong&gt; is the next node.
-   -The shortest path to node 6: &lt;strong&gt;1 –&amp;gt; 3 –&amp;gt; 6&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;round-4&quot;&gt;Round 4:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  6.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;-Now we &lt;strong&gt;only have 1&lt;/strong&gt; non-visited neighbour: 5.  D is 20.&lt;/p&gt;
-
-&lt;p&gt;-The &lt;strong&gt;stored distance&lt;/strong&gt;  is:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node 1*&lt;/th&gt;
-      &lt;th&gt;node 2*&lt;/th&gt;
-      &lt;th&gt;node 3*&lt;/th&gt;
-      &lt;th&gt;node 4&lt;/th&gt;
-      &lt;th&gt;node 5&lt;/th&gt;
-      &lt;th&gt;node 6*&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;through node 1&lt;/td&gt;
-      &lt;td&gt;through node 3&lt;/td&gt;
-      &lt;td&gt;through node 6&lt;/td&gt;
-      &lt;td&gt;through node 3&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Since now we only have 2 nodes left, and their stored distances are equal, we can stop. They both have 20 as the shortest path. (If these two distances are not equal, we still need to go to the next round).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;-The shortest path to node 5: &lt;strong&gt;1 –&amp;gt; 3 –&amp;gt; 6 –&amp;gt; 5&lt;/strong&gt;. 
-   -Shortest distance is &lt;strong&gt;20&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;example-2&quot;&gt;Example 2:&lt;/h2&gt;
-&lt;p&gt;Find the shortest path from A to I.
-&lt;img src=&quot;https://i.loli.net/2020/04/30/usi2WDCGTexk9wg.jpg&quot; alt=&quot;example2&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;round-1-1&quot;&gt;Round 1:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  A.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Stored distance:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node A*&lt;/th&gt;
-      &lt;th&gt;node B&lt;/th&gt;
-      &lt;th&gt;node C&lt;/th&gt;
-      &lt;th&gt;node D&lt;/th&gt;
-      &lt;th&gt;node E&lt;/th&gt;
-      &lt;th&gt;node F&lt;/th&gt;
-      &lt;th&gt;node G&lt;/th&gt;
-      &lt;th&gt;node H&lt;/th&gt;
-      &lt;th&gt;node I&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;B&lt;/strong&gt;.
-Node &lt;strong&gt;B&lt;/strong&gt; is the next one.&lt;/p&gt;
-
-&lt;p&gt;So shortest Path to B:   &lt;strong&gt;A –&amp;gt; B&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;round-2-1&quot;&gt;Round 2:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  B.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Stored distance:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node A*&lt;/th&gt;
-      &lt;th&gt;node B*&lt;/th&gt;
-      &lt;th&gt;node C&lt;/th&gt;
-      &lt;th&gt;node D&lt;/th&gt;
-      &lt;th&gt;node E&lt;/th&gt;
-      &lt;th&gt;node F&lt;/th&gt;
-      &lt;th&gt;node G&lt;/th&gt;
-      &lt;th&gt;node H&lt;/th&gt;
-      &lt;th&gt;node I&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node B&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;D&lt;/strong&gt;.
-  Node &lt;strong&gt;D&lt;/strong&gt; is the next one.&lt;/p&gt;
-
-&lt;p&gt;So shortest Path to D: &lt;strong&gt;A –&amp;gt; D&lt;/strong&gt;. （Since the distance is 4）&lt;/p&gt;
-
-&lt;h2 id=&quot;round-3-1&quot;&gt;Round 3:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  D.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Stored distance:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node A*&lt;/th&gt;
-      &lt;th&gt;node B*&lt;/th&gt;
-      &lt;th&gt;node C&lt;/th&gt;
-      &lt;th&gt;node D*&lt;/th&gt;
-      &lt;th&gt;node E&lt;/th&gt;
-      &lt;th&gt;node F&lt;/th&gt;
-      &lt;th&gt;node G&lt;/th&gt;
-      &lt;th&gt;node H&lt;/th&gt;
-      &lt;th&gt;node I&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node B&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;through node D&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;C&lt;/strong&gt;.
-Node &lt;strong&gt;C&lt;/strong&gt; is the next one.&lt;/p&gt;
-
-&lt;p&gt;So shortest Path to C: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;round-4-1&quot;&gt;Round 4:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  C.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Stored distance:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node A*&lt;/th&gt;
-      &lt;th&gt;node B*&lt;/th&gt;
-      &lt;th&gt;node C*&lt;/th&gt;
-      &lt;th&gt;node D*&lt;/th&gt;
-      &lt;th&gt;node E&lt;/th&gt;
-      &lt;th&gt;node F&lt;/th&gt;
-      &lt;th&gt;node G&lt;/th&gt;
-      &lt;th&gt;node H&lt;/th&gt;
-      &lt;th&gt;node I&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node B&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node C&lt;/td&gt;
-      &lt;td&gt;through node D&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;E&lt;/strong&gt;.
-Node &lt;strong&gt;E&lt;/strong&gt; is the next one.&lt;/p&gt;
-
-&lt;p&gt;So shortest Path to E: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C –&amp;gt;E&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;round-5&quot;&gt;Round 5:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  E.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Stored distance:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node A*&lt;/th&gt;
-      &lt;th&gt;node B*&lt;/th&gt;
-      &lt;th&gt;node C*&lt;/th&gt;
-      &lt;th&gt;node D*&lt;/th&gt;
-      &lt;th&gt;node E*&lt;/th&gt;
-      &lt;th&gt;node F&lt;/th&gt;
-      &lt;th&gt;node G&lt;/th&gt;
-      &lt;th&gt;node H&lt;/th&gt;
-      &lt;th&gt;node I&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node B&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node C&lt;/td&gt;
-      &lt;td&gt;through node D&lt;/td&gt;
-      &lt;td&gt;through node E&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;F&lt;/strong&gt;.
-  Node &lt;strong&gt;F&lt;/strong&gt; is the next one.&lt;/p&gt;
-
-&lt;p&gt;So shortest Path to G: &lt;strong&gt;A –&amp;gt; D –&amp;gt; F&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;round-6&quot;&gt;Round 6:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  F.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Stored distance:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node A*&lt;/th&gt;
-      &lt;th&gt;node B*&lt;/th&gt;
-      &lt;th&gt;node C*&lt;/th&gt;
-      &lt;th&gt;node D*&lt;/th&gt;
-      &lt;th&gt;node E*&lt;/th&gt;
-      &lt;th&gt;node F*&lt;/th&gt;
-      &lt;th&gt;node G&lt;/th&gt;
-      &lt;th&gt;node H&lt;/th&gt;
-      &lt;th&gt;node I&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-      &lt;td&gt;∞&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node B&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node C&lt;/td&gt;
-      &lt;td&gt;through node D&lt;/td&gt;
-      &lt;td&gt;through node E&lt;/td&gt;
-      &lt;td&gt;through F&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;smallest&lt;/strong&gt; non-visited node is &lt;strong&gt;G&lt;/strong&gt;.
-  Node &lt;strong&gt;G&lt;/strong&gt; is the next one.&lt;/p&gt;
-
-&lt;p&gt;So shortest Path to G: &lt;strong&gt;A–&amp;gt; B –&amp;gt; C –&amp;gt; E –&amp;gt; G&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;round-7&quot;&gt;Round 7:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Current node:  G.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Stored distance:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;NODE&lt;/th&gt;
-      &lt;th&gt;node A*&lt;/th&gt;
-      &lt;th&gt;node B*&lt;/th&gt;
-      &lt;th&gt;node C*&lt;/th&gt;
-      &lt;th&gt;node D*&lt;/th&gt;
-      &lt;th&gt;node E*&lt;/th&gt;
-      &lt;th&gt;node F*&lt;/th&gt;
-      &lt;th&gt;node G*&lt;/th&gt;
-      &lt;th&gt;node H&lt;/th&gt;
-      &lt;th&gt;node I&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;DISTANCE&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;PATH&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;–&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node B&lt;/td&gt;
-      &lt;td&gt;through node A&lt;/td&gt;
-      &lt;td&gt;through node C&lt;/td&gt;
-      &lt;td&gt;through node D&lt;/td&gt;
-      &lt;td&gt;through node E&lt;/td&gt;
-      &lt;td&gt;through node F&lt;/td&gt;
-      &lt;td&gt;through node G&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;(the star mark: visited node)&lt;/p&gt;
-
-&lt;p&gt;We get 2 equal distances again, stop.&lt;/p&gt;
-
-&lt;p&gt;So shortest Path to I: &lt;strong&gt;A –&amp;gt; B –&amp;gt; C –&amp;gt;E –&amp;gt; G –&amp;gt;I&lt;/strong&gt;.
-The distance is 11.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;Reference: https://blog.csdn.net/gamer_gyt/article/details/47184081&lt;/p&gt;
-</description>
-        <pubDate>Sat, 29 Aug 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/08/29/Dijkstra's-algorithm/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/08/29/Dijkstra's-algorithm/</guid>
-        
-        <category>Dijkstra's algorithm</category>
-        
-        <category>algorithm</category>
-        
-        <category>shortest path</category>
         
         <category>study notes</category>
         
@@ -2044,6 +1357,134 @@ T（威胁）：女神时不时在看手机，很可能在跟别的男生聊天�
         <category>产品</category>
         
         <category>产品体验报告</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>社交产品简论</title>
+        <description>&lt;h1 id=&quot;社交产品简论&quot;&gt;社交产品简论&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5ee9d0dda240b370e3eea61a.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5ee9d0dda240b370e3eea61a.jpg&quot; alt=&quot;社交思考&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1-社交产品本质&quot;&gt;1. 社交产品本质&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;社交产品的本质就是实现用户之间的价值交换。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这个价值可以是很多东西，有形的亦或无形的。例如，用户之间的陪伴是价值，分享的专业信息也是价值，甚至在电商社交场景里，社交还可以真金白银地带来商品价格的优惠（拼团）。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-社交关系发展路径&quot;&gt;2. 社交关系发展路径&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;陌生人–&amp;gt;弱关系–&amp;gt;强关系–&amp;gt;熟人&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;社交关系的发展路径，就是生活中我们与他人相认相识相知的过程。&lt;/p&gt;
+
+&lt;p&gt;从陌生人到熟人，不同的应用场景下的用户需求是不同的，因此产品的设计逻辑也不同。&lt;/p&gt;
+
+&lt;p&gt;陌生人社交场景，&lt;strong&gt;用户社交成本高&lt;/strong&gt;，其中包括推进关系的发展成本高，维系关系的维护成本高，产品需要将解决用户社交成本高的需求放在首位。因此我们可以看到陌生人社交产品中，有很多帮助用户发展、维护关系的功能，例如soul中的陌生人随机匹配，以及聊天越多可以点亮特殊标识等。&lt;/p&gt;
+
+&lt;p&gt;熟人社交场景，用户没有那么高的社交成本，相反，由于熟人之间互动更频繁，因此&lt;strong&gt;用户使用产品的频率更高，这也要求产品必须能提供极致的用户体验&lt;/strong&gt;，能在高频次、长时间的使用中让用户满意。这也是为什么简洁、轻快的微信能取代QQ成为社交龙头的核心原因。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5eead58c14195aa594f01475.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5eead58c14195aa594f01475.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;由于微信在熟人社交领域的绝对统治权，我们可将社交产品路径写为：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;陌生人社交产品–&amp;gt;弱关系社交产品–&amp;gt;强关系社交产品–&amp;gt;微信&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-社交产品分类&quot;&gt;3. 社交产品分类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5eead7f014195aa594f250c6.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5eead7f014195aa594f250c6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;根据社交产品发展路径，我们可以将社交产品分为两大类：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;强关系社交&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;弱关系社交&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;强关系社交包括熟人社交，半熟人社交，职业化社交等，代表产品有微信，领英，脉脉。&lt;/p&gt;
+
+&lt;p&gt;弱关系社交主要为陌生人社交，也包括兴趣社交等其他非职业化社交，代表产品有陌陌，探探，soul等。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-社交困局&quot;&gt;4. 社交困局&lt;/h2&gt;
+
+&lt;p&gt;（1）强关系社交&lt;/p&gt;
+
+&lt;p&gt;目前制约强关系社交产品发展的因素主要有以下两点：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;大块市场已经被微信霸占，&lt;strong&gt;发展空间较为狭窄&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;职业化社交产品难以提升用户黏性&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;微信作为一款亿级月活的国民产品，已经牢牢把持住了泛场景下的熟人社交领域，其他产品想要寻求突破，只能着手于二级细分市场，如应用于职场社交的脉脉。因此对于除微信外的其他强关系社交产品来说，他们的发展空间非常狭窄。&lt;/p&gt;
+
+&lt;p&gt;另外，对于职业化社交产品，其使用场景具有较强局限性，给人留下“办公软件”的印象，用户好感度低，粘性差。用户在下班后往往不情愿打开钉钉、脉脉，因此职业化社交产品很难深耕提高用户的使用时长。&lt;/p&gt;
+
+&lt;p&gt;（2）弱关系社交&lt;/p&gt;
+
+&lt;p&gt;弱关系社交的困局主要体现在以下几个方面：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;核心原因：社交关系发展路径决定了弱关系社交只是社交的其中一条途径，而并不是终点。&lt;/strong&gt;
+ 结果：用户留存率低。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;产品微创新，内容同质化严重。&lt;/strong&gt;
+ 结果：产品价值=新价值-旧价值-替代价值，内容千篇一律导致新旧价值间的差值小，产品价值不高。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;互动性差，往往少数优质用户会获得大量关注度，普通用户的互动体验较差。&lt;/strong&gt;
+ 结果：用户使用频次下降，打开率低。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;变现难，弱关系社交难以找到持续有效的变现方式。&lt;/strong&gt;
+ 结果：商业模式无法持久。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;5-破局&quot;&gt;5. 破局？&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pic.downk.cc/item/5eeae50314195aa59403c315.jpg&quot;&gt;&lt;img src=&quot;https://pic.downk.cc/item/5eeae50314195aa59403c315.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;改变路径终点，打破策略边界，即社交+或+社交&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由社交产品路径我们可得知，社交产品的路径终点最终都会指向微信，且这一结果在短期内不会发生变化。想要提高用户粘性，有两种方式可供选择：&lt;/p&gt;
+
+&lt;p&gt;（1）&lt;strong&gt;改变路径终点，将用户从微信中分流&lt;/strong&gt;
+ 在拼多多的电商社交模式中，用户不再是以单纯的社交为目的，相反，用户社交是为了在电商购物中获得一个更低的价格，因此社交路径的终点就从微信转向了拼多多，自然提高了用户留存。这种模式是社交+模式，即社交+电商。&lt;/p&gt;
+
+&lt;p&gt;（2）&lt;strong&gt;打破策略边界，将社交依附于新内容形式，深耕提高用户粘性，抢占微信中的使用时长&lt;/strong&gt;
+除了另辟蹊径改变路径终点，我们还可以提高路径内容的吸引力，将用户留在路径中间不再向前驶去。
+最好的例子就是抖音，抖音的产品逻辑是+社交，也就是短视频+社交。抖音的社交终点依然是微信，但由于短视频内容的强大吸引力，极大抢占了用户在微信中的使用时长，从而也实现了社交破局。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;功能上强化穿透，真正解决痛点需求&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;小王是一名互联网公司程序员，马上就要奔三却还没有女朋友，他自己也十分焦虑。听朋友介绍下载了探探，发现上面确实有很多优秀的女孩子，可是自己相貌平平加上平时工作忙也没有时间发展别的兴趣爱好，一个星期过去了，和他配对的女孩寥寥无几，仅有的几个里面还充斥着酒托、骗子，小王十分失望，绝望地得出了普通人不配拥有社交的结论，默默卸载了App。&lt;/p&gt;
+
+&lt;p&gt;上面的例子并不是个例，在众多社交产品中，少数优质用户吸引了大量关注度，而普通用户无人问津，始终处于”单方面社交”的尴尬局面。&lt;strong&gt;因此如何帮助普通用户获取关注度，真正做到“人人互动”，打破社交领域的二八定律是目前社交产品的真正痛点&lt;/strong&gt;。如果能将这一痛点解决，在获取大量用户的同时还能打通社交领域的下沉市场，拼多多的成功告诉了我们下沉市场的潜力，在社交领域中谁能掌握这一部分，成为下一个社交霸主也不是不可能。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;探索细分市场，开辟新社交战场&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在熟人社交领域，还可以继续开拓新细分市场，例如专门为大学生、研究生设计的高校社交产品；为小学生设计的少儿教育社交产品等。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-总结&quot;&gt;6. 总结&lt;/h2&gt;
+
+&lt;p&gt;在当今社交领域，微信是无论如何都绕不过去的一尊大佛，微信占据了社交路径的终点，导致其他社交产品做的再好，也只是一个为微信引流的社交入口。想要改变这一局面，可以从改变路径终点，打破策略边界；强化穿透功能，解决痛点需求；探索细分市场，开辟新社交战场这三个方面展开思考。&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 17 Jun 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/06/17/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/</guid>
+        
+        <category>产品</category>
         
         
       </item>

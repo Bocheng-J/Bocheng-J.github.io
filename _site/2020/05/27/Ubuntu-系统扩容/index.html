@@ -211,16 +211,38 @@
 
 <p>今天把系统拓展的步骤记录一下，避免以后再踩坑。</p>
 
+<hr />
+<p><em>2021-03-15更新：
+人这一生不能踏进两条一样的河流，不过一年后的我还真就又栽进了同一个坑里。Ubuntu的虚拟机内存又一次不够用了，也庆幸当初我把解决这一问题的过程记录了下来，确实为现在的我减少了很多麻烦。由此可见，写文章记录一些事情是一个很好的习惯，要继续坚持!</em></p>
+
 <h2 id="1-为虚拟机拓展空间并进入分区工具gparted">1. 为虚拟机拓展空间，并进入分区工具GParted</h2>
 
 <p><strong><a href="https://segmentfault.com/a/1190000004990372">教程</a>点这里。</strong></p>
 
 <p>感谢原作者的整理。</p>
 
-<p>（<strong>注意</strong>：下载GParted时要看好系统的版本，i686是32位系统的，amd64是64位系统的。）</p>
+<p>（<strong>注意</strong>：下载GParted时要看好系统的版本，i686是32位系统的，amd64是64位系统的。amd64<a href="https://sourceforge.net/projects/gparted/files/gparted-live-stable/1.2.0-1/gparted-live-1.2.0-1-amd64.iso/download?use_mirror=altushost-swe">下载链接</a>）</p>
+
+<hr />
+<p>2021-03-15更新：
+原文章中的图片失效，更新一篇新的<a href="https://blog.csdn.net/weixin_33743880/article/details/89424241">教程</a>。</p>
+
+<p>在运行CMD指令时遇到error:VboxManage 此应用无法在你的电脑上运行，原因是并没有在VirtualBox的安装目录下运行指令。
+解决办法：
+先输入E：，进入E盘
+再cd E:\VirtualBox，进入VirtualBox的安装目录
+最后运行指令VBoxManage.exe modifyhd UUID –resize 61440</p>
+
+<p>运行指令后遇到error：
+VBoxManage.exe: error: Could not find file for the medium ‘E:\VirtualBox\UUID’ (VERR_FILE_NOT_FOUND)
+VBoxManage.exe: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component MediumWrap, interface IMedium, callee IUnknown
+VBoxManage.exe: error: Context: “OpenMedium(Bstr(pszFilenameOrUuid).raw(), enmDevType, enmAccessMode, fForceNewUuidOnOpen, pMedium.asOutParam())” at line 191 of file VBoxManageDisk.cpp</p>
+
+<p>原因：没有替换UUID
+解决办法：打开Oracle VM VirtualBox 管理器–&gt;管理–&gt;虚拟介质管理–&gt;虚拟硬盘–&gt;选中当前ubuntu.vdi–&gt;明细–&gt;找到UUID并替换</p>
 
 <h2 id="2-进入gparted进行内存分配">2. 进入GParted，进行内存分配</h2>
-<p>为虚拟机拓展了空间后，这一部分空间并不能立即被我们使用，我们还必须进行内存分配，才能真正激活这一部分磁盘空间。</p>
+<p>为虚拟机拓展了空间后，这一部分空间并不能立即被我们使用，我们还必须惊醒内存分配，才能真正激活这一部分磁盘空间。</p>
 
 <p><strong><a href="https://www.cnblogs.com/yuanlibin/p/9207671.html">教程</a>点这里。</strong>
 感谢原作者的整理。</p>
